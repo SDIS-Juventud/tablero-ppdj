@@ -1,3 +1,5 @@
 # Dependencias de construcción del pipeline (el tablero publicado no las necesita)
 pandas>=2.0
 openpyxl>=3.1
+pyxlsb>=1.0
+

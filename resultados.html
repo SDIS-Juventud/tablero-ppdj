@@ -9,11 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --crema: #f5efd2;
-  --gris-oscuro: #2f2b28;
-  --gris: #83766c;
-  --gris-claro: #f4f2ee;
-  --verde-oscuro: #2F3E3C;
+  /* Paleta del tablero original (diseño de Carolina): navy + rosa */
+  --navy: #1e2a5c;
+  --rosa: #ee3a5e;
+  --gris-oscuro: #23252b;
+  --gris: #6b7280;
+  --gris-claro: #eef1f7;
   --blanco: #ffffff;
   /* Colores de los informes de Carolina (navy #0C1250 / naranja #F28E1C),
      ajustados al paso más cercano que pasa la validación de accesibilidad */
@@ -23,43 +24,37 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--gris-claro);
+  background: var(--blanco);
   color: var(--gris-oscuro);
 }
 
-.barra {
-  background: var(--verde-oscuro);
-  padding: 1.1rem 1.5rem;
-  display: flex; align-items: center; gap: 1.2rem;
+/* Encabezado del tablero original: píldora navy con sombra rosada y home */
+.encabezado {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem 0.8rem;
+  display: flex; align-items: center; gap: 1.4rem;
 }
-.btn-home {
-  color: var(--crema);
-  text-decoration: none;
-  font-family: 'Antonio', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  border: 1.5px solid rgba(245,239,210,0.5);
-  border-radius: 8px;
-  padding: 0.4rem 0.9rem;
-  transition: background 0.15s ease;
+.titulo-pill {
+  flex: 1;
+  background: var(--navy);
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: clamp(1.15rem, 2.4vw, 1.8rem);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--rosa);
+  padding: 0.75rem 1.5rem;
 }
-.btn-home:hover { background: rgba(245,239,210,0.12); }
-.barra-titulo {
-  font-family: 'Anton', sans-serif;
-  text-transform: uppercase;
-  color: var(--crema);
-  font-size: 1.5rem;
-  letter-spacing: 0.03em;
-}
+.btn-icono { display: inline-block; transition: transform 0.15s ease; }
+.btn-icono:hover { transform: translateY(-2px); }
+.btn-icono img { height: 48px; display: block; }
+.icono-filtro { width: 20px; height: 20px; }
 
 main { max-width: 1360px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
 
 .filtros {
-  background: var(--blanco);
+  background: var(--gris-claro);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   padding: 1rem 1.3rem;
   display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap;
   margin-bottom: 1.2rem;
@@ -88,9 +83,9 @@ select {
   font-family: inherit;
 }
 .chip.activo {
-  background: var(--verde-oscuro);
-  border-color: var(--verde-oscuro);
-  color: var(--crema);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--blanco);
 }
 
 .panel-doble { display: grid; grid-template-columns: minmax(380px, 46%) 1fr; gap: 1.2rem; align-items: start; }
@@ -99,7 +94,7 @@ select {
 .card {
   background: var(--blanco);
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 10px rgba(30,42,92,0.10);
   padding: 1.3rem;
 }
 .card-titulo {
@@ -135,7 +130,6 @@ tbody tr.seleccionada { background: var(--gris-claro); }
 
 .detalle-vacio { color: var(--gris); padding: 2.5rem 1rem; text-align: center; }
 .dim-etiqueta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
-.dim-punto { width: 0.85rem; height: 0.85rem; border-radius: 50%; flex-shrink: 0; }
 .dim-etiqueta span {
   font-family: 'Antonio', sans-serif; font-weight: 700;
   text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em;
@@ -153,15 +147,6 @@ tbody tr.seleccionada { background: var(--gris-claro); }
 }
 .ficha-valor { font-size: 0.88rem; font-weight: 600; line-height: 1.3; }
 
-.toggle { display: inline-flex; border: 1.5px solid #ddd6cf; border-radius: 8px; overflow: hidden; margin-bottom: 0.9rem; }
-.toggle button {
-  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; font-size: 0.75rem;
-  border: none; background: var(--blanco); color: var(--gris);
-  padding: 0.45rem 1rem; cursor: pointer;
-}
-.toggle button.activo { background: var(--verde-oscuro); color: var(--crema); }
-
 .grafica-caja { position: relative; height: 300px; }
 
 .serie-tabla { margin-top: 1.1rem; overflow-x: auto; }
@@ -175,26 +160,35 @@ tbody tr.seleccionada { background: var(--gris-claro); }
   font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.06em; font-size: 0.8rem;
   text-decoration: none; border-radius: 8px; padding: 0.55rem 1rem;
-  cursor: pointer; border: 1.5px solid var(--verde-oscuro);
+  cursor: pointer; border: 1.5px solid var(--navy);
   transition: transform 0.15s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primario { background: var(--verde-oscuro); color: var(--crema); }
-.btn-secundario { background: var(--blanco); color: var(--verde-oscuro); }
+.btn-primario { background: var(--navy); color: var(--blanco); }
+.btn-secundario { background: var(--blanco); color: var(--navy); }
 
-footer { background: var(--blanco); margin-top: 2rem; }
-.footer-marca { display: block; width: 100%; height: auto; }
+footer {
+  max-width: 1360px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem 1.5rem;
+  display: flex; justify-content: flex-end;
+}
+.footer-logos { height: 48px; width: auto; }
 </style>
 </head>
 <body>
 
-<div class="barra">
-  <a class="btn-home" href="index.html">&#8592; Inicio</a>
-  <div class="barra-titulo">Resultados</div>
-</div>
+<header class="encabezado">
+  <div class="titulo-pill">Política Pública Distrital de Juventud 2019-2030</div>
+  <a class="btn-icono" href="index.html" title="Volver al inicio"><img src="imagenes/disenio/Home.png" alt="Inicio"></a>
+</header>
 
 <main>
   <div class="filtros">
+    <div class="filtro-grupo">
+      <img class="icono-filtro" src="imagenes/disenio/Filtro.svg" alt="">
+      <span class="filtro-label">Filtros</span>
+    </div>
     <div class="filtro-grupo">
       <span class="filtro-label">Dimensión</span>
       <select id="filtro-dim"></select>
@@ -224,7 +218,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
 </main>
 
 <footer>
-  <img class="footer-marca" src="imagenes/Distrito joven.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá">
+  <img class="footer-logos" src="imagenes/disenio/Logos.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá - Secretaría Distrital de Integración Social">
 </footer>
 
 <script src="data/resultados.js"></script>
@@ -248,12 +242,25 @@ footer { background: var(--blanco); margin-top: 2rem; }
     dim: params.get('dim') || '',            // "1".."7" o "" = todas
     sectores: new Set(),                      // vacío = todos
     llave: params.get('llave') || '',
-    modo: 'valor',                            // 'valor' | 'porcentaje'
   };
   let grafica = null;
 
   const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
     : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
+
+  // Formateador según el tipo de indicador: los "Porcentaje" guardados como
+  // proporción (0 a 1) se muestran multiplicados por 100 con símbolo %; los
+  // que ya vienen en escala 0-100 solo reciben el símbolo; escalas dudosas
+  // se dejan crudas (calidad de datos pendiente con el equipo).
+  function crearFormateadorItem(it) {
+    if (it.indicador_tipo !== 'Porcentaje') return v => fmt(v);
+    const vals = it.serie.flatMap(p => [p.valor, p.meta, p.acumulado, p.meta_acum])
+      .filter(v => v !== null && v !== undefined).map(Math.abs);
+    const max = vals.length ? Math.max(...vals) : 0;
+    if (max <= 1.5) return v => (v === null || v === undefined) ? '—' : fmt(v * 100, 1) + ' %';
+    if (max <= 150) return v => (v === null || v === undefined) ? '—' : fmt(v, 1) + ' %';
+    return v => fmt(v);
+  }
 
   const dimPorKey = {};
   DATOS.dimensiones.forEach(d => { dimPorKey[d.key] = d; });
@@ -335,8 +342,9 @@ footer { background: var(--blanco); margin-top: 2rem; }
       const tr = document.createElement('tr');
       tr.dataset.llave = it.llave;
       if (it.llave === estado.llave) tr.classList.add('seleccionada');
+      const f = crearFormateadorItem(it);
       const celdasAnios = it.serie.map(p =>
-        `<td class="celda-anio">${p.valor === null ? '—' : fmt(p.valor)}</td>`).join('');
+        `<td class="celda-anio">${p.valor === null ? '—' : f(p.valor)}</td>`).join('');
       tr.innerHTML = `
         <td class="celda-num">${it.numero}</td>
         <td class="celda-texto">${it.esperado || ''}</td>
@@ -372,7 +380,6 @@ footer { background: var(--blanco); margin-top: 2rem; }
     const dim = dimPorKey[it.key_dimension];
     panel.innerHTML = `
       <div class="dim-etiqueta">
-        <div class="dim-punto" style="background:${dim.color}"></div>
         <span>${dim.key} ${dim.nombre}</span>
       </div>
       <div class="detalle-titulo">${it.esperado || ''}</div>
@@ -382,35 +389,30 @@ footer { background: var(--blanco); margin-top: 2rem; }
         <div class="ficha-item"><div class="ficha-label">Tipo de anualización</div><div class="ficha-valor">${it.tipo_anualizacion || '—'}</div></div>
         <div class="ficha-item"><div class="ficha-label">Indicador tipo</div><div class="ficha-valor">${it.indicador_tipo || '—'}</div></div>
       </div>
-      <div class="toggle">
-        <button id="btn-valor" class="${estado.modo === 'valor' ? 'activo' : ''}">Valor</button>
-        <button id="btn-pct" class="${estado.modo === 'porcentaje' ? 'activo' : ''}">% de la meta</button>
-      </div>
       <div class="grafica-caja"><canvas id="grafica"></canvas></div>
       <div class="serie-tabla" id="serie-tabla"></div>
       <div class="acciones">
         <a class="btn btn-primario" href="resultados-cualitativo.html?llave=${it.llave}">Ver análisis cualitativo</a>
         <a class="btn btn-secundario" href="indicadores.html">&iquest;Qué es el tipo de anualización?</a>
       </div>`;
-    document.getElementById('btn-valor').addEventListener('click', () => cambiarModo('valor'));
-    document.getElementById('btn-pct').addEventListener('click', () => cambiarModo('porcentaje'));
     pintarGrafica(it);
     pintarSerieTabla(it);
   }
 
-  function cambiarModo(modo) {
-    estado.modo = modo;
-    document.getElementById('btn-valor').classList.toggle('activo', modo === 'valor');
-    document.getElementById('btn-pct').classList.toggle('activo', modo === 'porcentaje');
-    const it = DATOS.items.find(i => i.llave === estado.llave);
-    if (it) pintarGrafica(it);
-  }
-
   function pintarGrafica(it) {
-    const esPct = estado.modo === 'porcentaje';
+    // formateador según el tipo de indicador (proporciones ×100 con %)
+    const fSerie = crearFormateadorItem(it);
     const etiquetas = it.serie.map(p => p.anio);
-    const datosValor = it.serie.map(p => esPct ? p.porcentaje : p.valor);
-    const datosMeta = it.serie.map(p => esPct ? (p.porcentaje !== null ? 100 : null) : p.meta);
+    const datosValor = it.serie.map(p => p.valor);
+    const datosMeta = it.serie.map(p => p.meta);
+    // la gráfica arranca en el primer año con dato o meta, como el Power BI
+    while (etiquetas.length > 1 && datosValor[0] == null && datosMeta[0] == null) {
+      etiquetas.shift(); datosValor.shift(); datosMeta.shift();
+    }
+    // aire del eje solo hacia arriba; piso anclado en 0 salvo negativos reales
+    const valoresTodos = [...datosValor, ...datosMeta].filter(v => v !== null && v !== undefined);
+    const minDato = valoresTodos.length ? Math.min(...valoresTodos) : 0;
+    const maxDato = valoresTodos.length ? Math.max(...valoresTodos) : 0;
 
     // Etiquetas de datos sobre cada punto de la serie principal, como en el
     // Power BI: permiten revisar y sacar pantallazos sin pasar el mouse.
@@ -426,7 +428,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
         puntos.forEach((pt, i) => {
           const v = valores[i];
           if (v === null || v === undefined) return;
-          const texto = fmt(v) + (esPct ? ' %' : '');
+          const texto = fSerie(v);
           const ancho = ctx.measureText(texto).width + 10;
           const arriba = pt.y - 16 > chart.chartArea.top;
           const y = arriba ? pt.y - 16 : pt.y + 18;
@@ -446,7 +448,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
         if (ultimo >= 0 && puntosMeta[ultimo]) {
           ctx.textAlign = 'left';
           ctx.fillStyle = COLOR_META;
-          ctx.fillText(fmt(valoresMeta[ultimo]) + (esPct ? ' %' : ''),
+          ctx.fillText(fSerie(valoresMeta[ultimo]),
                        puntosMeta[ultimo].x + 8, puntosMeta[ultimo].y + 4);
         }
         ctx.restore();
@@ -461,13 +463,14 @@ footer { background: var(--blanco); margin-top: 2rem; }
         labels: etiquetas,
         datasets: [
           {
-            label: esPct ? '% de la meta' : 'Resultado reportado',
+            label: 'Resultado reportado',
             data: datosValor,
             borderColor: COLOR_VALOR, backgroundColor: COLOR_VALOR,
             borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, tension: 0.25,
+            order: 2,  // se dibuja debajo: la meta punteada queda visible encima
           },
           {
-            label: esPct ? 'Meta (100%)' : 'Meta',
+            label: 'Meta',
             data: datosMeta,
             // Meta con leve transparencia y punteado corto: queda como
             // referencia recesiva y el resultado reportado domina la lectura
@@ -475,6 +478,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
             borderWidth: 1.8, borderDash: [2, 5], borderCapStyle: 'round',
             pointRadius: 0, pointHoverRadius: 5,
             tension: 0,
+            order: 1,  // encima del resultado, para verse cuando se superponen
           },
         ],
       },
@@ -487,16 +491,26 @@ footer { background: var(--blanco); margin-top: 2rem; }
           tooltip: {
             callbacks: {
               label: ctx => ' ' + ctx.dataset.label + ': ' +
-                (ctx.parsed.y === null ? 'sin dato' : fmt(ctx.parsed.y) + (esPct ? ' %' : '')),
+                (ctx.parsed.y === null ? 'sin dato' : fSerie(ctx.parsed.y)),
+              // diferencia entre el punto y la meta, como en el Power BI
+              footer: items => {
+                const v = items.find(i => i.datasetIndex === 0);
+                const m = items.find(i => i.datasetIndex === 1);
+                if (!v || !m || v.parsed.y === null || m.parsed.y === null) return '';
+                return 'Diferencia: ' + fSerie(v.parsed.y - m.parsed.y);
+              },
             },
           },
         },
         scales: {
           y: {
-            grace: '12%',
+            // aire solo hacia arriba (para las etiquetas); el piso queda en 0
+            // salvo que existan valores negativos reales (con la regla
+            // Creciente corregida, un resultado puede retroceder en el año)
+            ...(minDato >= 0 ? { min: 0 } : {}),
+            suggestedMax: (maxDato || 1) * 1.15,
             grid: { color: '#efeae3' },
-            ticks: { font: { family: 'Figtree' }, callback: v => fmt(v) },
-            title: { display: esPct, text: '% de la meta' },
+            ticks: { font: { family: 'Figtree' }, callback: v => fSerie(v) },
           },
           x: { grid: { display: false }, ticks: { font: { family: 'Figtree' } } },
         },
@@ -505,14 +519,15 @@ footer { background: var(--blanco); margin-top: 2rem; }
   }
 
   function pintarSerieTabla(it) {
+    const f = crearFormateadorItem(it);
     const filas = it.serie.filter(p => p.valor !== null || p.meta !== null);
     document.getElementById('serie-tabla').innerHTML = `
       <table>
         <thead><tr><th>Año</th><th>Valor</th><th>Meta</th><th>Diferencia</th><th>% meta</th></tr></thead>
         <tbody>${filas.map(p => `
           <tr>
-            <td>${p.anio}</td><td>${fmt(p.valor)}</td><td>${fmt(p.meta)}</td>
-            <td>${fmt(p.diff)}</td><td>${p.porcentaje === null ? '—' : fmt(p.porcentaje, 1) + ' %'}</td>
+            <td>${p.anio}</td><td>${f(p.valor)}</td><td>${f(p.meta)}</td>
+            <td>${f(p.diff)}</td><td>${p.porcentaje === null ? '—' : fmt(p.porcentaje, 1) + ' %'}</td>
           </tr>`).join('')}
         </tbody>
       </table>`;

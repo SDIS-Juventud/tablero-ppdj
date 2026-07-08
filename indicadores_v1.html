@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tipos de anualización - Seguimiento PPDJ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Paleta del tablero original (diseño de Carolina): navy + rosa */
+  --navy: #1e2a5c;
+  --rosa: #ee3a5e;
+  --gris-oscuro: #23252b;
+  --gris: #6b7280;
+  --gris-claro: #eef1f7;
+  --blanco: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--blanco);
+  color: var(--gris-oscuro);
+}
+/* Encabezado del tablero original: píldora navy con sombra rosada y home */
+.encabezado {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem 0.8rem;
+  display: flex; align-items: center; gap: 1.4rem;
+}
+.titulo-pill {
+  flex: 1;
+  background: var(--navy);
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--rosa);
+  padding: 0.7rem 1.4rem;
+}
+.btn-icono { display: inline-block; transition: transform 0.15s ease; }
+.btn-icono:hover { transform: translateY(-2px); }
+.btn-icono img { height: 48px; display: block; }
+
+main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+.intro { color: var(--gris); line-height: 1.6; margin-bottom: 1.8rem; max-width: 680px; }
+
+.tipo {
+  background: var(--blanco); border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(30,42,92,0.10);
+  padding: 1.3rem 1.5rem; margin-bottom: 1rem;
+}
+.tipo h2 {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  font-size: 1.05rem; margin-bottom: 0.5rem;
+}
+.tipo p { line-height: 1.6; font-size: 0.95rem; }
+.tipo .regla {
+  margin-top: 0.7rem;
+  background: var(--gris-claro); border-radius: 8px;
+  padding: 0.6rem 0.9rem; font-size: 0.87rem; color: var(--gris-oscuro);
+}
+.tipo .regla strong {
+  font-family: 'Antonio', sans-serif; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 0.08em; color: var(--gris);
+  display: block; margin-bottom: 0.2rem;
+}
+.fuente { color: var(--gris); font-size: 0.8rem; margin-top: 1.8rem; line-height: 1.5; }
+
+footer {
+  max-width: 860px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem 1.5rem;
+  display: flex; justify-content: flex-end;
+}
+.footer-logos { height: 48px; width: auto; }
+</style>
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="titulo-pill">Tipos de anualización</div>
+  <a class="btn-icono" href="javascript:history.back()" title="Volver"><img src="imagenes/disenio/Devolverse.png" alt="Volver"></a>
+  <a class="btn-icono" href="index.html" title="Volver al inicio"><img src="imagenes/disenio/Home.png" alt="Inicio"></a>
+</header>
+
+<main>
+  <p class="intro">
+    Cada indicador del Plan de Acción Indicativo declara un tipo de anualización,
+    que define cómo se calcula el valor anual a partir de los reportes
+    trimestrales. Estas son las cuatro categorías y la regla operativa con la que
+    este tablero calcula cada una.
+  </p>
+
+  <div class="tipo">
+    <h2>Suma</h2>
+    <p>La meta del año se cumple acumulando lo ejecutado en los cuatro trimestres:
+    cada trimestre aporta una parte del total anual.</p>
+    <div class="regla"><strong>Regla de cálculo</strong>
+    Valor anual = suma de los cuatro trimestres del año.</div>
+  </div>
+
+  <div class="tipo">
+    <h2>Constante</h2>
+    <p>La meta se mantiene en el mismo nivel a lo largo del tiempo; el reporte de
+    cada trimestre ya refleja el estado del indicador en ese momento.</p>
+    <div class="regla"><strong>Regla de cálculo</strong>
+    Valor anual = dato del cuarto trimestre (Q4).</div>
+  </div>
+
+  <div class="tipo">
+    <h2>Creciente</h2>
+    <p>El indicador se reporta de forma acumulada desde el inicio de la política:
+    para conocer el avance de un año hay que descontar lo acumulado hasta el año
+    anterior.</p>
+    <div class="regla"><strong>Regla de cálculo</strong>
+    Valor anual = dato del Q4 del año menos el dato del Q4 del año anterior.</div>
+  </div>
+
+  <div class="tipo">
+    <h2>Decreciente</h2>
+    <p>La meta busca reducir el valor del indicador en el tiempo (por ejemplo,
+    disminuir una tasa). La regla operativa de anualización para esta categoría
+    está en definición por el equipo técnico.</p>
+    <div class="regla"><strong>Regla de cálculo aplicada en este tablero</strong>
+    Valor anual = dato del cuarto trimestre (Q4), igual que Constante, mientras
+    el equipo define la regla propia de la categoría.</div>
+  </div>
+
+  <p class="fuente">
+    Fuente: Guía para la formulación e implementación de las políticas públicas
+    del Distrito (Secretaría Distrital de Planeación, 2018) y reglas de
+    validación del equipo técnico de la PPDJ.
+  </p>
+</main>
+
+<footer>
+  <img class="footer-logos" src="imagenes/disenio/Logos.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá - Secretaría Distrital de Integración Social">
+</footer>
+
+</body>
+</html>

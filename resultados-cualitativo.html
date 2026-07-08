@@ -9,11 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --crema: #f5efd2;
-  --gris-oscuro: #2f2b28;
-  --gris: #83766c;
-  --gris-claro: #f4f2ee;
-  --verde-oscuro: #2F3E3C;
+  /* Paleta del tablero original (diseño de Carolina): navy + rosa */
+  --navy: #1e2a5c;
+  --rosa: #ee3a5e;
+  --gris-oscuro: #23252b;
+  --gris: #6b7280;
+  --gris-claro: #eef1f7;
   --blanco: #ffffff;
   /* Colores de los informes de Carolina (navy #0C1250 / naranja #F28E1C),
      ajustados al paso más cercano que pasa la validación de accesibilidad */
@@ -23,35 +24,37 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--gris-claro);
+  background: var(--blanco);
   color: var(--gris-oscuro);
 }
-.barra {
-  background: var(--verde-oscuro);
-  padding: 1.1rem 1.5rem;
-  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+/* Encabezado del tablero original: píldora navy con sombra rosada y home */
+.encabezado {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem 0.8rem;
+  display: flex; align-items: center; gap: 1.4rem;
 }
-.btn-home {
-  color: var(--crema); text-decoration: none;
-  font-family: 'Antonio', sans-serif; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem;
-  border: 1.5px solid rgba(245,239,210,0.5); border-radius: 8px;
-  padding: 0.4rem 0.9rem; transition: background 0.15s ease;
+.titulo-pill {
+  flex: 1;
+  background: var(--navy);
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--rosa);
+  padding: 0.7rem 1.4rem;
 }
-.btn-home:hover { background: rgba(245,239,210,0.12); }
-.barra-titulo {
-  font-family: 'Anton', sans-serif; text-transform: uppercase;
-  color: var(--crema); font-size: 1.35rem; letter-spacing: 0.03em;
-}
+.btn-icono { display: inline-block; transition: transform 0.15s ease; }
+.btn-icono:hover { transform: translateY(-2px); }
+.btn-icono img { height: 48px; display: block; }
 
 main { max-width: 960px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
 .card {
   background: var(--blanco); border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 1.3rem;
+  box-shadow: 0 2px 10px rgba(30,42,92,0.10); padding: 1.3rem;
   margin-bottom: 1.2rem;
 }
 .dim-etiqueta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
-.dim-punto { width: 0.85rem; height: 0.85rem; border-radius: 50%; flex-shrink: 0; }
 .dim-etiqueta span {
   font-family: 'Antonio', sans-serif; font-weight: 700;
   text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em; color: var(--gris);
@@ -80,17 +83,9 @@ select {
   background: var(--blanco); padding: 0.32rem 0.7rem; cursor: pointer;
   color: var(--gris); font-family: inherit;
 }
-.chip.activo { background: var(--verde-oscuro); border-color: var(--verde-oscuro); color: var(--crema); }
+.chip.activo { background: var(--navy); border-color: var(--navy); color: var(--blanco); }
 
-.toggle { display: inline-flex; border: 1.5px solid #ddd6cf; border-radius: 8px; overflow: hidden; margin: 1rem 0 0.6rem; }
-.toggle button {
-  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; font-size: 0.75rem;
-  border: none; background: var(--blanco); color: var(--gris);
-  padding: 0.45rem 1rem; cursor: pointer;
-}
-.toggle button.activo { background: var(--verde-oscuro); color: var(--crema); }
-.grafica-caja { position: relative; height: 260px; }
+.grafica-caja { position: relative; height: 260px; margin-top: 1rem; }
 
 .registro { border-bottom: 1px solid var(--gris-claro); padding: 1rem 0; }
 .registro:last-child { border-bottom: none; }
@@ -102,17 +97,22 @@ select {
 .detalle-vacio { color: var(--gris); padding: 2rem 1rem; text-align: center; }
 .conteo { color: var(--gris); font-size: 0.8rem; margin-bottom: 0.4rem; }
 
-footer { background: var(--blanco); margin-top: 2rem; }
-.footer-marca { display: block; width: 100%; height: auto; }
+footer {
+  max-width: 960px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem 1.5rem;
+  display: flex; justify-content: flex-end;
+}
+.footer-logos { height: 48px; width: auto; }
 </style>
 </head>
 <body>
 
-<div class="barra">
-  <a class="btn-home" href="index.html">&#8592; Inicio</a>
-  <a class="btn-home" id="btn-volver" href="resultados.html">&#8592; Volver a resultados</a>
-  <div class="barra-titulo">Análisis cualitativo</div>
-</div>
+<header class="encabezado">
+  <div class="titulo-pill">Análisis cualitativo</div>
+  <a class="btn-icono" id="btn-volver" href="resultados.html" title="Volver a resultados"><img src="imagenes/disenio/Devolverse.png" alt="Volver a resultados"></a>
+  <a class="btn-icono" href="index.html" title="Volver al inicio"><img src="imagenes/disenio/Home.png" alt="Inicio"></a>
+</header>
 
 <main>
   <div class="card" id="panel-item">
@@ -137,7 +137,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
 </main>
 
 <footer>
-  <img class="footer-marca" src="imagenes/Distrito joven.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá">
+  <img class="footer-logos" src="imagenes/disenio/Logos.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá - Secretaría Distrital de Integración Social">
 </footer>
 
 <script src="data/resultados.js"></script>
@@ -170,7 +170,6 @@ footer { background: var(--blanco); margin-top: 2rem; }
   const dim = CUANTI.dimensiones.find(d => d.key === item.key_dimension);
   document.getElementById('panel-item').innerHTML = `
     <div class="dim-etiqueta">
-      <div class="dim-punto" style="background:${dim.color}"></div>
       <span>${dim.key} ${dim.nombre}</span>
     </div>
     <div class="detalle-titulo">${item.esperado || ''}</div>
@@ -180,10 +179,6 @@ footer { background: var(--blanco); margin-top: 2rem; }
       <div class="ficha-item"><div class="ficha-label">Tipo de anualización</div><div class="ficha-valor">${item.tipo_anualizacion || '—'}</div></div>
       <div class="ficha-item"><div class="ficha-label">Indicador tipo</div><div class="ficha-valor">${item.indicador_tipo || '—'}</div></div>
     </div>
-    <div class="toggle">
-      <button id="btn-valor" class="activo">Valor</button>
-      <button id="btn-pct">% de la meta</button>
-    </div>
     <div class="grafica-caja"><canvas id="grafica"></canvas></div>`;
 
   // Gráfica igual a la de resultados.html: valor anual vs meta anual (el
@@ -192,13 +187,31 @@ footer { background: var(--blanco); margin-top: 2rem; }
   const COLOR_META = getComputedStyle(document.documentElement).getPropertyValue('--meta').trim();
   const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
     : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
+  // los indicadores tipo Porcentaje guardados como proporción (0-1) se
+  // muestran ×100 con %; los que ya vienen 0-100 solo reciben el símbolo
+  const fItem = (() => {
+    if (item.indicador_tipo !== 'Porcentaje') return v => fmt(v);
+    const vals = item.serie.flatMap(p => [p.valor, p.meta, p.acumulado, p.meta_acum])
+      .filter(v => v !== null && v !== undefined).map(Math.abs);
+    const max = vals.length ? Math.max(...vals) : 0;
+    if (max <= 1.5) return v => (v === null || v === undefined) ? '—' : fmt(v * 100, 1) + ' %';
+    if (max <= 150) return v => (v === null || v === undefined) ? '—' : fmt(v, 1) + ' %';
+    return v => fmt(v);
+  })();
   let grafica = null;
-  let modo = 'valor';
 
   function pintarGrafica() {
-    const esPct = modo === 'porcentaje';
-    const datosValor = item.serie.map(p => esPct ? p.porcentaje : p.valor);
-    const datosMeta = item.serie.map(p => esPct ? (p.porcentaje !== null ? 100 : null) : p.meta);
+    const fSerie = fItem;
+    const etiquetas = item.serie.map(p => p.anio);
+    const datosValor = item.serie.map(p => p.valor);
+    const datosMeta = item.serie.map(p => p.meta);
+    // la gráfica arranca en el primer año con dato o meta, como el Power BI
+    while (etiquetas.length > 1 && datosValor[0] == null && datosMeta[0] == null) {
+      etiquetas.shift(); datosValor.shift(); datosMeta.shift();
+    }
+    const valoresTodos = [...datosValor, ...datosMeta].filter(v => v !== null && v !== undefined);
+    const minDato = valoresTodos.length ? Math.min(...valoresTodos) : 0;
+    const maxDato = valoresTodos.length ? Math.max(...valoresTodos) : 0;
     const etiquetasDatos = {
       id: 'etiquetasDatos',
       afterDatasetsDraw(chart) {
@@ -211,7 +224,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
         puntos.forEach((pt, i) => {
           const v = valores[i];
           if (v === null || v === undefined) return;
-          const texto = fmt(v) + (esPct ? ' %' : '');
+          const texto = fSerie(v);
           const ancho = ctx.measureText(texto).width + 10;
           const arriba = pt.y - 16 > chart.chartArea.top;
           const y = arriba ? pt.y - 16 : pt.y + 18;
@@ -231,7 +244,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
         if (ultimo >= 0 && puntosMeta[ultimo]) {
           ctx.textAlign = 'left';
           ctx.fillStyle = COLOR_META;
-          ctx.fillText(fmt(valoresMeta[ultimo]) + (esPct ? ' %' : ''),
+          ctx.fillText(fSerie(valoresMeta[ultimo]),
                        puntosMeta[ultimo].x + 8, puntosMeta[ultimo].y + 4);
         }
         ctx.restore();
@@ -242,15 +255,17 @@ footer { background: var(--blanco); margin-top: 2rem; }
       type: 'line',
       plugins: [etiquetasDatos],
       data: {
-        labels: item.serie.map(p => p.anio),
+        labels: etiquetas,
         datasets: [
-          { label: esPct ? '% de la meta' : 'Resultado reportado', data: datosValor,
+          { label: 'Resultado reportado', data: datosValor,
             borderColor: COLOR_VALOR, backgroundColor: COLOR_VALOR,
-            borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, tension: 0.25 },
-          { label: esPct ? 'Meta (100%)' : 'Meta', data: datosMeta,
+            borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, tension: 0.25,
+            order: 2 },
+          { label: 'Meta', data: datosMeta,
             borderColor: COLOR_META + 'cc', backgroundColor: COLOR_META,
             borderWidth: 1.8, borderDash: [2, 5], borderCapStyle: 'round',
-            pointRadius: 0, pointHoverRadius: 5, tension: 0 },
+            pointRadius: 0, pointHoverRadius: 5, tension: 0,
+            order: 1 },
         ],
       },
       options: {
@@ -259,29 +274,25 @@ footer { background: var(--blanco); margin-top: 2rem; }
         interaction: { intersect: false, mode: 'index' },
         plugins: {
           legend: { position: 'top', labels: { usePointStyle: true, font: { family: 'Figtree' } } },
-          tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' +
-            (ctx.parsed.y === null ? 'sin dato' : fmt(ctx.parsed.y) + (esPct ? ' %' : '')) } },
+          tooltip: { callbacks: {
+            label: ctx => ' ' + ctx.dataset.label + ': ' +
+              (ctx.parsed.y === null ? 'sin dato' : fSerie(ctx.parsed.y)),
+            footer: items => {
+              const v = items.find(i => i.datasetIndex === 0);
+              const m = items.find(i => i.datasetIndex === 1);
+              if (!v || !m || v.parsed.y === null || m.parsed.y === null) return '';
+              return 'Diferencia: ' + fSerie(v.parsed.y - m.parsed.y);
+            },
+          } },
         },
         scales: {
-          y: { grace: '12%', grid: { color: '#efeae3' }, ticks: { font: { family: 'Figtree' }, callback: v => fmt(v) } },
+          y: { ...(minDato >= 0 ? { min: 0 } : {}), suggestedMax: (maxDato || 1) * 1.15, grid: { color: '#efeae3' }, ticks: { font: { family: 'Figtree' }, callback: v => fSerie(v) } },
           x: { grid: { display: false }, ticks: { font: { family: 'Figtree' } } },
         },
       },
     });
   }
 
-  document.getElementById('btn-valor').addEventListener('click', () => {
-    modo = 'valor';
-    document.getElementById('btn-valor').classList.add('activo');
-    document.getElementById('btn-pct').classList.remove('activo');
-    pintarGrafica();
-  });
-  document.getElementById('btn-pct').addEventListener('click', () => {
-    modo = 'porcentaje';
-    document.getElementById('btn-pct').classList.add('activo');
-    document.getElementById('btn-valor').classList.remove('activo');
-    pintarGrafica();
-  });
   pintarGrafica();
 
   if (!registros.length) {

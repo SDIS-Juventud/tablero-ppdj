@@ -32,6 +32,9 @@ LITERALES_SIN_CONTENIDO = {'N.A.', 'N/A', 'No aplica', 'N.A', 'NA'}
 
 def construir(ruta_input=RUTA_INPUT, columna_numero='Producto No.', prefijo='P'):
     bd = pd.read_excel(ruta_input, sheet_name='Cuali', engine='openpyxl')
+    # Si el insumo trae estado (formato 2025 de resultados), solo los vigentes
+    if 'Estado del Indicador' in bd.columns:
+        bd = bd[bd['Estado del Indicador'] == 'Vigente']
     columnas_datos = [c for c in bd.columns if isinstance(c, str) and '__Q' in c]
 
     por_llave = {}

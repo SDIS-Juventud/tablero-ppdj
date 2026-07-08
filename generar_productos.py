@@ -93,6 +93,31 @@ def construir():
         elif corte and corte != 'Q4':
             anio_ultimo = int(anio_ultimo) - 1
 
+        # Meta acumulada COHERENTE con el tipo de anualización, calculada a
+        # partir de las metas anuales. No se usa la columna
+        # Meta_programada_acum del insumo porque viene con vacíos y ceros
+        # inconsistentes (ej. 1.1.3 con 0 en 2019 pese a meta anual de 2.500;
+        # 20 de 37 productos Constante con el mismo problema).
+        # - Suma: suma corrida de las metas anuales.
+        # - Constante / Creciente / Decreciente: la meta anual, que ya
+        #   expresa el nivel objetivo del año.
+        metas_anuales = {a: a_numero(fila.get(f'Meta_programada_{a}')) for a in ANIOS}
+        metas_acum = {}
+        # la acumulación de metas tipo Suma arranca desde 2018 (primer año
+        # con columna de meta en el insumo), aunque la serie muestre 2019+
+        meta_2018 = a_numero(fila.get('Meta_programada_2018'))
+        suma_corrida = meta_2018 if meta_2018 is not None else 0.0
+        hay_meta = meta_2018 is not None
+        for a in ANIOS:
+            m = metas_anuales[a]
+            if str(tipo).strip() == 'Suma':
+                if m is not None:
+                    suma_corrida += m
+                    hay_meta = True
+                metas_acum[a] = suma_corrida if hay_meta else None
+            else:
+                metas_acum[a] = m
+
         serie = []
         for anio in ANIOS:
             q4_anterior = a_numero(trimestres.get(anio - 1, {}).get(4))
@@ -101,15 +126,14 @@ def construir():
                 tipo, q4_anio_anterior=q4_anterior)
             if valor is None and anio_ultimo is not None and anio_inicio <= anio <= int(anio_ultimo):
                 valor = 0.0
-            meta = a_numero(fila.get(f'Meta_programada_{anio}'))
+            meta = metas_anuales[anio]
             diff = redondear(valor - meta) if valor is not None and meta is not None else None
             porcentaje = (redondear(valor / meta * 100, 1)
                           if valor is not None and meta not in (None, 0) else None)
-            # Acumulado y meta acumulada: vienen tal cual del insumo (el pbix
-            # los grafica directo; el R los descartaba). La gráfica del
-            # tablero usa estas dos series para coincidir con el Power BI.
+            # El acumulado reportado sí viene tal cual del insumo (columna
+            # Acumulado, que el pbix grafica directo y el R descartaba)
             acumulado = a_numero(fila.get(f'Acumulado {anio}'))
-            meta_acum = a_numero(fila.get(f'Meta_programada_acum_{anio}'))
+            meta_acum = metas_acum[anio]
             if acumulado is None and anio_ultimo is not None and anio_inicio <= anio <= int(anio_ultimo):
                 acumulado = 0.0
             porcentaje_acum = (redondear(acumulado / meta_acum * 100, 1)

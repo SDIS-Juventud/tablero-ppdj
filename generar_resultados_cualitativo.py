@@ -15,7 +15,8 @@ import os
 from comun_pipeline import DIR_INPUTS
 from generar_productos_cualitativo import construir
 
-RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2024_excel.xlsx')
+# Insumo del ciclo 2025 (generado por convertir_formato_resultados.py)
+RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2025_excel.xlsx')
 RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'resultados-cualitativo.json')
 
 

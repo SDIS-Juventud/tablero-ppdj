@@ -24,14 +24,26 @@ from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
                             parsear_fecha_mixta)
 from generar_productos import a_fecha_iso, a_numero, redondear
 
-RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2024_excel.xlsx')
+# Insumo del ciclo 2025 (generado por convertir_formato_resultados.py a
+# partir del formato crudo de la SDP; trae los datos de 2025)
+RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2025_excel.xlsx')
 RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'resultados.json')
 
-ANIOS = list(range(2018, 2026))  # 2025 solo tiene meta
+# Los resultados como tal arrancan en 2020 (año de implementación de la
+# política — aclaración de Carolina, 2026-07-08, igual que el Power BI).
+# El insumo trae trimestres de 2018-2019 pero no entran a la vista;
+# 2025 solo tiene meta.
+ANIOS = list(range(2020, 2026))
 
 
 def construir():
     bd = pd.read_excel(RUTA_INPUT, sheet_name='Cuanti', engine='openpyxl')
+    # Solo los resultados vigentes entran al tablero. En el ciclo 2025 salió
+    # el 2.7 (No Vigente) y entró el 2.8; OJO: eso corrió la numeración un
+    # puesto desde el antiguo R12 — "Resultado No." no es un identificador
+    # estable entre ciclos (comparar por el código del texto, ej. "3.1").
+    if 'Estado del Indicador' in bd.columns:
+        bd = bd[bd['Estado del Indicador'] == 'Vigente']
     columnas_trimestrales = [c for c in bd.columns if extraer_anio_y_trimestre(c)[0] is not None]
 
     objetivos = cargar_objetivos(pd)
@@ -53,11 +65,10 @@ def construir():
             anio, tri = extraer_anio_y_trimestre(col)
             trimestres.setdefault(anio, {})[tri] = fila[col]
 
-        # Ventana de reporte: igual que en generar_productos.py — años sin
-        # reporte se muestran en 0 solo entre el inicio del resultado y su
-        # último año cerrado; fuera de esa ventana queda null (sin dato).
-        fecha_ini = parsear_fecha_mixta(fila['Fecha de Inicio'])
-        anio_inicio = fecha_ini.year if fecha_ini else ANIOS[0]
+        # Ventana de reporte: años sin reporte se muestran en 0 desde 2020
+        # (inicio de la implementación, para TODOS los resultados) hasta su
+        # último año cerrado; después queda null (sin dato).
+        anio_inicio = 2020
         anio_ultimo = a_numero(fila.get('Año del último reporte'))
         corte = str(fila.get('Corte del último reporte') or '').strip()
         if anio_ultimo is None:
@@ -69,10 +80,15 @@ def construir():
 
         serie = []
         for anio in ANIOS:
-            q4_anterior = a_numero(trimestres.get(anio - 1, {}).get(4))
+            # Los resultados son indicadores de NIVEL (tasas, porcentajes):
+            # el valor del año es el último reporte (Q4), sin descontar el
+            # año anterior. La corrección de "Creciente" (Q4 menos Q4
+            # anterior) aplica solo a productos, que son conteos reportados
+            # de forma acumulada. Diferenciar una tasa producía valores
+            # negativos sin sentido (corrección de Carolina, 2026-07-08).
             valor = anualizar_tablero(
                 {t: a_numero(v) for t, v in trimestres.get(anio, {}).items()},
-                tipo, q4_anio_anterior=q4_anterior)
+                tipo)
             if valor is None and anio_ultimo is not None and anio_inicio <= anio <= int(anio_ultimo):
                 valor = 0.0
             meta = a_numero(fila.get(f'Meta_{anio}'))

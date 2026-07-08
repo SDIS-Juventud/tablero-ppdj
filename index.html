@@ -5,167 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seguimiento PPDJ 2019-2030</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap');
 
+/* Portada que emula el diseño original del tablero (mockup de Carolina):
+   tarjetas navy con sombra rosada desplazada, píldoras blancas con los
+   conteos y los íconos de dimensión del pbix. */
 :root {
-  --crema: #f5efd2;
-  --gris-oscuro: #2f2b28;
-  --gris: #83766c;
-  --gris-claro: #f4f2ee;
-  --verde-oscuro: #2F3E3C;
-  --blanco: #ffffff;
+  --navy: #1e2a5c;
+  --rosa: #ee3a5e;
+  --azul: #3143d0;
+  --tinta: #23252b;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--gris-claro);
-  color: var(--gris-oscuro);
+  background: #ffffff;
+  color: var(--tinta);
 }
 
-.hero {
-  background: var(--verde-oscuro);
-  padding: 3.5rem 1.5rem 3rem;
-  text-align: center;
-}
-.hero-title {
-  font-family: 'Anton', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  text-transform: uppercase;
-  color: var(--crema);
-  letter-spacing: 0.02em;
-  line-height: 1.15;
-  max-width: 900px;
+main {
+  max-width: 1240px;
   margin: 0 auto;
+  padding: 2.2rem 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(300px, 420px) 1fr;
+  gap: 3rem;
+  align-items: start;
 }
-.hero-sub {
-  font-family: 'Antonio', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #b9c4c0;
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
-}
+@media (max-width: 980px) { main { grid-template-columns: 1fr; gap: 2rem; } }
 
-main { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-.intro {
-  color: var(--gris);
-  font-size: 1.02rem;
-  max-width: 720px;
-  margin-bottom: 2.2rem;
-  line-height: 1.55;
-}
+/* ---- columna izquierda ---- */
+.logos { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.logos img { height: 52px; width: auto; }
 
-.dimension {
-  background: var(--blanco);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 1.1rem 1.4rem;
-  margin-bottom: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  flex-wrap: wrap;
+.tarjeta-titulo {
+  position: relative;
+  background: var(--navy);
+  border-radius: 26px;
+  box-shadow: 8px 8px 0 var(--rosa);
+  padding: 1.6rem 1.8rem 1.5rem;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.35;
+  margin-bottom: 1.6rem;
 }
-.dim-num {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.35rem;
-  color: var(--blanco);
-  width: 2.6rem; height: 2.6rem;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.dim-info { flex: 1; min-width: 220px; }
-.dim-nombre {
-  font-family: 'Antonio', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
-}
-.dim-objetivo {
-  color: var(--gris);
-  font-size: 0.86rem;
-  margin-top: 0.25rem;
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.dim-links { display: flex; gap: 0.6rem; flex-shrink: 0; }
-.pill {
+.tarjeta-titulo .resaltado {
   display: inline-block;
-  text-decoration: none;
-  color: var(--gris-oscuro);
-  background: var(--gris-claro);
-  border: 1.5px solid transparent;
-  border-radius: 8px;
-  padding: 0.5rem 0.9rem;
-  text-align: center;
-  min-width: 105px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #ffffff;
+  color: var(--navy);
+  border-radius: 10px;
+  padding: 0 0.5rem;
+  margin: 0.15rem 0;
 }
-.pill:hover { transform: translateY(-2px); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-.pill .cifra {
-  font-family: 'Anton', sans-serif;
-  font-size: 1.3rem;
-  display: block;
-}
-.pill .etiqueta {
-  font-family: 'Antonio', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  color: var(--gris);
+.tarjeta-titulo .anios { color: var(--rosa); font-size: 0.8em; margin-top: 0.2rem; }
+.estrella {
+  position: absolute;
+  top: -26px; right: -18px;
+  width: 58px; height: 58px;
 }
 
-.nota-fuente {
-  color: var(--gris);
-  font-size: 0.8rem;
-  margin-top: 2rem;
-  line-height: 1.5;
+.pill-sdis {
+  display: inline-block;
+  background: var(--navy);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 14px;
+  padding: 0.55rem 1.1rem;
+  font-size: 1.02rem;
+  margin-bottom: 2rem;
 }
-footer { background: var(--blanco); margin-top: 2rem; }
-.footer-marca { display: block; width: 100%; height: auto; }
+.explora { color: var(--rosa); font-weight: 800; font-size: 1.25rem; margin-bottom: 0.6rem; }
+.col-izq p { line-height: 1.55; max-width: 40ch; }
+
+/* ---- columna derecha ---- */
+.instruccion { text-align: right; font-weight: 700; margin-bottom: 1rem; }
+
+.fila, .fila-encabezado {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+.dim-icono { width: 44px; height: 44px; object-fit: contain; justify-self: center; }
+
+.barra-dim, .encabezado-interno {
+  display: grid;
+  grid-template-columns: 1fr 92px 92px;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+}
+.barra-dim {
+  background: var(--navy);
+  border-radius: 22px;
+  box-shadow: 5px 5px 0 var(--rosa);
+}
+.dim-etiqueta { color: #ffffff; font-weight: 800; font-size: 1.02rem; }
+.dim-etiqueta .num { color: var(--rosa); font-size: 1.15em; margin-right: 0.35rem; }
+
+.conteo {
+  display: block;
+  background: #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.15rem;
+  padding: 0.32rem 0;
+  transition: transform 0.15s ease;
+}
+.conteo:hover { transform: translateY(-2px); }
+.conteo.productos { color: var(--rosa); }
+.conteo.resultados { color: var(--azul); }
+
+.fila-encabezado { margin-bottom: 0.5rem; }
+.encabezado-interno span { font-weight: 800; font-size: 1.05rem; text-align: center; }
+.encabezado-interno .h-dim { text-align: left; color: var(--rosa); }
+.encabezado-interno .h-prod { color: var(--rosa); }
+.encabezado-interno .h-res { color: var(--azul); }
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <div class="hero-title">Seguimiento Política Pública Distrital de Juventud 2019-2030</div>
-  <div class="hero-sub">Productos y resultados del plan de acción indicativo</div>
-</div>
-
 <main>
-  <p class="intro">
-    Seguimiento al cumplimiento del Plan de Acción Indicativo de la PPDJ: metas
-    programadas frente a lo ejecutado, por cada una de las 7 dimensiones de la
-    política. Selecciona los productos o resultados de una dimensión para ver el
-    detalle por indicador.
-  </p>
+  <div class="col-izq">
+    <div class="logos">
+      <img src="imagenes/disenio/Logos.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá - Secretaría Distrital de Integración Social">
+    </div>
 
-  <div id="dimensiones"></div>
+    <div class="tarjeta-titulo">
+      <img class="estrella" src="imagenes/disenio/Estrella.png" alt="">
+      <div>Seguimiento</div>
+      <div><span class="resaltado">Política Pública</span></div>
+      <div>Distrital de Juventud</div>
+      <div class="anios">2019 - 2030</div>
+    </div>
 
-  <p class="nota-fuente">
-    Fuente: formatos de seguimiento a productos y resultados de la PPDJ (SDP - SDIS,
-    Subdirección para la Juventud). Los conteos corresponden a los productos y
-    resultados vigentes en el último corte cargado.
-  </p>
+    <div class="pill-sdis">Secretaría Distrital de Integración Social</div>
+
+    <h2 class="explora">Explora los avances de la PPDJ en Bogotá</h2>
+    <p>Haz clic en los productos o resultados de las 7 dimensiones a la derecha
+    para conocer sus productos, metas y progreso.</p>
+  </div>
+
+  <div class="col-der">
+    <p class="instruccion">De clic en el número para ver los datos</p>
+    <div class="fila-encabezado">
+      <span></span>
+      <div class="encabezado-interno">
+        <span class="h-dim">Dimensiones</span>
+        <span class="h-prod">Productos</span>
+        <span class="h-res">Resultados</span>
+      </div>
+    </div>
+    <div id="dimensiones"></div>
+  </div>
+
 </main>
-
-<footer>
-  <img class="footer-marca" src="imagenes/Distrito joven.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá">
-</footer>
 
 <script src="data/productos.js"></script>
 <script src="data/resultados.js"></script>
 <script>
-// Portada: pinta las 7 dimensiones con el conteo de productos y resultados.
-// Los datos llegan por <script src> (data/*.js), que funciona también al
-// abrir el archivo directamente (file://), a diferencia de fetch().
+// Portada: pinta las 7 dimensiones con su ícono y el conteo de productos y
+// resultados. Los datos llegan por <script src> (data/*.js), que funciona
+// también al abrir el archivo directamente (file://).
 (function () {
   const prod = window.DATOS_PRODUCTOS;
   const res = window.DATOS_RESULTADOS;
@@ -184,22 +189,15 @@ footer { background: var(--blanco); margin-top: 2rem; }
   prod.dimensiones.forEach(d => {
     const n = d.key.replace('.', '');
     const fila = document.createElement('div');
-    fila.className = 'dimension';
+    fila.className = 'fila';
     fila.innerHTML = `
-      <div class="dim-num" style="background:${d.color}">${n}</div>
-      <div class="dim-info">
-        <div class="dim-nombre">${n}. ${d.nombre}</div>
-        <div class="dim-objetivo">${d.objetivo || ''}</div>
-      </div>
-      <div class="dim-links">
-        <a class="pill" href="productos.html?dim=${n}" style="border-color:${d.color}">
-          <span class="cifra">${conteo[d.key].productos}</span>
-          <span class="etiqueta">Productos</span>
-        </a>
-        <a class="pill" href="resultados.html?dim=${n}" style="border-color:${d.color}">
-          <span class="cifra">${conteo[d.key].resultados}</span>
-          <span class="etiqueta">Resultados</span>
-        </a>
+      <img class="dim-icono" src="imagenes/disenio/DIM%20${n}.svg" alt="">
+      <div class="barra-dim">
+        <div class="dim-etiqueta"><span class="num">${n}.</span>${d.nombre}</div>
+        <a class="conteo productos" href="productos.html?dim=${n}"
+           title="Ver los productos de ${d.nombre}">${conteo[d.key].productos}</a>
+        <a class="conteo resultados" href="resultados.html?dim=${n}"
+           title="Ver los resultados de ${d.nombre}">${conteo[d.key].resultados}</a>
       </div>`;
     cont.appendChild(fila);
   });
