@@ -1,0 +1,125 @@
+# -*- coding: utf-8 -*-
+"""
+Genera data/resultados.json para el tablero HTML.
+
+Igual que generar_productos.py pero para la vista de Resultados:
+- Datos trimestrales 2018-2024; metas 2020-2025 (el año 2025 entra a la
+  serie solo con meta, sin valor, para que la línea de meta continúe).
+- Regla "Creciente" corregida (Q4 menos Q4 del año anterior): 17 casos.
+- "Decreciente" (10 casos) se mantiene como Q4, igual que Constante,
+  porque no hay regla documentada — pendiente de definición del equipo.
+
+Ejecución: python generar_resultados.py  (desde tablero-ppdj/)
+"""
+
+import json
+import os
+from datetime import date
+
+import pandas as pd
+
+from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
+                            cargar_objetivos, extraer_anio_y_trimestre,
+                            normalizar_texto, parsear_fecha_mixta)
+from generar_productos import a_fecha_iso, a_numero, redondear
+
+RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2024_excel.xlsx')
+RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'resultados.json')
+
+ANIOS = list(range(2018, 2026))  # 2025 solo tiene meta
+
+
+def construir():
+    bd = pd.read_excel(RUTA_INPUT, sheet_name='Cuanti', engine='openpyxl')
+    columnas_trimestrales = [c for c in bd.columns if extraer_anio_y_trimestre(c)[0] is not None]
+
+    objetivos = cargar_objetivos(pd)
+    objetivos_por_key = {f'{int(k)}.': normalizar_texto(o)
+                         for k, o in zip(objetivos['Key'], objetivos['Objetivo'])}
+
+    items = []
+    sectores = set()
+    for _, fila in bd.iterrows():
+        numero = int(fila['Resultado No.'])
+        key_dim = f"{int(fila['Key'])}."
+        tipo = fila['Tipo de anualización']
+        sector = normalizar_texto(fila['Sector Líder'])
+        if sector:
+            sectores.add(sector)
+
+        trimestres = {}
+        for col in columnas_trimestrales:
+            anio, tri = extraer_anio_y_trimestre(col)
+            trimestres.setdefault(anio, {})[tri] = fila[col]
+
+        # Ventana de reporte: igual que en generar_productos.py — años sin
+        # reporte se muestran en 0 solo entre el inicio del resultado y su
+        # último año cerrado; fuera de esa ventana queda null (sin dato).
+        fecha_ini = parsear_fecha_mixta(fila['Fecha de Inicio'])
+        anio_inicio = fecha_ini.year if fecha_ini else ANIOS[0]
+        anio_ultimo = a_numero(fila.get('Año del último reporte'))
+        corte = str(fila.get('Corte del último reporte') or '').strip()
+        if anio_ultimo is None:
+            anios_con_dato = [a for a, ts in trimestres.items()
+                              if any(a_numero(v) is not None for v in ts.values())]
+            anio_ultimo = max(anios_con_dato) if anios_con_dato else None
+        elif corte and corte != 'Q4':
+            anio_ultimo = int(anio_ultimo) - 1
+
+        serie = []
+        for anio in ANIOS:
+            q4_anterior = a_numero(trimestres.get(anio - 1, {}).get(4))
+            valor = anualizar_tablero(
+                {t: a_numero(v) for t, v in trimestres.get(anio, {}).items()},
+                tipo, q4_anio_anterior=q4_anterior)
+            if valor is None and anio_ultimo is not None and anio_inicio <= anio <= int(anio_ultimo):
+                valor = 0.0
+            meta = a_numero(fila.get(f'Meta_{anio}'))
+            diff = redondear(valor - meta) if valor is not None and meta is not None else None
+            porcentaje = (redondear(valor / meta * 100, 1)
+                          if valor is not None and meta not in (None, 0) else None)
+            serie.append({'anio': anio, 'valor': redondear(valor), 'meta': redondear(meta),
+                          'porcentaje': porcentaje, 'diff': diff})
+
+        items.append({
+            'llave': f'R{numero}',
+            'numero': numero,
+            'key_dimension': key_dim,
+            'dimension': DIMENSIONES[key_dim]['nombre'],
+            'esperado': normalizar_texto(fila['Resultado esperado']),
+            'indicador': normalizar_texto(fila['Nombre indicador de Resultado']),
+            'sector_lider': sector,
+            'ponderacion': a_numero(fila['Ponderación relativa del Resultado (%)']),
+            'valor_linea_base': (a_numero(fila['Valor Linea Base'])
+                                 if a_numero(fila['Valor Linea Base']) is not None
+                                 else normalizar_texto(fila['Valor Linea Base'])),
+            'tipo_anualizacion': normalizar_texto(tipo),
+            'fecha_inicio': a_fecha_iso(fila['Fecha de Inicio']),
+            'fecha_fin': a_fecha_iso(fila['Fecha de Finalización']),
+            'serie': serie,
+        })
+
+    datos = {
+        'generado': date.today().isoformat(),
+        'vista': 'resultados',
+        'anios': ANIOS,
+        'dimensiones': [{'key': k, 'nombre': v['nombre'], 'color': v['color'],
+                         'objetivo': objetivos_por_key.get(k)}
+                        for k, v in DIMENSIONES.items()],
+        'sectores': sorted(sectores),
+        'items': items,
+    }
+    return datos
+
+
+def main():
+    from generar_productos import escribir_json_y_js
+    datos = construir()
+    escribir_json_y_js(datos, RUTA_JSON, 'DATOS_RESULTADOS')
+    kb = os.path.getsize(RUTA_JSON) / 1024
+    print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
+    print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])}')
+
+
+if __name__ == '__main__':
+    main()

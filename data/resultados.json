@@ -1,0 +1,2666 @@
+{
+ "generado": "2026-07-07",
+ "vista": "resultados",
+ "anios": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "dimensiones": [
+  {
+   "key": "1.",
+   "nombre": "Ser Joven",
+   "color": "#f4676e",
+   "objetivo": "1. Aumentar la participación incidente y el acceso a toma de decisiones públicas de los jóvenes y las juventudes."
+  },
+  {
+   "key": "2.",
+   "nombre": "Educación",
+   "color": "#1eaf76",
+   "objetivo": "2. Generar condiciones para el acceso, permanencia y calidad de la educación media, superior y la educación para el trabajo y el desarrollo humano"
+  },
+  {
+   "key": "3.",
+   "nombre": "Inclusión Productiva",
+   "color": "#663a93",
+   "objetivo": "3. Aumentar las oportunidades de las juventudes para el empleo digno, el desarrollo de emprendimientos y de economías colaborativas, solidarias y populares"
+  },
+  {
+   "key": "4.",
+   "nombre": "Salud Integral y Autocuidado",
+   "color": "#1e9da3",
+   "objetivo": "4. Garantizar la atención integral y diferencial en salud para las juventudes que promueva el cuidado, el autocuidado para la prevención y tratamiento de los eventos de salud física y mental."
+  },
+  {
+   "key": "5.",
+   "nombre": "Cultura, Recreación y Deporte",
+   "color": "#f58b53",
+   "objetivo": "5. Aumentar las oportunidades juveniles para el acceso y disfrute del arte, la cultura, la diversidad, el patrimonio, el deporte y la recreación"
+  },
+  {
+   "key": "6.",
+   "nombre": "Paz, Convivencia y Justicia",
+   "color": "#2fa4d4",
+   "objetivo": "6. Garantizar entornos seguros para que los y las jóvenes puedan convivir, acceder a la justicia y contribuir a la construcción de la cultura de Paz"
+  },
+  {
+   "key": "7.",
+   "nombre": "Hábitat",
+   "color": "#1e7895",
+   "objetivo": "7. Promover el acceso equitativo de los y las jóvenes al hábitat urbano y rural, con conciencia ambiental y nuevas prácticas que contribuyan al desarrollo sostenible de la ciudad y la región."
+  }
+ ],
+ "sectores": [
+  "Ambiente",
+  "Cultura, Recreación y Deporte",
+  "Desarrollo Económico, Industria y Turismo",
+  "Educación",
+  "Gestión Pública",
+  "Gobierno",
+  "Hábitat",
+  "Integración Social",
+  "Movilidad",
+  "Salud",
+  "Sector Social",
+  "Seguridad, Convivencia y Justicia"
+ ],
+ "items": [
+  {
+   "llave": "R1",
+   "numero": 1,
+   "key_dimension": "1.",
+   "dimension": "Ser Joven",
+   "esperado": "1.1 Jóvenes que acceden a servicios sociales de acuerdo con sus intereses.",
+   "indicador": "Porcentaje de jóvenes atendidos en servicios sociales para potenciar sus capacidades y mitigar sus necesidades.",
+   "sector_lider": "Sector Social",
+   "ponderacion": 0.0357142857142857,
+   "valor_linea_base": 0.603,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.62,
+     "porcentaje": 0.0,
+     "diff": -0.62
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.63,
+     "porcentaje": 0.0,
+     "diff": -0.63
+    },
+    {
+     "anio": 2022,
+     "valor": 0.63,
+     "meta": 0.64,
+     "porcentaje": 98.4,
+     "diff": -0.01
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 0.65,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.66,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.67,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R2",
+   "numero": 2,
+   "key_dimension": "1.",
+   "dimension": "Ser Joven",
+   "esperado": "1.2 Jóvenes reconocidos desde sus diferentes talentos, estéticas, culturas y cosmovisiones.",
+   "indicador": "Porcentaje de jóvenes que se relacionan tranquilamente con personas de culturas distintas a las suyas",
+   "sector_lider": "Integración Social",
+   "ponderacion": 0.0357142857142857,
+   "valor_linea_base": 0.313,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.44,
+     "meta": 0.32,
+     "porcentaje": 136.2,
+     "diff": 0.12
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.33,
+     "porcentaje": 0.0,
+     "diff": -0.33
+    },
+    {
+     "anio": 2022,
+     "valor": -0.1,
+     "meta": 0.34,
+     "porcentaje": -29.2,
+     "diff": -0.44
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 0.35,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.36,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.37,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R3",
+   "numero": 3,
+   "key_dimension": "1.",
+   "dimension": "Ser Joven",
+   "esperado": "1.3 Jóvenes que participan e inciden en las dinámicas de sus territorios.",
+   "indicador": "Porcentaje de jóvenes que participan en organizaciones sociales",
+   "sector_lider": "Gobierno",
+   "ponderacion": 0.0357142857142857,
+   "valor_linea_base": 0.1,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.1,
+     "porcentaje": 0.0,
+     "diff": -0.1
+    },
+    {
+     "anio": 2021,
+     "valor": 0.1,
+     "meta": 0.1,
+     "porcentaje": 95.2,
+     "diff": -0.0
+    },
+    {
+     "anio": 2022,
+     "valor": null,
+     "meta": 0.1,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 0.1,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.11,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.11,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R4",
+   "numero": 4,
+   "key_dimension": "1.",
+   "dimension": "Ser Joven",
+   "esperado": "1.4 Instancias sectoriales fortalecidas para la participación juvenil.",
+   "indicador": "Número de instancias sectoriales fortalecidas con participación juvenil",
+   "sector_lider": "Gobierno",
+   "ponderacion": 0.0357142857142857,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.0,
+     "porcentaje": null,
+     "diff": 0.0
+    },
+    {
+     "anio": 2021,
+     "valor": 0.01,
+     "meta": 5.0,
+     "porcentaje": 0.2,
+     "diff": -4.99
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 5.0,
+     "porcentaje": 0.0,
+     "diff": -5.0
+    },
+    {
+     "anio": 2023,
+     "valor": 2.0,
+     "meta": 5.0,
+     "porcentaje": 40.0,
+     "diff": -3.0
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 5.0,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 5.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R5",
+   "numero": 5,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.1 Jóvenes con acceso a educación basica secundaria que les permita proyectarse, convivir, proteger el ambiente y acceder a la ciencia y a la tecnología.",
+   "indicador": "Tasa de cobertura bruta en educación básica secundaria",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 0.924,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.92,
+     "porcentaje": 0.0,
+     "diff": -0.92
+    },
+    {
+     "anio": 2021,
+     "valor": 0.01,
+     "meta": 0.92,
+     "porcentaje": 1.1,
+     "diff": -0.91
+    },
+    {
+     "anio": 2022,
+     "valor": 1.11,
+     "meta": 0.92,
+     "porcentaje": 119.7,
+     "diff": 0.18
+    },
+    {
+     "anio": 2023,
+     "valor": 1.04,
+     "meta": 0.92,
+     "porcentaje": 112.4,
+     "diff": 0.11
+    },
+    {
+     "anio": 2024,
+     "valor": 1.01,
+     "meta": 0.92,
+     "porcentaje": 108.9,
+     "diff": 0.08
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.92,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R6",
+   "numero": 6,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.2 Jóvenes con acceso a educación media que les permita proyectarse, convivir, proteger el ambiente, acceder a la ciencia y a la tecnología.",
+   "indicador": "Tasa de cobertura bruta en educación media",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 0.823,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.82,
+     "porcentaje": 0.0,
+     "diff": -0.82
+    },
+    {
+     "anio": 2021,
+     "valor": 0.01,
+     "meta": 0.82,
+     "porcentaje": 0.6,
+     "diff": -0.82
+    },
+    {
+     "anio": 2022,
+     "valor": 0.98,
+     "meta": 0.82,
+     "porcentaje": 118.8,
+     "diff": 0.16
+    },
+    {
+     "anio": 2023,
+     "valor": 0.99,
+     "meta": 0.82,
+     "porcentaje": 120.0,
+     "diff": 0.16
+    },
+    {
+     "anio": 2024,
+     "valor": 0.98,
+     "meta": 0.82,
+     "porcentaje": 118.5,
+     "diff": 0.15
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.82,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R7",
+   "numero": 7,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.3 Jóvenes con acceso a educación superior que les permita proyectarse, convivir, proteger el ambiente, acceder a la ciencia y a la tecnología.",
+   "indicador": "Tasa de tránsito a la educación superior",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.56,
+     "porcentaje": 0.0,
+     "diff": -0.56
+    },
+    {
+     "anio": 2021,
+     "valor": 0.48,
+     "meta": 0.56,
+     "porcentaje": 86.4,
+     "diff": -0.08
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.56,
+     "porcentaje": 0.0,
+     "diff": -0.56
+    },
+    {
+     "anio": 2023,
+     "valor": 0.03,
+     "meta": 0.57,
+     "porcentaje": 5.8,
+     "diff": -0.54
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.57,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.58,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R8",
+   "numero": 8,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.4 Jóvenes que reciben educación de calidad con acceso a tecnologías de información.",
+   "indicador": "Porcentaje de matrícula oficial con conexión a internet (indicador ODS conpes)",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 1.0,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 1.0,
+     "porcentaje": 0.0,
+     "diff": -1.0
+    },
+    {
+     "anio": 2021,
+     "valor": 1.0,
+     "meta": 1.0,
+     "porcentaje": 100.0,
+     "diff": 0.0
+    },
+    {
+     "anio": 2022,
+     "valor": 1.0,
+     "meta": 1.0,
+     "porcentaje": 100.0,
+     "diff": 0.0
+    },
+    {
+     "anio": 2023,
+     "valor": 1.0,
+     "meta": 1.0,
+     "porcentaje": 100.0,
+     "diff": 0.0
+    },
+    {
+     "anio": 2024,
+     "valor": 1.0,
+     "meta": 1.0,
+     "porcentaje": 99.9,
+     "diff": -0.0
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 1.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R9",
+   "numero": 9,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.5 Instituciones Educativas Oficiales que fomentan en los y las jóvenes prácticas para el cuidado ambiental y rural",
+   "indicador": "Porcentaje de IED Oficiales que fomentan en los jóvenes prácticas para el cuidado ambiental y rural.",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 0.33,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.32,
+     "porcentaje": 0.0,
+     "diff": -0.32
+    },
+    {
+     "anio": 2021,
+     "valor": 0.35,
+     "meta": 0.32,
+     "porcentaje": 108.8,
+     "diff": 0.03
+    },
+    {
+     "anio": 2022,
+     "valor": 0.35,
+     "meta": 0.32,
+     "porcentaje": 109.5,
+     "diff": 0.03
+    },
+    {
+     "anio": 2023,
+     "valor": 0.35,
+     "meta": 0.32,
+     "porcentaje": 108.8,
+     "diff": 0.03
+    },
+    {
+     "anio": 2024,
+     "valor": 0.33,
+     "meta": 0.32,
+     "porcentaje": 101.6,
+     "diff": 0.01
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.32,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R10",
+   "numero": 10,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.6. Jóvenes que cuentan con las condiciones para permanecer en la educación media .",
+   "indicador": "Tasa de deserción intranual en la educación media en el sector oficial",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 0.0155,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 1.53,
+     "porcentaje": 0.0,
+     "diff": -1.53
+    },
+    {
+     "anio": 2021,
+     "valor": 1.4,
+     "meta": 1.53,
+     "porcentaje": 91.5,
+     "diff": -0.13
+    },
+    {
+     "anio": 2022,
+     "valor": 0.01,
+     "meta": 1.53,
+     "porcentaje": 0.4,
+     "diff": -1.52
+    },
+    {
+     "anio": 2023,
+     "valor": 0.04,
+     "meta": 1.53,
+     "porcentaje": 2.3,
+     "diff": -1.5
+    },
+    {
+     "anio": 2024,
+     "valor": 0.02,
+     "meta": 1.53,
+     "porcentaje": 1.4,
+     "diff": -1.51
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 1.53,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R11",
+   "numero": 11,
+   "key_dimension": "2.",
+   "dimension": "Educación",
+   "esperado": "2.7. Jóvenes que cuentan con las condiciones para permanecer en la educación Universitaria .",
+   "indicador": "Deserción por cohorte universitaria",
+   "sector_lider": "Educación",
+   "ponderacion": 0.0204081632653061,
+   "valor_linea_base": 0.452,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2019-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": 0.0,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.45,
+     "porcentaje": 0.0,
+     "diff": -0.45
+    },
+    {
+     "anio": 2021,
+     "valor": 0.09,
+     "meta": 0.45,
+     "porcentaje": 19.5,
+     "diff": -0.36
+    },
+    {
+     "anio": 2022,
+     "valor": 0.09,
+     "meta": 0.45,
+     "porcentaje": 19.5,
+     "diff": -0.36
+    },
+    {
+     "anio": 2023,
+     "valor": 0.11,
+     "meta": 0.45,
+     "porcentaje": 23.5,
+     "diff": -0.35
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.45,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.45,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R12",
+   "numero": 12,
+   "key_dimension": "3.",
+   "dimension": "Inclusión Productiva",
+   "esperado": "3.1. Jóvenes que acceden al mercado laboral mediante la oferta de programas de formación, vinculación y remisión a empleadores",
+   "indicador": "Jóvenes que acceden al mercado laboral a través de la Agencia Pública de Empleo",
+   "sector_lider": "Desarrollo Económico, Industria y Turismo",
+   "ponderacion": 0.0714285714285714,
+   "valor_linea_base": 0.25199362041467305,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.62,
+     "meta": 0.25,
+     "porcentaje": 248.0,
+     "diff": 0.37
+    },
+    {
+     "anio": 2021,
+     "valor": -0.37,
+     "meta": 0.27,
+     "porcentaje": -136.7,
+     "diff": -0.64
+    },
+    {
+     "anio": 2022,
+     "valor": 0.66,
+     "meta": 0.28,
+     "porcentaje": 234.6,
+     "diff": 0.38
+    },
+    {
+     "anio": 2023,
+     "valor": -0.6,
+     "meta": 0.3,
+     "porcentaje": -199.8,
+     "diff": -0.9
+    },
+    {
+     "anio": 2024,
+     "valor": 0.19,
+     "meta": 0.31,
+     "porcentaje": 61.8,
+     "diff": -0.12
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.33,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R13",
+   "numero": 13,
+   "key_dimension": "3.",
+   "dimension": "Inclusión Productiva",
+   "esperado": "3.2. Jóvenes con acceso a la oferta de programas de emprendimiento, formalización, asistencia técnica y financiamiento",
+   "indicador": "Porcentaje de jóvenes que acceden a la oferta de emprendimiento, formalización, asistencia técnica y financiamiento de la SDDE",
+   "sector_lider": "Desarrollo Económico, Industria y Turismo",
+   "ponderacion": 0.0714285714285714,
+   "valor_linea_base": 0.29,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.4,
+     "porcentaje": 0.0,
+     "diff": -0.4
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.4,
+     "porcentaje": 0.0,
+     "diff": -0.4
+    },
+    {
+     "anio": 2022,
+     "valor": 0.13,
+     "meta": 0.4,
+     "porcentaje": 32.5,
+     "diff": -0.27
+    },
+    {
+     "anio": 2023,
+     "valor": 0.11,
+     "meta": 0.4,
+     "porcentaje": 26.3,
+     "diff": -0.29
+    },
+    {
+     "anio": 2024,
+     "valor": 0.17,
+     "meta": 0.4,
+     "porcentaje": 43.0,
+     "diff": -0.23
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.4,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R14",
+   "numero": 14,
+   "key_dimension": "4.",
+   "dimension": "Salud Integral y Autocuidado",
+   "esperado": "4.1 Joven que cuenta con acceso a servicios de salud de detección temprana y protección específica en el marco de la Ruta de promoción y Mantenimiento de la Salud.",
+   "indicador": "Porcentaje de personas con consulta del joven",
+   "sector_lider": "Salud",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 26.4,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.28,
+     "meta": 0.23,
+     "porcentaje": 118.9,
+     "diff": 0.04
+    },
+    {
+     "anio": 2021,
+     "valor": 4.66,
+     "meta": 0.25,
+     "porcentaje": 1850.4,
+     "diff": 4.41
+    },
+    {
+     "anio": 2022,
+     "valor": -4.58,
+     "meta": 0.27,
+     "porcentaje": -1718.9,
+     "diff": -4.84
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.28,
+     "porcentaje": 0.0,
+     "diff": -0.28
+    },
+    {
+     "anio": 2024,
+     "valor": 0.0,
+     "meta": 0.29,
+     "porcentaje": 0.0,
+     "diff": -0.29
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.3,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R15",
+   "numero": 15,
+   "key_dimension": "4.",
+   "dimension": "Salud Integral y Autocuidado",
+   "esperado": "4.2 Jóvenes que pueden identificar y prevenir riesgos en salud mental, a través de la toma de decisiones informada.",
+   "indicador": "Tasa de suicidios en jóvenes",
+   "sector_lider": "Salud",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 7.77,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 5.1,
+     "meta": 6.86,
+     "porcentaje": 74.3,
+     "diff": -1.76
+    },
+    {
+     "anio": 2021,
+     "valor": 4.94,
+     "meta": 7.7,
+     "porcentaje": 64.2,
+     "diff": -2.76
+    },
+    {
+     "anio": 2022,
+     "valor": 9.33,
+     "meta": 7.7,
+     "porcentaje": 121.2,
+     "diff": 1.63
+    },
+    {
+     "anio": 2023,
+     "valor": 8.66,
+     "meta": 7.7,
+     "porcentaje": 112.5,
+     "diff": 0.96
+    },
+    {
+     "anio": 2024,
+     "valor": 7.5,
+     "meta": 7.7,
+     "porcentaje": 97.4,
+     "diff": -0.2
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 7.7,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R16",
+   "numero": 16,
+   "key_dimension": "4.",
+   "dimension": "Salud Integral y Autocuidado",
+   "esperado": "4.3. Jóvenes que promueven estilos y hábitos de vida saludables porque cuentan con una consciencia de si, del cuidado de los demás y del ambiente.",
+   "indicador": "Proporción de prevalencia de personas entre 14 a 28 años residentes en Bogotá que tuvieron consumo adictivo o problemático de SPA e ingresaron a tratamiento.",
+   "sector_lider": "Salud",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 14.7,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 14.9,
+     "meta": 81.77,
+     "porcentaje": 18.2,
+     "diff": -66.87
+    },
+    {
+     "anio": 2021,
+     "valor": 14.4,
+     "meta": 14.7,
+     "porcentaje": 98.0,
+     "diff": -0.3
+    },
+    {
+     "anio": 2022,
+     "valor": 14.1,
+     "meta": 14.7,
+     "porcentaje": 95.9,
+     "diff": -0.6
+    },
+    {
+     "anio": 2023,
+     "valor": 14.22,
+     "meta": 14.7,
+     "porcentaje": 96.7,
+     "diff": -0.48
+    },
+    {
+     "anio": 2024,
+     "valor": 15.01,
+     "meta": 14.7,
+     "porcentaje": 102.1,
+     "diff": 0.31
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 14.7,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R17",
+   "numero": 17,
+   "key_dimension": "4.",
+   "dimension": "Salud Integral y Autocuidado",
+   "esperado": "4.4. Jóvenes que toman decisiones libres frente a la maternidad y paternidad.",
+   "indicador": "Tasa de fecundidad en mujeres de 15 a 19 años",
+   "sector_lider": "Salud",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 34.61,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 27.5,
+     "meta": 0.34,
+     "porcentaje": 8088.2,
+     "diff": 27.16
+    },
+    {
+     "anio": 2021,
+     "valor": 0.3,
+     "meta": 34.6,
+     "porcentaje": 0.9,
+     "diff": -34.3
+    },
+    {
+     "anio": 2022,
+     "valor": 0.22,
+     "meta": 32.8,
+     "porcentaje": 0.7,
+     "diff": -32.58
+    },
+    {
+     "anio": 2023,
+     "valor": 41.4,
+     "meta": 31.1,
+     "porcentaje": 133.1,
+     "diff": 10.3
+    },
+    {
+     "anio": 2024,
+     "valor": 16.83,
+     "meta": 29.5,
+     "porcentaje": 57.1,
+     "diff": -12.67
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 29.5,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R18",
+   "numero": 18,
+   "key_dimension": "4.",
+   "dimension": "Salud Integral y Autocuidado",
+   "esperado": "4.5. Joven que ejerce de sus derechos sexuales y sus derechos reproductivos, de manera planeada y protegida.",
+   "indicador": "Porcentaje de incidencia de VIH en jóvenes",
+   "sector_lider": "Salud",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 86.1,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 84.2,
+     "meta": 86.1,
+     "porcentaje": 97.8,
+     "diff": -1.9
+    },
+    {
+     "anio": 2021,
+     "valor": 17.6,
+     "meta": 86.5,
+     "porcentaje": 20.3,
+     "diff": -68.9
+    },
+    {
+     "anio": 2022,
+     "valor": 1.0,
+     "meta": 87.0,
+     "porcentaje": 1.1,
+     "diff": -86.0
+    },
+    {
+     "anio": 2023,
+     "valor": -3.5,
+     "meta": 87.4,
+     "porcentaje": -4.0,
+     "diff": -90.9
+    },
+    {
+     "anio": 2024,
+     "valor": -0.2,
+     "meta": 87.4,
+     "porcentaje": -0.2,
+     "diff": -87.6
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 87.8,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R19",
+   "numero": 19,
+   "key_dimension": "5.",
+   "dimension": "Cultura, Recreación y Deporte",
+   "esperado": "5.1. Jóvenes con capacidades y espacios para poder apreciar, crear y producir bienes y servicios culturales",
+   "indicador": "Porcentaje de jóvenes que han recibido alguna formación artística",
+   "sector_lider": "Cultura, Recreación y Deporte",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 0.064,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.2,
+     "meta": 9.4,
+     "porcentaje": 2.1,
+     "diff": -9.2
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.1,
+     "porcentaje": 0.0,
+     "diff": -0.1
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.11,
+     "porcentaje": 0.0,
+     "diff": -0.11
+    },
+    {
+     "anio": 2023,
+     "valor": 0.03,
+     "meta": 0.12,
+     "porcentaje": 26.6,
+     "diff": -0.09
+    },
+    {
+     "anio": 2024,
+     "valor": 0.03,
+     "meta": 0.12,
+     "porcentaje": 27.8,
+     "diff": -0.09
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.13,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R20",
+   "numero": 20,
+   "key_dimension": "5.",
+   "dimension": "Cultura, Recreación y Deporte",
+   "esperado": "5.2. Jóvenes con espacios artísticos, culturales y patrimoniales para participar de acuerdo con sus preferencias, tradiciones y cosmovisiones",
+   "indicador": "Porcentaje de jóvenes que realizan alguna actividad artística al mes",
+   "sector_lider": "Cultura, Recreación y Deporte",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.18,
+     "meta": 0.32,
+     "porcentaje": 55.7,
+     "diff": -0.14
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.34,
+     "porcentaje": 0.0,
+     "diff": -0.34
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.36,
+     "porcentaje": 0.0,
+     "diff": -0.36
+    },
+    {
+     "anio": 2023,
+     "valor": 0.14,
+     "meta": 0.38,
+     "porcentaje": 37.6,
+     "diff": -0.24
+    },
+    {
+     "anio": 2024,
+     "valor": -0.01,
+     "meta": 0.38,
+     "porcentaje": -2.3,
+     "diff": -0.39
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.4,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R21",
+   "numero": 21,
+   "key_dimension": "5.",
+   "dimension": "Cultura, Recreación y Deporte",
+   "esperado": "5.3. Jóvenes con hábitos de lectura",
+   "indicador": "Promedio de libros leidos por jóvenes al año",
+   "sector_lider": "Cultura, Recreación y Deporte",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 5.0,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 1.2,
+     "meta": 5.0,
+     "porcentaje": 24.0,
+     "diff": -3.8
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 5.0,
+     "porcentaje": 0.0,
+     "diff": -5.0
+    },
+    {
+     "anio": 2022,
+     "valor": -1.13,
+     "meta": 5.0,
+     "porcentaje": -22.6,
+     "diff": -6.13
+    },
+    {
+     "anio": 2023,
+     "valor": 5.96,
+     "meta": 5.0,
+     "porcentaje": 119.2,
+     "diff": 0.96
+    },
+    {
+     "anio": 2024,
+     "valor": -1.63,
+     "meta": 5.0,
+     "porcentaje": -32.6,
+     "diff": -6.63
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 6.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R22",
+   "numero": 22,
+   "key_dimension": "5.",
+   "dimension": "Cultura, Recreación y Deporte",
+   "esperado": "5.4. Jóvenes satisfechos con actividades recreativas y deportivas en sus territorios.",
+   "indicador": "Porcentaje de jóvenes que están satisfechos o muy satisfechos con las actividades deportivas y recreativas en su barrio",
+   "sector_lider": "Cultura, Recreación y Deporte",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.33,
+     "meta": 0.48,
+     "porcentaje": 68.8,
+     "diff": -0.15
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.55,
+     "porcentaje": 0.0,
+     "diff": -0.55
+    },
+    {
+     "anio": 2022,
+     "valor": 0.17,
+     "meta": 0.58,
+     "porcentaje": 29.3,
+     "diff": -0.41
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.61,
+     "porcentaje": 0.0,
+     "diff": -0.61
+    },
+    {
+     "anio": 2024,
+     "valor": 0.02,
+     "meta": 0.61,
+     "porcentaje": 2.7,
+     "diff": -0.59
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.64,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R23",
+   "numero": 23,
+   "key_dimension": "5.",
+   "dimension": "Cultura, Recreación y Deporte",
+   "esperado": "5.5. Jóvenes que realizan actividades deportivas",
+   "indicador": "Porcentaje de jóvenes que practica algún deporte.",
+   "sector_lider": "Cultura, Recreación y Deporte",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.4,
+     "meta": 0.52,
+     "porcentaje": 76.9,
+     "diff": -0.12
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.54,
+     "porcentaje": 0.0,
+     "diff": -0.54
+    },
+    {
+     "anio": 2022,
+     "valor": 0.01,
+     "meta": 0.55,
+     "porcentaje": 1.8,
+     "diff": -0.54
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.56,
+     "porcentaje": 0.0,
+     "diff": -0.56
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.56,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.57,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R24",
+   "numero": 24,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.1 Jóvenes que cuentan con entornos seguros que favorecen su integridad personal.",
+   "indicador": "Tasa de lesiones personales en jóvenes 18-28 años por cada 100.000 habitantes de jóvenes entre los 18-28 años",
+   "sector_lider": "Seguridad, Convivencia y Justicia",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": 473.5,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 473.5,
+     "porcentaje": 0.0,
+     "diff": -473.5
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 459.5,
+     "porcentaje": 0.0,
+     "diff": -459.5
+    },
+    {
+     "anio": 2022,
+     "valor": null,
+     "meta": 452.5,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 445.5,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": 333.0,
+     "meta": 445.5,
+     "porcentaje": 74.7,
+     "diff": -112.5
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 438.5,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R25",
+   "numero": 25,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.2. Jóvenes que cuentan con entornos seguros y libres de riesgos y amenzas de vinculación o instrumentalización.",
+   "indicador": "Tasa por 100.000 habitantes de jóvenes entre los 14 y 17 años en el SRPA",
+   "sector_lider": "Seguridad, Convivencia y Justicia",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": 1095.1102432674313,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 1079.0,
+     "porcentaje": 0.0,
+     "diff": -1079.0
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 1062.26,
+     "porcentaje": 0.0,
+     "diff": -1062.26
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 1045.83,
+     "porcentaje": 0.0,
+     "diff": -1045.83
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 1029.4,
+     "porcentaje": 0.0,
+     "diff": -1029.4
+    },
+    {
+     "anio": 2024,
+     "valor": 0.0,
+     "meta": 1029.0,
+     "porcentaje": 0.0,
+     "diff": -1029.0
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 1013.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R26",
+   "numero": 26,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.3. Jóvenes con entornos familiares seguros",
+   "indicador": "Tasa de violencia intrafamiliar",
+   "sector_lider": "Integración Social",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": 270.0,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 242.0,
+     "porcentaje": 0.0,
+     "diff": -242.0
+    },
+    {
+     "anio": 2021,
+     "valor": 1090.0,
+     "meta": 235.0,
+     "porcentaje": 463.8,
+     "diff": 855.0
+    },
+    {
+     "anio": 2022,
+     "valor": null,
+     "meta": 229.0,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 223.0,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": 84.0,
+     "meta": 223.0,
+     "porcentaje": 37.7,
+     "diff": -139.0
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 218.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R27",
+   "numero": 27,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.4. Jóvenes que cuentan con entornos seguros sin riesgos y amenazas de explotación y trata.",
+   "indicador": "Tasa de trata de personas en jóvenes entre 18- 28 años",
+   "sector_lider": "Gobierno",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": "1,00",
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.4,
+     "meta": 1.0,
+     "porcentaje": 40.0,
+     "diff": -0.6
+    },
+    {
+     "anio": 2021,
+     "valor": 0.51,
+     "meta": 1.0,
+     "porcentaje": 51.0,
+     "diff": -0.49
+    },
+    {
+     "anio": 2022,
+     "valor": 1.1,
+     "meta": 1.0,
+     "porcentaje": 110.0,
+     "diff": 0.1
+    },
+    {
+     "anio": 2023,
+     "valor": 1.62,
+     "meta": 1.0,
+     "porcentaje": 162.1,
+     "diff": 0.62
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 1.0,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 1.0,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R28",
+   "numero": 28,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.5. Jóvenes que cuentan con entornos seguros para el ejercicio de su ciudadanía",
+   "indicador": "Tasa de desaparición forzosa en persona (art. 166 CP, art. 4)",
+   "sector_lider": "Gobierno",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": "1.1 %",
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.4,
+     "meta": 0.01,
+     "porcentaje": 3669.7,
+     "diff": 0.39
+    },
+    {
+     "anio": 2021,
+     "valor": 0.82,
+     "meta": 0.01,
+     "porcentaje": 7522.9,
+     "diff": 0.81
+    },
+    {
+     "anio": 2022,
+     "valor": 3.04,
+     "meta": 0.01,
+     "porcentaje": 28148.1,
+     "diff": 3.03
+    },
+    {
+     "anio": 2023,
+     "valor": 3.83,
+     "meta": 0.01,
+     "porcentaje": 35794.4,
+     "diff": 3.82
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.01,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.01,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R29",
+   "numero": 29,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.6. Jóvenes con oportunidades y herramientas para conciliar ante situaciones de conflicto en los territorios.",
+   "indicador": "Porcentaje de jóvenes que perciben el espacio público como peligroso o conflictivo",
+   "sector_lider": "Seguridad, Convivencia y Justicia",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": 0.8963,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.89,
+     "porcentaje": 0.0,
+     "diff": -0.89
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.88,
+     "porcentaje": 0.0,
+     "diff": -0.88
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.87,
+     "porcentaje": 0.0,
+     "diff": -0.87
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.86,
+     "porcentaje": 0.0,
+     "diff": -0.86
+    },
+    {
+     "anio": 2024,
+     "valor": 0.0,
+     "meta": 0.86,
+     "porcentaje": 0.0,
+     "diff": -0.86
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.85,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R30",
+   "numero": 30,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.7. Jóvenes comprometidos con la construcción de paz y reconciliación.",
+   "indicador": "Porcentaje de jóvenes que consideran que las actividades realizadas profundizan su compromiso en la memoria, paz y reconciliación",
+   "sector_lider": "Gestión Pública",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": 0.0,
+   "tipo_anualizacion": "Constante",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.7,
+     "porcentaje": 0.0,
+     "diff": -0.7
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.7,
+     "porcentaje": 0.0,
+     "diff": -0.7
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.7,
+     "porcentaje": 0.0,
+     "diff": -0.7
+    },
+    {
+     "anio": 2023,
+     "valor": 0.7,
+     "meta": 0.7,
+     "porcentaje": 100.0,
+     "diff": 0.0
+    },
+    {
+     "anio": 2024,
+     "valor": 1.0,
+     "meta": 0.7,
+     "porcentaje": 142.9,
+     "diff": 0.3
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.7,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R31",
+   "numero": 31,
+   "key_dimension": "6.",
+   "dimension": "Paz, Convivencia y Justicia",
+   "esperado": "6.8. Jóvenes vinculados a procesos penales capaces de planear sus proyectos de vida basados en la cultura de la legalidad",
+   "indicador": "Porcentaje de reincidentes condenados de 18 a 28 años en las cárceles nacionales",
+   "sector_lider": "Seguridad, Convivencia y Justicia",
+   "ponderacion": 0.0178571428571429,
+   "valor_linea_base": "19,3%",
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.19,
+     "porcentaje": 0.0,
+     "diff": -0.19
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.19,
+     "porcentaje": 0.0,
+     "diff": -0.19
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.19,
+     "porcentaje": 0.0,
+     "diff": -0.19
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.19,
+     "porcentaje": 0.0,
+     "diff": -0.19
+    },
+    {
+     "anio": 2024,
+     "valor": 0.0,
+     "meta": 0.19,
+     "porcentaje": 0.0,
+     "diff": -0.19
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.19,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R32",
+   "numero": 32,
+   "key_dimension": "7.",
+   "dimension": "Hábitat",
+   "esperado": "7.1. Jóvenes con consciencia ambiental y con la capacidad de entender la incidencia de sus acciones cotidianas sobre el ambiente de la Ciudad y la región.",
+   "indicador": "Porcentaje de jóvenes que realizan alguna práctica de reciclaje",
+   "sector_lider": "Ambiente",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 0.61,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 10.05,
+     "meta": 0.61,
+     "porcentaje": 1639.6,
+     "diff": 9.44
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.61,
+     "porcentaje": 0.0,
+     "diff": -0.61
+    },
+    {
+     "anio": 2022,
+     "valor": 25256.0,
+     "meta": 0.62,
+     "porcentaje": 4100000.0,
+     "diff": 25255.38
+    },
+    {
+     "anio": 2023,
+     "valor": -25255.02,
+     "meta": 0.62,
+     "porcentaje": -4089881.8,
+     "diff": -25255.64
+    },
+    {
+     "anio": 2024,
+     "valor": 0.01,
+     "meta": 0.62,
+     "porcentaje": 1.6,
+     "diff": -0.61
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.62,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R33",
+   "numero": 33,
+   "key_dimension": "7.",
+   "dimension": "Hábitat",
+   "esperado": "7.2. Jóvenes que protegen y fomentan el bienestar animal.",
+   "indicador": "Porcentaje de jóvenes que se vinculan a procesos de movilización social por la protección y el bienestar animal",
+   "sector_lider": "Ambiente",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.24,
+     "meta": 0.45,
+     "porcentaje": 52.3,
+     "diff": -0.21
+    },
+    {
+     "anio": 2021,
+     "valor": 0.17,
+     "meta": 0.47,
+     "porcentaje": 36.7,
+     "diff": -0.3
+    },
+    {
+     "anio": 2022,
+     "valor": 0.59,
+     "meta": 0.48,
+     "porcentaje": 123.4,
+     "diff": 0.11
+    },
+    {
+     "anio": 2023,
+     "valor": 0.0,
+     "meta": 0.49,
+     "porcentaje": 0.0,
+     "diff": -0.49
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.48,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.49,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R34",
+   "numero": 34,
+   "key_dimension": "7.",
+   "dimension": "Hábitat",
+   "esperado": "7.3. Jóvenes que habitan en una vivienda digna.",
+   "indicador": "Porcentaje de jóvenes que viven en una vivienda sin deficit habitacional",
+   "sector_lider": "Hábitat",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 0.948,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 1.0,
+     "meta": 0.95,
+     "porcentaje": 105.2,
+     "diff": 0.05
+    },
+    {
+     "anio": 2021,
+     "valor": 0.0,
+     "meta": 0.95,
+     "porcentaje": 0.0,
+     "diff": -0.95
+    },
+    {
+     "anio": 2022,
+     "valor": null,
+     "meta": 0.96,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 0.96,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": null,
+     "meta": 0.96,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.96,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R35",
+   "numero": 35,
+   "key_dimension": "7.",
+   "dimension": "Hábitat",
+   "esperado": "7.4. Jóvenes que se movilizan en transportes amigables o ambientalmente sostenibles.",
+   "indicador": "Porcentaje de jóvenes que se movilizan principalmente caminando o en bicicleta",
+   "sector_lider": "Movilidad",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": null,
+   "tipo_anualizacion": "Creciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 0.0,
+     "meta": 0.32,
+     "porcentaje": 0.0,
+     "diff": -0.32
+    },
+    {
+     "anio": 2021,
+     "valor": 0.18,
+     "meta": 0.34,
+     "porcentaje": 53.7,
+     "diff": -0.16
+    },
+    {
+     "anio": 2022,
+     "valor": 0.0,
+     "meta": 0.35,
+     "porcentaje": 0.0,
+     "diff": -0.35
+    },
+    {
+     "anio": 2023,
+     "valor": null,
+     "meta": 0.36,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2024,
+     "valor": 0.18,
+     "meta": 0.35,
+     "porcentaje": 51.4,
+     "diff": -0.17
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 0.36,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  },
+  {
+   "llave": "R36",
+   "numero": 36,
+   "key_dimension": "7.",
+   "dimension": "Hábitat",
+   "esperado": "7.5. Jóvenes que se movilizan de manera segura en la ciudad",
+   "indicador": "Tasa de mortalidad por accidentes de tránsito en jóvenes de 15 a 29 años",
+   "sector_lider": "Movilidad",
+   "ponderacion": 0.0285714285714286,
+   "valor_linea_base": 8.552681094469495,
+   "tipo_anualizacion": "Decreciente",
+   "fecha_inicio": "2020-01-01",
+   "fecha_fin": "2030-12-31",
+   "serie": [
+    {
+     "anio": 2018,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2019,
+     "valor": null,
+     "meta": null,
+     "porcentaje": null,
+     "diff": null
+    },
+    {
+     "anio": 2020,
+     "valor": 142.0,
+     "meta": 7.38,
+     "porcentaje": 1924.1,
+     "diff": 134.62
+    },
+    {
+     "anio": 2021,
+     "valor": 0.08,
+     "meta": 6.99,
+     "porcentaje": 1.2,
+     "diff": -6.91
+    },
+    {
+     "anio": 2022,
+     "valor": 0.08,
+     "meta": 6.61,
+     "porcentaje": 1.3,
+     "diff": -6.53
+    },
+    {
+     "anio": 2023,
+     "valor": 10.32,
+     "meta": 6.28,
+     "porcentaje": 164.3,
+     "diff": 4.04
+    },
+    {
+     "anio": 2024,
+     "valor": 11.1,
+     "meta": 6.61,
+     "porcentaje": 167.9,
+     "diff": 4.49
+    },
+    {
+     "anio": 2025,
+     "valor": null,
+     "meta": 6.28,
+     "porcentaje": null,
+     "diff": null
+    }
+   ]
+  }
+ ]
+}

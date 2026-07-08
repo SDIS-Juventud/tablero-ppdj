@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis cualitativo de productos - Seguimiento PPDJ</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --crema: #f5efd2;
+  --gris-oscuro: #2f2b28;
+  --gris: #83766c;
+  --gris-claro: #f4f2ee;
+  --verde-oscuro: #2F3E3C;
+  --blanco: #ffffff;
+  --valor: #00a583;   /* serie Valor: turquesa de marca oscurecido para contraste */
+  --meta: #234f9c;    /* serie Meta: navy de marca aclarado, validado junto al turquesa */
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gris-claro);
+  color: var(--gris-oscuro);
+}
+.barra {
+  background: var(--verde-oscuro);
+  padding: 1.1rem 1.5rem;
+  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+}
+.btn-home {
+  color: var(--crema); text-decoration: none;
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem;
+  border: 1.5px solid rgba(245,239,210,0.5); border-radius: 8px;
+  padding: 0.4rem 0.9rem; transition: background 0.15s ease;
+}
+.btn-home:hover { background: rgba(245,239,210,0.12); }
+.barra-titulo {
+  font-family: 'Anton', sans-serif; text-transform: uppercase;
+  color: var(--crema); font-size: 1.35rem; letter-spacing: 0.03em;
+}
+
+main { max-width: 960px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
+.card {
+  background: var(--blanco); border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+.dim-etiqueta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+.dim-punto { width: 0.85rem; height: 0.85rem; border-radius: 50%; flex-shrink: 0; }
+.dim-etiqueta span {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em; color: var(--gris);
+}
+.detalle-titulo { font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin-bottom: 0.3rem; }
+.detalle-indicador { color: var(--gris); font-size: 0.9rem; line-height: 1.45; margin-bottom: 0.9rem; }
+.ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.7rem; }
+.ficha-item { background: var(--gris-claro); border-radius: 8px; padding: 0.6rem 0.8rem; }
+.ficha-label {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 0.65rem; letter-spacing: 0.08em; color: var(--gris); margin-bottom: 0.2rem;
+}
+.ficha-valor { font-size: 0.88rem; font-weight: 600; line-height: 1.3; }
+
+.filtros { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.filtro-label {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 0.75rem; letter-spacing: 0.08em; color: var(--gris);
+}
+select {
+  font-family: inherit; font-size: 0.9rem; padding: 0.45rem 0.7rem;
+  border: 1.5px solid #ddd6cf; border-radius: 8px; background: var(--blanco); color: var(--gris-oscuro);
+}
+.chip {
+  font-size: 0.8rem; border: 1.5px solid #ddd6cf; border-radius: 8px;
+  background: var(--blanco); padding: 0.32rem 0.7rem; cursor: pointer;
+  color: var(--gris); font-family: inherit;
+}
+.chip.activo { background: var(--verde-oscuro); border-color: var(--verde-oscuro); color: var(--crema); }
+
+.toggle { display: inline-flex; border: 1.5px solid #ddd6cf; border-radius: 8px; overflow: hidden; margin: 1rem 0 0.6rem; }
+.toggle button {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; font-size: 0.75rem;
+  border: none; background: var(--blanco); color: var(--gris);
+  padding: 0.45rem 1rem; cursor: pointer;
+}
+.toggle button.activo { background: var(--verde-oscuro); color: var(--crema); }
+.grafica-caja { position: relative; height: 260px; }
+
+.registro { border-bottom: 1px solid var(--gris-claro); padding: 1rem 0; }
+.registro:last-child { border-bottom: none; }
+.registro-encabezado {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  font-size: 0.78rem; letter-spacing: 0.06em; color: var(--gris); margin-bottom: 0.4rem;
+}
+.registro-texto { font-size: 0.92rem; line-height: 1.55; white-space: pre-line; }
+.detalle-vacio { color: var(--gris); padding: 2rem 1rem; text-align: center; }
+.conteo { color: var(--gris); font-size: 0.8rem; margin-bottom: 0.4rem; }
+
+footer { background: var(--blanco); margin-top: 2rem; }
+.footer-marca { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<div class="barra">
+  <a class="btn-home" href="index.html">&#8592; Inicio</a>
+  <a class="btn-home" id="btn-volver" href="productos.html">&#8592; Volver a productos</a>
+  <div class="barra-titulo">Análisis cualitativo</div>
+</div>
+
+<main>
+  <div class="card" id="panel-item">
+    <div class="detalle-vacio">Llega a esta página desde el botón "Ver análisis cualitativo" de un producto.</div>
+  </div>
+
+  <div class="card" id="panel-filtros" style="display:none">
+    <div class="filtros">
+      <span class="filtro-label">Año</span>
+      <select id="filtro-anio"><option value="">Todos</option></select>
+      <span class="filtro-label">Trimestre</span>
+      <select id="filtro-trimestre"><option value="">Todos</option></select>
+      <span class="filtro-label">Tipo</span>
+      <div id="filtro-tipos" style="display:flex; gap:0.4rem;"></div>
+    </div>
+  </div>
+
+  <div class="card" id="panel-registros" style="display:none">
+    <div class="conteo" id="conteo"></div>
+    <div id="registros"></div>
+  </div>
+</main>
+
+<footer>
+  <img class="footer-marca" src="imagenes/Distrito joven.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá">
+</footer>
+
+<script src="data/productos.js"></script>
+<script src="data/productos-cualitativo.js"></script>
+<script>
+// Análisis cualitativo de un producto: llega por querystring (?llave=P12),
+// muestra la ficha del producto y la bitácora trimestral con filtros por
+// año, trimestre y tipo (Cualitativo / Enfoques).
+(function () {
+  const CUANTI = window.DATOS_PRODUCTOS;
+  const CUALI = window.DATOS_PRODUCTOS_CUALI;
+  const params = new URLSearchParams(location.search);
+  const llave = params.get('llave') || '';
+
+  if (!CUANTI || !CUALI) {
+    document.querySelector('main').innerHTML =
+      '<p style="color:#83766c">No se pudieron cargar los datos (carpeta data/).</p>';
+    return;
+  }
+
+  const item = CUANTI.items.find(i => i.llave === llave);
+  const registros = (CUALI.por_llave[llave] || []);
+  const estado = { anio: '', trimestre: '', tipo: '' };
+
+  // el botón de volver conserva el producto seleccionado
+  if (llave) document.getElementById('btn-volver').href = 'productos.html?llave=' + llave;
+
+  if (!item) return; // se queda el mensaje de la ficha vacía
+
+  const dim = CUANTI.dimensiones.find(d => d.key === item.key_dimension);
+  document.getElementById('panel-item').innerHTML = `
+    <div class="dim-etiqueta">
+      <div class="dim-punto" style="background:${dim.color}"></div>
+      <span>${dim.key} ${dim.nombre}</span>
+    </div>
+    <div class="detalle-titulo">${item.esperado || ''}</div>
+    <div class="detalle-indicador">${item.indicador || ''}</div>
+    <div class="ficha">
+      <div class="ficha-item"><div class="ficha-label">Sector líder</div><div class="ficha-valor">${item.sector_lider || '—'}</div></div>
+      <div class="ficha-item"><div class="ficha-label">Tipo de anualización</div><div class="ficha-valor">${item.tipo_anualizacion || '—'}</div></div>
+    </div>
+    <div class="toggle">
+      <button id="btn-valor" class="activo">Acumulado</button>
+      <button id="btn-pct">% de la meta</button>
+    </div>
+    <div class="grafica-caja"><canvas id="grafica"></canvas></div>`;
+
+  // Gráfica igual a la de productos.html: acumulado vs meta acumulada, con
+  // etiquetas de datos sobre los puntos (misma vista que el Power BI).
+  const COLOR_VALOR = getComputedStyle(document.documentElement).getPropertyValue('--valor').trim();
+  const COLOR_META = getComputedStyle(document.documentElement).getPropertyValue('--meta').trim();
+  const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
+    : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
+  let grafica = null;
+  let modo = 'valor';
+
+  function pintarGrafica() {
+    const esPct = modo === 'porcentaje';
+    const datosValor = item.serie.map(p => esPct ? p.porcentaje_acum : p.acumulado);
+    const datosMeta = item.serie.map(p => esPct ? (p.porcentaje_acum !== null ? 100 : null) : p.meta_acum);
+    const etiquetasDatos = {
+      id: 'etiquetasDatos',
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        const puntos = chart.getDatasetMeta(0).data;
+        const valores = chart.data.datasets[0].data;
+        ctx.save();
+        ctx.font = "600 11px Figtree, 'Segoe UI', sans-serif";
+        ctx.textAlign = 'center';
+        puntos.forEach((pt, i) => {
+          const v = valores[i];
+          if (v === null || v === undefined) return;
+          const texto = fmt(v) + (esPct ? ' %' : '');
+          const ancho = ctx.measureText(texto).width + 10;
+          const arriba = pt.y - 16 > chart.chartArea.top;
+          const y = arriba ? pt.y - 16 : pt.y + 18;
+          ctx.fillStyle = 'rgba(244,242,238,0.92)';
+          ctx.beginPath();
+          ctx.roundRect(pt.x - ancho / 2, y - 8, ancho, 16, 4);
+          ctx.fill();
+          ctx.fillStyle = '#2f2b28';
+          ctx.fillText(texto, pt.x, y + 4);
+        });
+        ctx.restore();
+      },
+    };
+    if (grafica) grafica.destroy();
+    grafica = new Chart(document.getElementById('grafica'), {
+      type: 'line',
+      plugins: [etiquetasDatos],
+      data: {
+        labels: item.serie.map(p => p.anio),
+        datasets: [
+          { label: esPct ? '% de la meta' : 'Acumulado', data: datosValor,
+            borderColor: COLOR_VALOR, backgroundColor: COLOR_VALOR,
+            borderWidth: 2, pointRadius: 4, pointHoverRadius: 6, tension: 0.25 },
+          { label: esPct ? 'Meta (100%)' : 'Meta acumulada', data: datosMeta,
+            borderColor: COLOR_META, backgroundColor: COLOR_META,
+            borderWidth: 2, borderDash: [6, 4], pointRadius: 0, pointHoverRadius: 5, tension: 0 },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { top: 20, right: 26, left: 6 } },
+        interaction: { intersect: false, mode: 'index' },
+        plugins: {
+          legend: { position: 'top', labels: { usePointStyle: true, font: { family: 'Figtree' } } },
+          tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' +
+            (ctx.parsed.y === null ? 'sin dato' : fmt(ctx.parsed.y) + (esPct ? ' %' : '')) } },
+        },
+        scales: {
+          y: { grid: { color: '#efeae3' }, ticks: { font: { family: 'Figtree' }, callback: v => fmt(v) } },
+          x: { grid: { display: false }, ticks: { font: { family: 'Figtree' } } },
+        },
+      },
+    });
+  }
+
+  document.getElementById('btn-valor').addEventListener('click', () => {
+    modo = 'valor';
+    document.getElementById('btn-valor').classList.add('activo');
+    document.getElementById('btn-pct').classList.remove('activo');
+    pintarGrafica();
+  });
+  document.getElementById('btn-pct').addEventListener('click', () => {
+    modo = 'porcentaje';
+    document.getElementById('btn-pct').classList.add('activo');
+    document.getElementById('btn-valor').classList.remove('activo');
+    pintarGrafica();
+  });
+  pintarGrafica();
+
+  if (!registros.length) {
+    document.getElementById('panel-registros').style.display = '';
+    document.getElementById('registros').innerHTML =
+      '<div class="detalle-vacio">Este producto no tiene registros cualitativos.</div>';
+    return;
+  }
+
+  document.getElementById('panel-filtros').style.display = '';
+  document.getElementById('panel-registros').style.display = '';
+
+  // filtros a partir de los datos del producto
+  const anios = [...new Set(registros.map(r => r.anio))].sort();
+  const trimestres = [...new Set(registros.map(r => r.trimestre))].sort();
+  const tipos = [...new Set(registros.map(r => r.tipo))].sort();
+
+  const selAnio = document.getElementById('filtro-anio');
+  anios.forEach(a => selAnio.insertAdjacentHTML('beforeend', `<option value="${a}">${a}</option>`));
+  selAnio.addEventListener('change', () => { estado.anio = selAnio.value; pintar(); });
+
+  const selTri = document.getElementById('filtro-trimestre');
+  trimestres.forEach(t => selTri.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
+  selTri.addEventListener('change', () => { estado.trimestre = selTri.value; pintar(); });
+
+  const cajaTipos = document.getElementById('filtro-tipos');
+  const chipTodos = document.createElement('button');
+  chipTodos.className = 'chip activo';
+  chipTodos.textContent = 'Todos';
+  chipTodos.addEventListener('click', () => { estado.tipo = ''; refrescarChips(); pintar(); });
+  cajaTipos.appendChild(chipTodos);
+  tipos.forEach(t => {
+    const b = document.createElement('button');
+    b.className = 'chip';
+    b.dataset.tipo = t;
+    b.textContent = t;
+    b.addEventListener('click', () => { estado.tipo = (estado.tipo === t) ? '' : t; refrescarChips(); pintar(); });
+    cajaTipos.appendChild(b);
+  });
+  function refrescarChips() {
+    chipTodos.classList.toggle('activo', estado.tipo === '');
+    cajaTipos.querySelectorAll('.chip[data-tipo]').forEach(c =>
+      c.classList.toggle('activo', c.dataset.tipo === estado.tipo));
+  }
+
+  function pintar() {
+    const filtrados = registros.filter(r =>
+      (!estado.anio || String(r.anio) === estado.anio) &&
+      (!estado.trimestre || r.trimestre === estado.trimestre) &&
+      (!estado.tipo || r.tipo === estado.tipo));
+    document.getElementById('conteo').textContent =
+      filtrados.length.toLocaleString('es-CO') + ' registros';
+    document.getElementById('registros').innerHTML = filtrados.length
+      ? filtrados.map(r => `
+        <div class="registro">
+          <div class="registro-encabezado">${r.anio} · ${r.trimestre} · ${r.tipo}</div>
+          <div class="registro-texto">${r.descripcion}</div>
+        </div>`).join('')
+      : '<div class="detalle-vacio">No hay registros con los filtros seleccionados.</div>';
+  }
+
+  pintar();
+})();
+</script>
+
+</body>
+</html>

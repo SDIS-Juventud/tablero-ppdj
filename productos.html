@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos - Seguimiento PPDJ</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@700&family=Figtree:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --crema: #f5efd2;
+  --gris-oscuro: #2f2b28;
+  --gris: #83766c;
+  --gris-claro: #f4f2ee;
+  --verde-oscuro: #2F3E3C;
+  --blanco: #ffffff;
+  --valor: #00a583;   /* serie Valor: turquesa de marca oscurecido para contraste */
+  --meta: #234f9c;    /* serie Meta: navy de marca aclarado, validado junto al turquesa */
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Figtree', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gris-claro);
+  color: var(--gris-oscuro);
+}
+
+.barra {
+  background: var(--verde-oscuro);
+  padding: 1.1rem 1.5rem;
+  display: flex; align-items: center; gap: 1.2rem;
+}
+.btn-home {
+  color: var(--crema);
+  text-decoration: none;
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  border: 1.5px solid rgba(245,239,210,0.5);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  transition: background 0.15s ease;
+}
+.btn-home:hover { background: rgba(245,239,210,0.12); }
+.barra-titulo {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  color: var(--crema);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+main { max-width: 1360px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
+
+.filtros {
+  background: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1rem 1.3rem;
+  display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+.filtro-grupo { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.filtro-label {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700; text-transform: uppercase;
+  font-size: 0.75rem; letter-spacing: 0.08em;
+  color: var(--gris);
+}
+select {
+  font-family: inherit; font-size: 0.9rem;
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid #ddd6cf; border-radius: 8px;
+  background: var(--blanco); color: var(--gris-oscuro);
+}
+.chip {
+  font-size: 0.8rem;
+  border: 1.5px solid #ddd6cf;
+  border-radius: 8px;
+  background: var(--blanco);
+  padding: 0.32rem 0.7rem;
+  cursor: pointer;
+  color: var(--gris);
+  font-family: inherit;
+}
+.chip.activo {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: var(--crema);
+}
+
+.panel-doble { display: grid; grid-template-columns: minmax(380px, 46%) 1fr; gap: 1.2rem; align-items: start; }
+@media (max-width: 980px) { .panel-doble { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.3rem;
+}
+.card-titulo {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700; text-transform: uppercase;
+  font-size: 0.95rem; letter-spacing: 0.06em;
+  margin-bottom: 0.8rem;
+}
+.conteo-tabla { color: var(--gris); font-size: 0.8rem; margin-bottom: 0.6rem; }
+
+.tabla-scroll { max-height: 620px; overflow-y: auto; overflow-x: auto; }
+.celda-anio { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+th.th-anio { text-align: right; }
+.celda-texto { min-width: 200px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+thead th {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 0.06em;
+  color: var(--gris);
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 2px solid var(--gris-claro);
+  position: sticky; top: 0; background: var(--blanco);
+}
+tbody td { padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--gris-claro); vertical-align: top; }
+tbody tr { cursor: pointer; }
+tbody tr:hover { background: #faf8f4; }
+tbody tr.seleccionada { background: var(--gris-claro); }
+.celda-num { font-family: 'Anton', sans-serif; font-size: 0.9rem; color: var(--gris); }
+.celda-texto { line-height: 1.4; }
+.celda-indicador { color: var(--gris); font-size: 0.8rem; }
+
+.detalle-vacio { color: var(--gris); padding: 2.5rem 1rem; text-align: center; }
+.dim-etiqueta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+.dim-punto { width: 0.85rem; height: 0.85rem; border-radius: 50%; flex-shrink: 0; }
+.dim-etiqueta span {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em;
+  color: var(--gris);
+}
+.detalle-titulo { font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin-bottom: 0.3rem; }
+.detalle-indicador { color: var(--gris); font-size: 0.9rem; line-height: 1.45; margin-bottom: 1rem; }
+
+.ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.7rem; margin-bottom: 1.2rem; }
+.ficha-item { background: var(--gris-claro); border-radius: 8px; padding: 0.6rem 0.8rem; }
+.ficha-label {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.08em;
+  color: var(--gris); margin-bottom: 0.2rem;
+}
+.ficha-valor { font-size: 0.88rem; font-weight: 600; line-height: 1.3; }
+
+.toggle { display: inline-flex; border: 1.5px solid #ddd6cf; border-radius: 8px; overflow: hidden; margin-bottom: 0.9rem; }
+.toggle button {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; font-size: 0.75rem;
+  border: none; background: var(--blanco); color: var(--gris);
+  padding: 0.45rem 1rem; cursor: pointer;
+}
+.toggle button.activo { background: var(--verde-oscuro); color: var(--crema); }
+
+.grafica-caja { position: relative; height: 300px; }
+
+.serie-tabla { margin-top: 1.1rem; overflow-x: auto; }
+.serie-tabla table { font-size: 0.8rem; }
+.serie-tabla td, .serie-tabla th { text-align: right; padding: 0.4rem 0.55rem; }
+.serie-tabla td:first-child, .serie-tabla th:first-child { text-align: left; }
+.serie-tabla tbody tr { cursor: default; }
+
+.acciones { display: flex; gap: 0.7rem; margin-top: 1.2rem; flex-wrap: wrap; }
+.btn {
+  font-family: 'Antonio', sans-serif; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; font-size: 0.8rem;
+  text-decoration: none; border-radius: 8px; padding: 0.55rem 1rem;
+  cursor: pointer; border: 1.5px solid var(--verde-oscuro);
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primario { background: var(--verde-oscuro); color: var(--crema); }
+.btn-secundario { background: var(--blanco); color: var(--verde-oscuro); }
+
+footer { background: var(--blanco); margin-top: 2rem; }
+.footer-marca { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<div class="barra">
+  <a class="btn-home" href="index.html">&#8592; Inicio</a>
+  <div class="barra-titulo">Productos</div>
+</div>
+
+<main>
+  <div class="filtros">
+    <div class="filtro-grupo">
+      <span class="filtro-label">Dimensión</span>
+      <select id="filtro-dim"></select>
+    </div>
+    <div class="filtro-grupo">
+      <span class="filtro-label">Sector líder</span>
+      <div id="filtro-sectores" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
+    </div>
+  </div>
+
+  <div class="panel-doble">
+    <div class="card">
+      <div class="card-titulo">Productos e indicadores</div>
+      <div class="conteo-tabla" id="conteo-tabla"></div>
+      <div class="tabla-scroll">
+        <table>
+          <thead id="cabeza-tabla"></thead>
+          <tbody id="cuerpo-tabla"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" id="panel-detalle">
+      <div class="detalle-vacio">Selecciona un producto de la tabla para ver su detalle.</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <img class="footer-marca" src="imagenes/Distrito joven.png" alt="Distrito Joven - Alcaldía Mayor de Bogotá">
+</footer>
+
+<script src="data/productos.js"></script>
+<script>
+// Página de detalle de Productos: filtros por dimensión y sector, tabla
+// maestro, ficha del producto seleccionado y gráfica Valor vs Meta con
+// alternador a porcentaje de cumplimiento.
+(function () {
+  const DATOS = window.DATOS_PRODUCTOS;
+  if (!DATOS) {
+    document.querySelector('main').innerHTML =
+      '<p style="color:#83766c">No se pudieron cargar los datos (falta data/productos.js).</p>';
+    return;
+  }
+
+  const COLOR_VALOR = getComputedStyle(document.documentElement).getPropertyValue('--valor').trim();
+  const COLOR_META = getComputedStyle(document.documentElement).getPropertyValue('--meta').trim();
+  const params = new URLSearchParams(location.search);
+
+  const estado = {
+    dim: params.get('dim') || '',            // "1".."7" o "" = todas
+    sectores: new Set(),                      // vacío = todos
+    llave: params.get('llave') || '',
+    modo: 'valor',                            // 'valor' | 'porcentaje'
+  };
+  let grafica = null;
+
+  const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
+    : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
+
+  const dimPorKey = {};
+  DATOS.dimensiones.forEach(d => { dimPorKey[d.key] = d; });
+
+  // ---- filtros ----
+  function initFiltros() {
+    const sel = document.getElementById('filtro-dim');
+    sel.innerHTML = '<option value="">Todas las dimensiones</option>' +
+      DATOS.dimensiones.map(d =>
+        `<option value="${d.key.replace('.', '')}">${d.key} ${d.nombre}</option>`).join('');
+    sel.value = estado.dim;
+    sel.addEventListener('change', () => {
+      estado.dim = sel.value;
+      estado.llave = '';
+      sincronizarUrl();
+      pintarSectores();
+      pintarTabla();
+    });
+
+    pintarSectores();
+  }
+
+  // Solo los sectores con ítems en la dimensión elegida; sin dimensión, todos
+  function sectoresDisponibles() {
+    const items = DATOS.items.filter(it =>
+      !estado.dim || it.key_dimension === estado.dim + '.');
+    return [...new Set(items.map(it => it.sector_lider).filter(Boolean))].sort();
+  }
+
+  function pintarSectores() {
+    const caja = document.getElementById('filtro-sectores');
+    const disponibles = sectoresDisponibles();
+    // descarta selecciones que ya no aplican a la dimensión elegida
+    [...estado.sectores].forEach(s => { if (!disponibles.includes(s)) estado.sectores.delete(s); });
+    caja.innerHTML = '';
+    const todos = document.createElement('button');
+    todos.className = 'chip' + (estado.sectores.size === 0 ? ' activo' : '');
+    todos.textContent = 'Todos';
+    todos.addEventListener('click', () => {
+      estado.sectores.clear();
+      pintarSectores();
+      pintarTabla();
+    });
+    caja.appendChild(todos);
+    disponibles.forEach(s => {
+      const b = document.createElement('button');
+      b.className = 'chip' + (estado.sectores.has(s) ? ' activo' : '');
+      b.textContent = s;
+      b.addEventListener('click', () => {
+        if (estado.sectores.has(s)) estado.sectores.delete(s); else estado.sectores.add(s);
+        pintarSectores();
+        pintarTabla();
+      });
+      caja.appendChild(b);
+    });
+  }
+
+  function itemsFiltrados() {
+    return DATOS.items.filter(it =>
+      (!estado.dim || it.key_dimension === estado.dim + '.') &&
+      (estado.sectores.size === 0 || estado.sectores.has(it.sector_lider)));
+  }
+
+  function sincronizarUrl() {
+    const p = new URLSearchParams();
+    if (estado.dim) p.set('dim', estado.dim);
+    if (estado.llave) p.set('llave', estado.llave);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+
+  // ---- tabla maestro ----
+  function pintarTabla() {
+    const items = itemsFiltrados();
+    const cuerpo = document.getElementById('cuerpo-tabla');
+    document.getElementById('conteo-tabla').textContent =
+      items.length.toLocaleString('es-CO') + ' de ' + DATOS.items.length.toLocaleString('es-CO') + ' productos';
+    cuerpo.innerHTML = '';
+    items.forEach(it => {
+      const tr = document.createElement('tr');
+      tr.dataset.llave = it.llave;
+      if (it.llave === estado.llave) tr.classList.add('seleccionada');
+      const celdasAnios = it.serie.map(p =>
+        `<td class="celda-anio">${p.valor === null ? '—' : fmt(p.valor)}</td>`).join('');
+      tr.innerHTML = `
+        <td class="celda-num">${it.numero}</td>
+        <td class="celda-texto">${it.esperado || ''}</td>
+        <td class="celda-texto celda-indicador">${it.indicador || ''}</td>${celdasAnios}`;
+      tr.addEventListener('click', () => seleccionar(it.llave));
+      cuerpo.appendChild(tr);
+    });
+    // si el ítem seleccionado quedó fuera del filtro, limpia el detalle
+    if (estado.llave && !items.some(it => it.llave === estado.llave)) {
+      estado.llave = '';
+      sincronizarUrl();
+    }
+    pintarDetalle();
+  }
+
+  function seleccionar(llave) {
+    estado.llave = llave;
+    sincronizarUrl();
+    document.querySelectorAll('#cuerpo-tabla tr').forEach(tr =>
+      tr.classList.toggle('seleccionada', tr.dataset.llave === llave));
+    pintarDetalle();
+  }
+
+  // ---- panel de detalle ----
+  function pintarDetalle() {
+    const panel = document.getElementById('panel-detalle');
+    const it = DATOS.items.find(i => i.llave === estado.llave);
+    if (!it) {
+      panel.innerHTML = '<div class="detalle-vacio">Selecciona un producto de la tabla para ver su detalle.</div>';
+      if (grafica) { grafica.destroy(); grafica = null; }
+      return;
+    }
+    const dim = dimPorKey[it.key_dimension];
+    const periodo = (it.fecha_inicio || '') + (it.fecha_fin ? ' a ' + it.fecha_fin : '');
+    panel.innerHTML = `
+      <div class="dim-etiqueta">
+        <div class="dim-punto" style="background:${dim.color}"></div>
+        <span>${dim.key} ${dim.nombre}</span>
+      </div>
+      <div class="detalle-titulo">${it.esperado || ''}</div>
+      <div class="detalle-indicador">${it.indicador || ''}</div>
+      <div class="ficha">
+        <div class="ficha-item"><div class="ficha-label">Sector líder</div><div class="ficha-valor">${it.sector_lider || '—'}</div></div>
+        <div class="ficha-item"><div class="ficha-label">Tipo de anualización</div><div class="ficha-valor">${it.tipo_anualizacion || '—'}</div></div>
+        <div class="ficha-item"><div class="ficha-label">Valor línea base</div><div class="ficha-valor">${typeof it.valor_linea_base === 'number' ? fmt(it.valor_linea_base) : (it.valor_linea_base || '—')}</div></div>
+        <div class="ficha-item"><div class="ficha-label">Periodo</div><div class="ficha-valor">${periodo || '—'}</div></div>
+      </div>
+      <div class="toggle">
+        <button id="btn-valor" class="${estado.modo === 'valor' ? 'activo' : ''}">Acumulado</button>
+        <button id="btn-pct" class="${estado.modo === 'porcentaje' ? 'activo' : ''}">% de la meta</button>
+      </div>
+      <div class="grafica-caja"><canvas id="grafica"></canvas></div>
+      <div class="serie-tabla" id="serie-tabla"></div>
+      <div class="acciones">
+        <a class="btn btn-primario" href="productos-cualitativo.html?llave=${it.llave}">Ver análisis cualitativo</a>
+        <a class="btn btn-secundario" href="indicadores.html">&iquest;Qué es el tipo de anualización?</a>
+      </div>`;
+    document.getElementById('btn-valor').addEventListener('click', () => cambiarModo('valor'));
+    document.getElementById('btn-pct').addEventListener('click', () => cambiarModo('porcentaje'));
+    pintarGrafica(it);
+    pintarSerieTabla(it);
+  }
+
+  function cambiarModo(modo) {
+    estado.modo = modo;
+    document.getElementById('btn-valor').classList.toggle('activo', modo === 'valor');
+    document.getElementById('btn-pct').classList.toggle('activo', modo === 'porcentaje');
+    const it = DATOS.items.find(i => i.llave === estado.llave);
+    if (it) pintarGrafica(it);
+  }
+
+  function pintarGrafica(it) {
+    const esPct = estado.modo === 'porcentaje';
+    // La gráfica pinta el ACUMULADO contra la meta acumulada, igual que el
+    // Power BI original (la tabla maestro sí muestra los valores anuales).
+    const etiquetas = it.serie.map(p => p.anio);
+    const datosValor = it.serie.map(p => esPct ? p.porcentaje_acum : p.acumulado);
+    const datosMeta = it.serie.map(p => esPct ? (p.porcentaje_acum !== null ? 100 : null) : p.meta_acum);
+
+    // Etiquetas de datos sobre cada punto de la serie principal, como en el
+    // Power BI: permiten revisar y sacar pantallazos sin pasar el mouse.
+    const etiquetasDatos = {
+      id: 'etiquetasDatos',
+      afterDatasetsDraw(chart) {
+        const ctx = chart.ctx;
+        const puntos = chart.getDatasetMeta(0).data;
+        const valores = chart.data.datasets[0].data;
+        ctx.save();
+        ctx.font = "600 11px Figtree, 'Segoe UI', sans-serif";
+        ctx.textAlign = 'center';
+        puntos.forEach((pt, i) => {
+          const v = valores[i];
+          if (v === null || v === undefined) return;
+          const texto = fmt(v) + (esPct ? ' %' : '');
+          const ancho = ctx.measureText(texto).width + 10;
+          const arriba = pt.y - 16 > chart.chartArea.top;
+          const y = arriba ? pt.y - 16 : pt.y + 18;
+          ctx.fillStyle = 'rgba(244,242,238,0.92)';
+          ctx.beginPath();
+          ctx.roundRect(pt.x - ancho / 2, y - 8, ancho, 16, 4);
+          ctx.fill();
+          ctx.fillStyle = '#2f2b28';
+          ctx.fillText(texto, pt.x, y + 4);
+        });
+        ctx.restore();
+      },
+    };
+
+    if (grafica) grafica.destroy();
+    grafica = new Chart(document.getElementById('grafica'), {
+      type: 'line',
+      plugins: [etiquetasDatos],
+      data: {
+        labels: etiquetas,
+        datasets: [
+          {
+            label: esPct ? '% de la meta' : 'Acumulado',
+            data: datosValor,
+            borderColor: COLOR_VALOR, backgroundColor: COLOR_VALOR,
+            borderWidth: 2, pointRadius: 4, pointHoverRadius: 6, tension: 0.25,
+          },
+          {
+            label: esPct ? 'Meta (100%)' : 'Meta acumulada',
+            data: datosMeta,
+            borderColor: COLOR_META, backgroundColor: COLOR_META,
+            borderWidth: 2, borderDash: [6, 4], pointRadius: 0, pointHoverRadius: 5,
+            tension: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        layout: { padding: { top: 20, right: 26, left: 6 } },
+        interaction: { intersect: false, mode: 'index' },
+        plugins: {
+          legend: { position: 'top', labels: { usePointStyle: true, font: { family: 'Figtree' } } },
+          tooltip: {
+            callbacks: {
+              label: ctx => ' ' + ctx.dataset.label + ': ' +
+                (ctx.parsed.y === null ? 'sin dato' : fmt(ctx.parsed.y) + (esPct ? ' %' : '')),
+            },
+          },
+        },
+        scales: {
+          y: {
+            grid: { color: '#efeae3' },
+            ticks: { font: { family: 'Figtree' }, callback: v => fmt(v) },
+            title: { display: esPct, text: '% de la meta' },
+          },
+          x: { grid: { display: false }, ticks: { font: { family: 'Figtree' } } },
+        },
+      },
+    });
+  }
+
+  function pintarSerieTabla(it) {
+    const filas = it.serie.filter(p => p.valor !== null || p.meta !== null || p.acumulado !== null);
+    document.getElementById('serie-tabla').innerHTML = `
+      <table>
+        <thead><tr><th>Año</th><th>Valor</th><th>Meta</th><th>Acumulado</th><th>Meta acum.</th><th>% meta</th></tr></thead>
+        <tbody>${filas.map(p => `
+          <tr>
+            <td>${p.anio}</td><td>${fmt(p.valor)}</td><td>${fmt(p.meta)}</td>
+            <td>${fmt(p.acumulado)}</td><td>${fmt(p.meta_acum)}</td>
+            <td>${p.porcentaje_acum === null ? '—' : fmt(p.porcentaje_acum, 1) + ' %'}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>`;
+  }
+
+  // encabezado de la tabla con las columnas de años (como en el Power BI)
+  document.getElementById('cabeza-tabla').innerHTML =
+    '<tr><th>No.</th><th>Producto esperado</th><th>Indicador</th>' +
+    DATOS.anios.map(a => `<th class="th-anio">${a}</th>`).join('') + '</tr>';
+
+  initFiltros();
+  pintarTabla();
+})();
+</script>
+
+</body>
+</html>
