@@ -522,11 +522,11 @@ footer {
     const filas = it.serie.filter(p => p.valor !== null || p.meta !== null);
     document.getElementById('serie-tabla').innerHTML = `
       <table>
-        <thead><tr><th>Año</th><th>Valor</th><th>Meta</th><th>Diferencia</th><th>% meta</th></tr></thead>
+        <thead><tr><th>Año</th><th>Valor</th><th>Meta</th><th>Diferencia</th></tr></thead>
         <tbody>${filas.map(p => `
           <tr>
             <td>${p.anio}</td><td>${f(p.valor)}</td><td>${f(p.meta)}</td>
-            <td>${f(p.diff)}</td><td>${p.porcentaje === null ? '—' : fmt(p.porcentaje, 1) + ' %'}</td>
+            <td>${f(p.diff)}</td>
           </tr>`).join('')}
         </tbody>
       </table>`;
