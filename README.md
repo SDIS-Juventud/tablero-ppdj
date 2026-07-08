@@ -6,12 +6,3 @@ política, con vistas de Productos y de Resultados y análisis cualitativo por
 indicador.
 
 Tablero estático (HTML + Chart.js) con datos procesados en Python.
-
-## Cómo verlo
-
-Abrir `index.html` en el navegador, o visitar la versión publicada en GitHub
-Pages.
-
-## Cómo actualizar los datos
-
-Ver [INSTRUCCIONES.md](INSTRUCCIONES.md).
