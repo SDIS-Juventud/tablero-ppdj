@@ -346,7 +346,6 @@ footer {
       const celdasAnios = it.serie.map(p =>
         `<td class="celda-anio">${p.valor === null ? '—' : f(p.valor)}</td>`).join('');
       tr.innerHTML = `
-        <td class="celda-num">${it.numero}</td>
         <td class="celda-texto">${it.esperado || ''}</td>
         <td class="celda-texto celda-indicador">${it.indicador || ''}</td>${celdasAnios}`;
       tr.addEventListener('click', () => seleccionar(it.llave));
@@ -537,7 +536,7 @@ footer {
 
   // encabezado de la tabla con las columnas de años (como en el Power BI)
   document.getElementById('cabeza-tabla').innerHTML =
-    '<tr><th>No.</th><th>Producto esperado</th><th>Indicador</th>' +
+    '<tr><th>Producto esperado</th><th>Indicador</th>' +
     DATOS.anios.map(a => `<th class="th-anio">${a}</th>`).join('') + '</tr>';
 
   initFiltros();
