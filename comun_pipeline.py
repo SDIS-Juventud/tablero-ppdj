@@ -138,6 +138,22 @@ def anualizar_tablero(valores_trimestre, tipo, q4_anio_anterior=None):
     return None
 
 
+def clasificar_indicador_tipo(nombre_indicador):
+    """Deriva el campo "Indicador Tipo" de la ficha (Valor / Porcentaje /
+    Tasa) a partir del nombre del indicador. El campo original vive solo en
+    el modelo binario del Power BI (no está en ningún Excel), así que se
+    reconstruye con esta regla transparente basada en cómo empieza el nombre.
+    Verificado contra los 106 productos y 36 resultados del insumo actual."""
+    if not nombre_indicador:
+        return None
+    inicio = str(nombre_indicador).strip().lower()
+    if inicio.startswith(('porcentaje', '%', 'proporción', 'proporcion', 'deserción', 'desercion')):
+        return 'Porcentaje'
+    if inicio.startswith('tasa'):
+        return 'Tasa'
+    return 'Valor'
+
+
 def cargar_objetivos(pandas_modulo):
     """Lee Objetivos.xlsx (columnas Key y Objetivo, Keys "1." a "7.")
     y lo devuelve como DataFrame para el join por Key."""

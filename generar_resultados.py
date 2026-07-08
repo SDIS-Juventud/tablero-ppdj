@@ -19,8 +19,9 @@ from datetime import date
 import pandas as pd
 
 from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
-                            cargar_objetivos, extraer_anio_y_trimestre,
-                            normalizar_texto, parsear_fecha_mixta)
+                            cargar_objetivos, clasificar_indicador_tipo,
+                            extraer_anio_y_trimestre, normalizar_texto,
+                            parsear_fecha_mixta)
 from generar_productos import a_fecha_iso, a_numero, redondear
 
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2024_excel.xlsx')
@@ -89,6 +90,7 @@ def construir():
             'esperado': normalizar_texto(fila['Resultado esperado']),
             'indicador': normalizar_texto(fila['Nombre indicador de Resultado']),
             'sector_lider': sector,
+            'indicador_tipo': clasificar_indicador_tipo(fila['Nombre indicador de Resultado']),
             'ponderacion': a_numero(fila['Ponderación relativa del Resultado (%)']),
             'valor_linea_base': (a_numero(fila['Valor Linea Base'])
                                  if a_numero(fila['Valor Linea Base']) is not None
@@ -113,11 +115,15 @@ def construir():
 
 
 def main():
-    from generar_productos import escribir_json_y_js
+    from generar_productos import escribir_json_y_js, exportar_base_excel
     datos = construir()
     escribir_json_y_js(datos, RUTA_JSON, 'DATOS_RESULTADOS')
+    ruta_base = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             'salidas', 'Base_resultados_PPDJ_python.xlsx')
+    exportar_base_excel(datos, ruta_base)
     kb = os.path.getsize(RUTA_JSON) / 1024
     print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
+    print(f'Base Excel: {ruta_base}')
     print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])}')
 
 

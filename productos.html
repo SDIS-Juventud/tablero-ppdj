@@ -15,8 +15,10 @@
   --gris-claro: #f4f2ee;
   --verde-oscuro: #2F3E3C;
   --blanco: #ffffff;
-  --valor: #00a583;   /* serie Valor: turquesa de marca oscurecido para contraste */
-  --meta: #234f9c;    /* serie Meta: navy de marca aclarado, validado junto al turquesa */
+  /* Colores de los informes de Carolina (navy #0C1250 / naranja #F28E1C),
+     ajustados al paso más cercano que pasa la validación de accesibilidad */
+  --valor: #2c47a5;   /* serie reportada: navy del informe, aclarado */
+  --meta: #c96a08;    /* serie meta: naranja del informe, oscurecido */
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -368,7 +370,6 @@ footer { background: var(--blanco); margin-top: 2rem; }
       return;
     }
     const dim = dimPorKey[it.key_dimension];
-    const periodo = (it.fecha_inicio || '') + (it.fecha_fin ? ' a ' + it.fecha_fin : '');
     panel.innerHTML = `
       <div class="dim-etiqueta">
         <div class="dim-punto" style="background:${dim.color}"></div>
@@ -379,8 +380,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
       <div class="ficha">
         <div class="ficha-item"><div class="ficha-label">Sector líder</div><div class="ficha-valor">${it.sector_lider || '—'}</div></div>
         <div class="ficha-item"><div class="ficha-label">Tipo de anualización</div><div class="ficha-valor">${it.tipo_anualizacion || '—'}</div></div>
-        <div class="ficha-item"><div class="ficha-label">Valor línea base</div><div class="ficha-valor">${typeof it.valor_linea_base === 'number' ? fmt(it.valor_linea_base) : (it.valor_linea_base || '—')}</div></div>
-        <div class="ficha-item"><div class="ficha-label">Periodo</div><div class="ficha-valor">${periodo || '—'}</div></div>
+        <div class="ficha-item"><div class="ficha-label">Indicador tipo</div><div class="ficha-valor">${it.indicador_tipo || '—'}</div></div>
       </div>
       <div class="toggle">
         <button id="btn-valor" class="${estado.modo === 'valor' ? 'activo' : ''}">Acumulado</button>
@@ -439,6 +439,18 @@ footer { background: var(--blanco); margin-top: 2rem; }
           ctx.fillStyle = '#2f2b28';
           ctx.fillText(texto, pt.x, y + 4);
         });
+        // etiqueta de la última meta al final de la línea, como en los
+        // informes (en el color de la serie meta)
+        const puntosMeta = chart.getDatasetMeta(1).data;
+        const valoresMeta = chart.data.datasets[1].data;
+        let ultimo = -1;
+        valoresMeta.forEach((v, i) => { if (v !== null && v !== undefined) ultimo = i; });
+        if (ultimo >= 0 && puntosMeta[ultimo]) {
+          ctx.textAlign = 'left';
+          ctx.fillStyle = COLOR_META;
+          ctx.fillText(fmt(valoresMeta[ultimo]) + (esPct ? ' %' : ''),
+                       puntosMeta[ultimo].x + 8, puntosMeta[ultimo].y + 4);
+        }
         ctx.restore();
       },
     };
@@ -451,23 +463,26 @@ footer { background: var(--blanco); margin-top: 2rem; }
         labels: etiquetas,
         datasets: [
           {
-            label: esPct ? '% de la meta' : 'Acumulado',
+            label: esPct ? '% de la meta' : 'Producto reportado',
             data: datosValor,
             borderColor: COLOR_VALOR, backgroundColor: COLOR_VALOR,
-            borderWidth: 2, pointRadius: 4, pointHoverRadius: 6, tension: 0.25,
+            borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, tension: 0.25,
           },
           {
-            label: esPct ? 'Meta (100%)' : 'Meta acumulada',
+            label: esPct ? 'Meta (100%)' : 'Meta',
             data: datosMeta,
-            borderColor: COLOR_META, backgroundColor: COLOR_META,
-            borderWidth: 2, borderDash: [6, 4], pointRadius: 0, pointHoverRadius: 5,
+            // Meta con leve transparencia y punteado corto: queda como
+            // referencia recesiva y el producto reportado domina la lectura
+            borderColor: COLOR_META + 'cc', backgroundColor: COLOR_META,
+            borderWidth: 1.8, borderDash: [2, 5], borderCapStyle: 'round',
+            pointRadius: 0, pointHoverRadius: 5,
             tension: 0,
           },
         ],
       },
       options: {
         responsive: true, maintainAspectRatio: false,
-        layout: { padding: { top: 20, right: 26, left: 6 } },
+        layout: { padding: { top: 20, right: 60, left: 6 } },
         interaction: { intersect: false, mode: 'index' },
         plugins: {
           legend: { position: 'top', labels: { usePointStyle: true, font: { family: 'Figtree' } } },
@@ -480,6 +495,7 @@ footer { background: var(--blanco); margin-top: 2rem; }
         },
         scales: {
           y: {
+            grace: '12%',
             grid: { color: '#efeae3' },
             ticks: { font: { family: 'Figtree' }, callback: v => fmt(v) },
             title: { display: esPct, text: '% de la meta' },

@@ -22,8 +22,9 @@ from datetime import date, datetime
 import pandas as pd
 
 from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
-                            cargar_objetivos, extraer_anio_y_trimestre,
-                            normalizar_texto, parsear_fecha_mixta)
+                            cargar_objetivos, clasificar_indicador_tipo,
+                            extraer_anio_y_trimestre, normalizar_texto,
+                            parsear_fecha_mixta)
 
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_Q1_2025_excel.xlsx')
 RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'productos.json')
@@ -126,6 +127,7 @@ def construir():
             'esperado': normalizar_texto(fila['Producto esperado']),
             'indicador': normalizar_texto(fila['Nombre indicador de Producto']),
             'sector_lider': sector,
+            'indicador_tipo': clasificar_indicador_tipo(fila['Nombre indicador de Producto']),
             'ponderacion': a_numero(fila['Ponderación relativa del Producto (%)']),
             'valor_linea_base': (a_numero(fila['Valor Linea Base'])
                                  if a_numero(fila['Valor Linea Base']) is not None
@@ -149,6 +151,39 @@ def construir():
     return datos
 
 
+def exportar_base_excel(datos, ruta_excel):
+    """Exporta la base procesada a Excel (una fila por producto/resultado,
+    con Indicador tipo como columna y los valores anuales corregidos).
+    Es la versión presentable de "cómo quedó la base en Python"."""
+    filas = []
+    for it in datos['items']:
+        fila = {
+            'Key': it['key_dimension'],
+            'Dimensión': it['dimension'],
+            'No.': it['numero'],
+            'Esperado': it['esperado'],
+            'Nombre indicador': it['indicador'],
+            'Indicador tipo': it['indicador_tipo'],
+            'Sector líder': it['sector_lider'],
+            'Tipo de anualización': it['tipo_anualizacion'],
+            'Fecha inicio': it['fecha_inicio'],
+            'Fecha fin': it['fecha_fin'],
+        }
+        tiene_acumulado = any(p.get('acumulado') is not None for p in it['serie'])
+        for p in it['serie']:
+            a = p['anio']
+            fila[f'Valor_{a}'] = p['valor']
+            fila[f'Meta_{a}'] = p['meta']
+            fila[f'Diff_{a}'] = p['diff']
+            if tiene_acumulado:
+                fila[f'Acumulado_{a}'] = p.get('acumulado')
+                fila[f'Meta_acum_{a}'] = p.get('meta_acum')
+        filas.append(fila)
+    os.makedirs(os.path.dirname(ruta_excel), exist_ok=True)
+    pd.DataFrame(filas).to_excel(ruta_excel, index=False, engine='openpyxl')
+    return ruta_excel
+
+
 def escribir_json_y_js(datos, ruta_json, nombre_variable):
     """Escribe el JSON y un compañero .js (window.<VARIABLE> = ...).
     El .js es lo que cargan las páginas HTML con <script src>: funciona
@@ -168,8 +203,12 @@ def escribir_json_y_js(datos, ruta_json, nombre_variable):
 def main():
     datos = construir()
     escribir_json_y_js(datos, RUTA_JSON, 'DATOS_PRODUCTOS')
+    ruta_base = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             'salidas', 'Base_productos_PPDJ_python.xlsx')
+    exportar_base_excel(datos, ruta_base)
     kb = os.path.getsize(RUTA_JSON) / 1024
     print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
+    print(f'Base Excel: {ruta_base}')
     print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])}')
 
 
