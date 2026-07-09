@@ -86,28 +86,28 @@
      "anio": 2020,
      "valor": 0.0,
      "meta": 0.62,
-     "porcentaje": 0.0,
+     "porcentaje": -3547.1,
      "diff": -0.62
     },
     {
      "anio": 2021,
      "valor": 0.0,
      "meta": 0.63,
-     "porcentaje": 0.0,
+     "porcentaje": -2233.3,
      "diff": -0.63
     },
     {
      "anio": 2022,
      "valor": 0.63,
      "meta": 0.64,
-     "porcentaje": 98.4,
+     "porcentaje": 73.0,
      "diff": -0.01
     },
     {
      "anio": 2023,
      "valor": 0.78,
      "meta": 0.65,
-     "porcentaje": 120.0,
+     "porcentaje": 376.6,
      "diff": 0.13
     },
     {
@@ -144,44 +144,44 @@
     {
      "anio": 2020,
      "valor": 0.44,
-     "meta": 0.32,
+     "meta": 0.323,
      "porcentaje": 136.2,
-     "diff": 0.12
+     "diff": 0.117
     },
     {
      "anio": 2021,
      "valor": 0.44,
-     "meta": 0.33,
+     "meta": 0.333,
      "porcentaje": 132.1,
-     "diff": 0.11
+     "diff": 0.107
     },
     {
      "anio": 2022,
      "valor": 0.34,
-     "meta": 0.34,
+     "meta": 0.343,
      "porcentaje": 99.1,
-     "diff": -0.0
+     "diff": -0.003
     },
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 0.35,
+     "meta": 0.353,
      "porcentaje": 0.0,
-     "diff": -0.35
+     "diff": -0.353
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.36,
+     "meta": 0.363,
      "porcentaje": 0.0,
-     "diff": -0.36
+     "diff": -0.363
     },
     {
      "anio": 2025,
      "valor": 0.34,
-     "meta": 0.37,
+     "meta": 0.373,
      "porcentaje": 91.2,
-     "diff": -0.03
+     "diff": -0.033
     }
    ]
   },
@@ -204,42 +204,42 @@
      "anio": 2020,
      "valor": 0.0,
      "meta": 0.1,
-     "porcentaje": 0.0,
+     "porcentaje": null,
      "diff": -0.1
     },
     {
      "anio": 2021,
      "valor": 0.1,
-     "meta": 0.1,
-     "porcentaje": 95.2,
-     "diff": -0.0
+     "meta": 0.105,
+     "porcentaje": 0.0,
+     "diff": -0.005
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.1,
-     "porcentaje": 0.0,
-     "diff": -0.1
+     "meta": 0.105,
+     "porcentaje": -2000.0,
+     "diff": -0.105
     },
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 0.1,
-     "porcentaje": 0.0,
-     "diff": -0.1
+     "meta": 0.105,
+     "porcentaje": -2000.0,
+     "diff": -0.105
     },
     {
      "anio": 2024,
      "valor": 0.0,
      "meta": 0.11,
-     "porcentaje": 0.0,
+     "porcentaje": -1000.0,
      "diff": -0.11
     },
     {
      "anio": 2025,
      "valor": 0.02,
      "meta": 0.11,
-     "porcentaje": 18.2,
+     "porcentaje": -800.0,
      "diff": -0.09
     }
    ]
@@ -268,10 +268,10 @@
     },
     {
      "anio": 2021,
-     "valor": 0.01,
+     "valor": 0.0119,
      "meta": 5.0,
      "porcentaje": 0.2,
-     "diff": -4.99
+     "diff": -4.9881
     },
     {
      "anio": 2022,
@@ -321,44 +321,44 @@
     {
      "anio": 2020,
      "valor": 0.0,
-     "meta": 0.92,
+     "meta": 0.924,
      "porcentaje": 0.0,
-     "diff": -0.92
+     "diff": -0.924
     },
     {
      "anio": 2021,
-     "valor": 0.01,
-     "meta": 0.92,
+     "valor": 0.0102,
+     "meta": 0.924,
      "porcentaje": 1.1,
-     "diff": -0.91
+     "diff": -0.9138
     },
     {
      "anio": 2022,
-     "valor": 1.11,
-     "meta": 0.92,
+     "valor": 1.106,
+     "meta": 0.924,
      "porcentaje": 119.7,
-     "diff": 0.18
+     "diff": 0.182
     },
     {
      "anio": 2023,
-     "valor": 1.04,
-     "meta": 0.92,
+     "valor": 1.0385,
+     "meta": 0.924,
      "porcentaje": 112.4,
-     "diff": 0.11
+     "diff": 0.1145
     },
     {
      "anio": 2024,
      "valor": 100.58,
-     "meta": 0.92,
+     "meta": 0.924,
      "porcentaje": 10885.3,
-     "diff": 99.66
+     "diff": 99.656
     },
     {
      "anio": 2025,
      "valor": 102.02,
-     "meta": 0.92,
+     "meta": 0.924,
      "porcentaje": 11041.1,
-     "diff": 101.1
+     "diff": 101.096
     }
    ]
   },
@@ -380,44 +380,44 @@
     {
      "anio": 2020,
      "valor": 0.0,
-     "meta": 0.82,
+     "meta": 0.823,
      "porcentaje": 0.0,
-     "diff": -0.82
+     "diff": -0.823
     },
     {
      "anio": 2021,
-     "valor": 0.01,
-     "meta": 0.82,
+     "valor": 0.0051,
+     "meta": 0.823,
      "porcentaje": 0.6,
-     "diff": -0.82
+     "diff": -0.8179
     },
     {
      "anio": 2022,
-     "valor": 0.98,
-     "meta": 0.82,
+     "valor": 0.978,
+     "meta": 0.823,
      "porcentaje": 118.8,
-     "diff": 0.16
+     "diff": 0.155
     },
     {
      "anio": 2023,
-     "valor": 0.99,
-     "meta": 0.82,
+     "valor": 0.9876,
+     "meta": 0.823,
      "porcentaje": 120.0,
-     "diff": 0.16
+     "diff": 0.1646
     },
     {
      "anio": 2024,
-     "valor": 0.98,
-     "meta": 0.82,
+     "valor": 0.9754,
+     "meta": 0.823,
      "porcentaje": 118.5,
-     "diff": 0.15
+     "diff": 0.1524
     },
     {
      "anio": 2025,
      "valor": 101.79,
-     "meta": 0.82,
+     "meta": 0.823,
      "porcentaje": 12368.2,
-     "diff": 100.97
+     "diff": 100.967
     }
    ]
   },
@@ -439,44 +439,44 @@
     {
      "anio": 2020,
      "valor": 0.0,
-     "meta": 0.56,
+     "meta": 0.558,
      "porcentaje": 0.0,
-     "diff": -0.56
+     "diff": -0.558
     },
     {
      "anio": 2021,
-     "valor": 0.48,
-     "meta": 0.56,
+     "valor": 0.482,
+     "meta": 0.558,
      "porcentaje": 86.4,
-     "diff": -0.08
+     "diff": -0.076
     },
     {
      "anio": 2022,
-     "valor": 0.48,
-     "meta": 0.56,
+     "valor": 0.482,
+     "meta": 0.563,
      "porcentaje": 85.6,
-     "diff": -0.08
+     "diff": -0.081
     },
     {
      "anio": 2023,
-     "valor": 0.52,
-     "meta": 0.57,
+     "valor": 0.515,
+     "meta": 0.568,
      "porcentaje": 90.7,
-     "diff": -0.05
+     "diff": -0.053
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.57,
+     "meta": 0.573,
      "porcentaje": 0.0,
-     "diff": -0.57
+     "diff": -0.573
     },
     {
      "anio": 2025,
-     "valor": 0.54,
-     "meta": 0.58,
+     "valor": 0.5391,
+     "meta": 0.578,
      "porcentaje": 93.3,
-     "diff": -0.04
+     "diff": -0.0389
     }
    ]
   },
@@ -525,10 +525,10 @@
     },
     {
      "anio": 2024,
-     "valor": 1.0,
+     "valor": 0.9991,
      "meta": 1.0,
      "porcentaje": 99.9,
-     "diff": -0.0
+     "diff": -0.0009
     },
     {
      "anio": 2025,
@@ -564,30 +564,30 @@
     {
      "anio": 2021,
      "valor": 0.35,
-     "meta": 0.32,
+     "meta": 0.3216,
      "porcentaje": 108.8,
-     "diff": 0.03
+     "diff": 0.0284
     },
     {
      "anio": 2022,
-     "valor": 0.35,
-     "meta": 0.32,
+     "valor": 0.352,
+     "meta": 0.3216,
      "porcentaje": 109.5,
-     "diff": 0.03
+     "diff": 0.0304
     },
     {
      "anio": 2023,
      "valor": 0.35,
-     "meta": 0.32,
+     "meta": 0.3216,
      "porcentaje": 108.8,
-     "diff": 0.03
+     "diff": 0.0284
     },
     {
      "anio": 2024,
-     "valor": 0.33,
+     "valor": 0.325,
      "meta": 0.32,
      "porcentaje": 101.6,
-     "diff": 0.01
+     "diff": 0.005
     },
     {
      "anio": 2025,
@@ -629,24 +629,24 @@
     },
     {
      "anio": 2022,
-     "valor": 0.01,
+     "valor": 0.006,
      "meta": 1.53,
      "porcentaje": 0.4,
-     "diff": -1.52
+     "diff": -1.524
     },
     {
      "anio": 2023,
-     "valor": 0.04,
+     "valor": 0.035,
      "meta": 1.53,
      "porcentaje": 2.3,
-     "diff": -1.5
+     "diff": -1.495
     },
     {
      "anio": 2024,
-     "valor": 0.02,
+     "valor": 0.0216,
      "meta": 1.53,
      "porcentaje": 1.4,
-     "diff": -1.51
+     "diff": -1.5084
     },
     {
      "anio": 2025,
@@ -709,10 +709,10 @@
     },
     {
      "anio": 2025,
-     "valor": 0.09,
-     "meta": 0.09,
+     "valor": 0.0949,
+     "meta": 0.0906,
      "porcentaje": 104.7,
-     "diff": 0.0
+     "diff": 0.0043
     }
    ]
   },
@@ -740,24 +740,24 @@
     },
     {
      "anio": 2021,
-     "valor": 0.25,
+     "valor": 0.251,
      "meta": 0.27,
      "porcentaje": 93.0,
-     "diff": -0.02
+     "diff": -0.019
     },
     {
      "anio": 2022,
-     "valor": 0.91,
+     "valor": 0.9079,
      "meta": 0.28,
      "porcentaje": 324.2,
-     "diff": 0.63
+     "diff": 0.6279
     },
     {
      "anio": 2023,
-     "valor": 0.31,
+     "valor": 0.3085,
      "meta": 0.3,
      "porcentaje": 102.8,
-     "diff": 0.01
+     "diff": 0.0085
     },
     {
      "anio": 2024,
@@ -813,17 +813,17 @@
     },
     {
      "anio": 2023,
-     "valor": 0.11,
+     "valor": 0.1053,
      "meta": 0.4,
      "porcentaje": 26.3,
-     "diff": -0.29
+     "diff": -0.2947
     },
     {
      "anio": 2024,
-     "valor": 0.17,
+     "valor": 0.172,
      "meta": 0.4,
      "porcentaje": 43.0,
-     "diff": -0.23
+     "diff": -0.228
     },
     {
      "anio": 2025,
@@ -851,45 +851,45 @@
    "serie": [
     {
      "anio": 2020,
-     "valor": 0.28,
-     "meta": 0.23,
+     "valor": 0.2771,
+     "meta": 0.233,
      "porcentaje": 118.9,
-     "diff": 0.04
+     "diff": 0.0441
     },
     {
      "anio": 2021,
      "valor": 4.94,
-     "meta": 0.25,
+     "meta": 0.252,
      "porcentaje": 1960.3,
-     "diff": 4.69
+     "diff": 4.688
     },
     {
      "anio": 2022,
-     "valor": 0.36,
-     "meta": 0.27,
+     "valor": 0.3625,
+     "meta": 0.2663,
      "porcentaje": 136.1,
-     "diff": 0.1
+     "diff": 0.0962
     },
     {
      "anio": 2023,
-     "valor": 0.36,
-     "meta": 0.28,
+     "valor": 0.3626,
+     "meta": 0.2762,
      "porcentaje": 131.3,
-     "diff": 0.09
+     "diff": 0.0864
     },
     {
      "anio": 2024,
-     "valor": 0.36,
-     "meta": 0.29,
+     "valor": 0.3626,
+     "meta": 0.2885,
      "porcentaje": 125.7,
-     "diff": 0.07
+     "diff": 0.0741
     },
     {
      "anio": 2025,
-     "valor": 0.36,
-     "meta": 0.3,
+     "valor": 0.3626,
+     "meta": 0.3008,
      "porcentaje": 120.5,
-     "diff": 0.06
+     "diff": 0.0618
     }
    ]
   },
@@ -1035,17 +1035,17 @@
     },
     {
      "anio": 2021,
-     "valor": 0.3,
+     "valor": 0.3005,
      "meta": 34.6,
      "porcentaje": 0.9,
-     "diff": -34.3
+     "diff": -34.2995
     },
     {
      "anio": 2022,
-     "valor": 0.22,
+     "valor": 0.2195,
      "meta": 32.8,
      "porcentaje": 0.7,
-     "diff": -32.58
+     "diff": -32.5805
     },
     {
      "anio": 2023,
@@ -1154,37 +1154,37 @@
     {
      "anio": 2021,
      "valor": 0.2,
-     "meta": 0.1,
+     "meta": 0.104,
      "porcentaje": 192.3,
-     "diff": 0.1
+     "diff": 0.096
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.11,
+     "meta": 0.114,
      "porcentaje": 0.0,
-     "diff": -0.11
+     "diff": -0.114
     },
     {
      "anio": 2023,
-     "valor": 0.03,
-     "meta": 0.12,
+     "valor": 0.033,
+     "meta": 0.124,
      "porcentaje": 26.6,
-     "diff": -0.09
+     "diff": -0.091
     },
     {
      "anio": 2024,
-     "valor": 0.07,
-     "meta": 0.12,
+     "valor": 0.0675,
+     "meta": 0.124,
      "porcentaje": 54.4,
-     "diff": -0.06
+     "diff": -0.0565
     },
     {
      "anio": 2025,
-     "valor": 0.07,
-     "meta": 0.13,
+     "valor": 0.0675,
+     "meta": 0.134,
      "porcentaje": 50.4,
-     "diff": -0.07
+     "diff": -0.0665
     }
    ]
   },
@@ -1206,44 +1206,44 @@
     {
      "anio": 2020,
      "valor": 0.18,
-     "meta": 0.32,
+     "meta": 0.323,
      "porcentaje": 55.7,
-     "diff": -0.14
+     "diff": -0.143
     },
     {
      "anio": 2021,
      "valor": 0.18,
-     "meta": 0.34,
+     "meta": 0.343,
      "porcentaje": 52.5,
-     "diff": -0.16
+     "diff": -0.163
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.36,
+     "meta": 0.363,
      "porcentaje": 0.0,
-     "diff": -0.36
+     "diff": -0.363
     },
     {
      "anio": 2023,
-     "valor": 0.14,
-     "meta": 0.38,
+     "valor": 0.144,
+     "meta": 0.383,
      "porcentaje": 37.6,
-     "diff": -0.24
+     "diff": -0.239
     },
     {
      "anio": 2024,
-     "valor": 0.14,
-     "meta": 0.38,
+     "valor": 0.1353,
+     "meta": 0.383,
      "porcentaje": 35.3,
-     "diff": -0.25
+     "diff": -0.2477
     },
     {
      "anio": 2025,
-     "valor": 0.14,
-     "meta": 0.4,
+     "valor": 0.1353,
+     "meta": 0.403,
      "porcentaje": 33.6,
-     "diff": -0.27
+     "diff": -0.2677
     }
    ]
   },
@@ -1278,10 +1278,10 @@
     },
     {
      "anio": 2022,
-     "valor": 0.07,
+     "valor": 0.068,
      "meta": 5.0,
      "porcentaje": 1.4,
-     "diff": -4.93
+     "diff": -4.932
     },
     {
      "anio": 2023,
@@ -1351,10 +1351,10 @@
     },
     {
      "anio": 2024,
-     "valor": 0.52,
+     "valor": 0.5165,
      "meta": 0.61,
      "porcentaje": 84.7,
-     "diff": -0.09
+     "diff": -0.0935
     },
     {
      "anio": 2025,
@@ -1508,23 +1508,23 @@
     {
      "anio": 2021,
      "valor": 0.0,
-     "meta": 1062.26,
+     "meta": 1062.2569,
      "porcentaje": 0.0,
-     "diff": -1062.26
+     "diff": -1062.2569
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 1045.83,
+     "meta": 1045.8303,
      "porcentaje": 0.0,
-     "diff": -1045.83
+     "diff": -1045.8303
     },
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 1029.4,
+     "meta": 1029.4036,
      "porcentaje": 0.0,
-     "diff": -1029.4
+     "diff": -1029.4036
     },
     {
      "anio": 2024,
@@ -1619,44 +1619,44 @@
     {
      "anio": 2020,
      "valor": 0.4,
-     "meta": 1.0,
+     "meta": 0.9999,
      "porcentaje": 40.0,
-     "diff": -0.6
+     "diff": -0.5999
     },
     {
      "anio": 2021,
      "valor": 0.51,
-     "meta": 1.0,
+     "meta": 0.9998,
      "porcentaje": 51.0,
-     "diff": -0.49
+     "diff": -0.4898
     },
     {
      "anio": 2022,
      "valor": 1.1,
-     "meta": 1.0,
+     "meta": 0.9997,
      "porcentaje": 110.0,
-     "diff": 0.1
+     "diff": 0.1003
     },
     {
      "anio": 2023,
      "valor": 1.62,
-     "meta": 1.0,
+     "meta": 0.9996,
      "porcentaje": 162.1,
-     "diff": 0.62
+     "diff": 0.6204
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 1.0,
+     "meta": 0.9995,
      "porcentaje": 0.0,
-     "diff": -1.0
+     "diff": -0.9995
     },
     {
      "anio": 2025,
-     "valor": 3.06,
-     "meta": 1.0,
+     "valor": 3.0612,
+     "meta": 0.9994,
      "porcentaje": 306.3,
-     "diff": 2.06
+     "diff": 2.0618
     }
    ]
   },
@@ -1678,44 +1678,44 @@
     {
      "anio": 2020,
      "valor": 0.4,
-     "meta": 0.01,
+     "meta": 0.0109,
      "porcentaje": 3669.7,
-     "diff": 0.39
+     "diff": 0.3891
     },
     {
      "anio": 2021,
      "valor": 0.82,
-     "meta": 0.01,
+     "meta": 0.0109,
      "porcentaje": 7522.9,
-     "diff": 0.81
+     "diff": 0.8091
     },
     {
      "anio": 2022,
      "valor": 3.04,
-     "meta": 0.01,
+     "meta": 0.0108,
      "porcentaje": 28148.1,
-     "diff": 3.03
+     "diff": 3.0292
     },
     {
      "anio": 2023,
      "valor": 3.83,
-     "meta": 0.01,
+     "meta": 0.0107,
      "porcentaje": 35794.4,
-     "diff": 3.82
+     "diff": 3.8193
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.01,
+     "meta": 0.0107,
      "porcentaje": 0.0,
-     "diff": -0.01
+     "diff": -0.0107
     },
     {
      "anio": 2025,
      "valor": 4.66,
-     "meta": 0.01,
+     "meta": 0.0106,
      "porcentaje": 43962.3,
-     "diff": 4.65
+     "diff": 4.6494
     }
    ]
   },
@@ -1737,42 +1737,42 @@
     {
      "anio": 2020,
      "valor": 0.0,
-     "meta": 0.89,
+     "meta": 0.8863,
      "porcentaje": 0.0,
-     "diff": -0.89
+     "diff": -0.8863
     },
     {
      "anio": 2021,
      "valor": 0.0,
-     "meta": 0.88,
+     "meta": 0.8763,
      "porcentaje": 0.0,
-     "diff": -0.88
+     "diff": -0.8763
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.87,
+     "meta": 0.8663,
      "porcentaje": 0.0,
-     "diff": -0.87
+     "diff": -0.8663
     },
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 0.86,
+     "meta": 0.8563,
      "porcentaje": 0.0,
-     "diff": -0.86
+     "diff": -0.8563
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.86,
+     "meta": 0.8563,
      "porcentaje": 0.0,
-     "diff": -0.86
+     "diff": -0.8563
     },
     {
      "anio": 2025,
      "valor": null,
-     "meta": 0.85,
+     "meta": 0.8463,
      "porcentaje": null,
      "diff": null
     }
@@ -1855,42 +1855,42 @@
     {
      "anio": 2020,
      "valor": 0.0,
-     "meta": 0.19,
+     "meta": 0.1919,
      "porcentaje": 0.0,
-     "diff": -0.19
+     "diff": -0.1919
     },
     {
      "anio": 2021,
      "valor": 0.0,
-     "meta": 0.19,
+     "meta": 0.1908,
      "porcentaje": 0.0,
-     "diff": -0.19
+     "diff": -0.1908
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.19,
+     "meta": 0.1897,
      "porcentaje": 0.0,
-     "diff": -0.19
+     "diff": -0.1897
     },
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 0.19,
+     "meta": 0.1886,
      "porcentaje": 0.0,
-     "diff": -0.19
+     "diff": -0.1886
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.19,
+     "meta": 0.1886,
      "porcentaje": 0.0,
-     "diff": -0.19
+     "diff": -0.1886
     },
     {
      "anio": 2025,
      "valor": null,
-     "meta": 0.19,
+     "meta": 0.1875,
      "porcentaje": null,
      "diff": null
     }
@@ -1913,45 +1913,45 @@
    "serie": [
     {
      "anio": 2020,
-     "valor": 0.1,
-     "meta": 0.61,
+     "valor": 0.1005,
+     "meta": 0.613,
      "porcentaje": 16.4,
-     "diff": -0.51
+     "diff": -0.5125
     },
     {
      "anio": 2021,
      "valor": 0.0,
-     "meta": 0.61,
+     "meta": 0.6145,
      "porcentaje": 0.0,
-     "diff": -0.61
+     "diff": -0.6145
     },
     {
      "anio": 2022,
-     "valor": 0.25,
-     "meta": 0.62,
+     "valor": 0.2525,
+     "meta": 0.616,
      "porcentaje": 41.0,
-     "diff": -0.36
+     "diff": -0.3635
     },
     {
      "anio": 2023,
      "valor": 0.98,
-     "meta": 0.62,
+     "meta": 0.6175,
      "porcentaje": 158.7,
-     "diff": 0.36
+     "diff": 0.3625
     },
     {
      "anio": 2024,
      "valor": 0.99,
-     "meta": 0.62,
+     "meta": 0.6175,
      "porcentaje": 160.3,
-     "diff": 0.37
+     "diff": 0.3725
     },
     {
      "anio": 2025,
      "valor": 0.99,
-     "meta": 0.62,
+     "meta": 0.619,
      "porcentaje": 159.9,
-     "diff": 0.37
+     "diff": 0.371
     }
    ]
   },
@@ -1972,17 +1972,17 @@
    "serie": [
     {
      "anio": 2020,
-     "valor": 0.24,
+     "valor": 0.2354,
      "meta": 0.45,
      "porcentaje": 52.3,
-     "diff": -0.21
+     "diff": -0.2146
     },
     {
      "anio": 2021,
-     "valor": 0.41,
+     "valor": 0.4079,
      "meta": 0.47,
      "porcentaje": 86.8,
-     "diff": -0.06
+     "diff": -0.0621
     },
     {
      "anio": 2022,
@@ -2032,43 +2032,43 @@
     {
      "anio": 2020,
      "valor": 1.0,
-     "meta": 0.95,
-     "porcentaje": 105.2,
-     "diff": 0.05
+     "meta": 0.951,
+     "porcentaje": 1733.3,
+     "diff": 0.049
     },
     {
      "anio": 2021,
      "valor": 1.0,
-     "meta": 0.95,
-     "porcentaje": 104.8,
-     "diff": 0.05
+     "meta": 0.954,
+     "porcentaje": 866.7,
+     "diff": 0.046
     },
     {
      "anio": 2022,
      "valor": 0.0,
-     "meta": 0.96,
-     "porcentaje": 0.0,
-     "diff": -0.96
+     "meta": 0.957,
+     "porcentaje": -10533.3,
+     "diff": -0.957
     },
     {
      "anio": 2023,
      "valor": 0.0,
      "meta": 0.96,
-     "porcentaje": 0.0,
+     "porcentaje": -7900.0,
      "diff": -0.96
     },
     {
      "anio": 2024,
      "valor": 0.0,
-     "meta": 0.96,
-     "porcentaje": 0.0,
-     "diff": -0.96
+     "meta": 0.957,
+     "porcentaje": -10533.3,
+     "diff": -0.957
     },
     {
      "anio": 2025,
      "valor": 0.84,
      "meta": 0.96,
-     "porcentaje": 87.5,
+     "porcentaje": -900.0,
      "diff": -0.12
     }
    ]
@@ -2098,9 +2098,9 @@
     {
      "anio": 2021,
      "valor": 0.18,
-     "meta": 0.34,
+     "meta": 0.335,
      "porcentaje": 53.7,
-     "diff": -0.16
+     "diff": -0.155
     },
     {
      "anio": 2022,
@@ -2112,9 +2112,9 @@
     {
      "anio": 2023,
      "valor": 0.0,
-     "meta": 0.36,
+     "meta": 0.365,
      "porcentaje": 0.0,
-     "diff": -0.36
+     "diff": -0.365
     },
     {
      "anio": 2024,
@@ -2126,9 +2126,9 @@
     {
      "anio": 2025,
      "valor": 0.0,
-     "meta": 0.36,
+     "meta": 0.365,
      "porcentaje": 0.0,
-     "diff": -0.36
+     "diff": -0.365
     }
    ]
   },
@@ -2156,24 +2156,24 @@
     },
     {
      "anio": 2021,
-     "valor": 0.08,
-     "meta": 6.99,
+     "valor": 0.0827,
+     "meta": 6.9925,
      "porcentaje": 1.2,
-     "diff": -6.91
+     "diff": -6.9098
     },
     {
      "anio": 2022,
-     "valor": 0.08,
-     "meta": 6.61,
+     "valor": 0.0827,
+     "meta": 6.6123,
      "porcentaje": 1.3,
-     "diff": -6.53
+     "diff": -6.5296
     },
     {
      "anio": 2023,
      "valor": 10.32,
-     "meta": 6.28,
+     "meta": 6.2823,
      "porcentaje": 164.3,
-     "diff": 4.04
+     "diff": 4.0377
     },
     {
      "anio": 2024,

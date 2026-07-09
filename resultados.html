@@ -415,40 +415,66 @@ footer {
 
     // Etiquetas de datos sobre cada punto de la serie principal, como en el
     // Power BI: permiten revisar y sacar pantallazos sin pasar el mouse.
+    // La última meta lleva una píldora propia que esquiva la etiqueta del
+    // resultado para que no se monten; si se oculta el resultado en la
+    // leyenda, la meta muestra el valor de todos sus puntos.
     const etiquetasDatos = {
       id: 'etiquetasDatos',
       afterDatasetsDraw(chart) {
         const ctx = chart.ctx;
-        const puntos = chart.getDatasetMeta(0).data;
-        const valores = chart.data.datasets[0].data;
         ctx.save();
         ctx.font = "600 11px Figtree, 'Segoe UI', sans-serif";
         ctx.textAlign = 'center';
-        puntos.forEach((pt, i) => {
-          const v = valores[i];
-          if (v === null || v === undefined) return;
-          const texto = fSerie(v);
+        const cajas = [];  // píldoras ya pintadas, para detectar choques
+
+        function pintarPildora(pt, texto, color, preferirArriba) {
           const ancho = ctx.measureText(texto).width + 10;
-          const arriba = pt.y - 16 > chart.chartArea.top;
-          const y = arriba ? pt.y - 16 : pt.y + 18;
+          const candidatos = preferirArriba ? [pt.y - 16, pt.y + 18] : [pt.y + 18, pt.y - 16];
+          let y = candidatos[candidatos.length - 1];
+          for (const cand of candidatos) {
+            const caja = { x1: pt.x - ancho / 2, x2: pt.x + ancho / 2, y1: cand - 8, y2: cand + 8 };
+            const dentro = caja.y1 > chart.chartArea.top - 10;
+            const choca = cajas.some(c =>
+              caja.x1 < c.x2 && caja.x2 > c.x1 && caja.y1 < c.y2 && caja.y2 > c.y1);
+            if (dentro && !choca) { y = cand; break; }
+          }
           ctx.fillStyle = 'rgba(244,242,238,0.92)';
           ctx.beginPath();
           ctx.roundRect(pt.x - ancho / 2, y - 8, ancho, 16, 4);
           ctx.fill();
-          ctx.fillStyle = '#2f2b28';
+          ctx.fillStyle = color;
           ctx.fillText(texto, pt.x, y + 4);
-        });
-        // etiqueta de la última meta al final de la línea, como en los
-        // informes (en el color de la serie meta)
-        const puntosMeta = chart.getDatasetMeta(1).data;
-        const valoresMeta = chart.data.datasets[1].data;
-        let ultimo = -1;
-        valoresMeta.forEach((v, i) => { if (v !== null && v !== undefined) ultimo = i; });
-        if (ultimo >= 0 && puntosMeta[ultimo]) {
-          ctx.textAlign = 'left';
-          ctx.fillStyle = COLOR_META;
-          ctx.fillText(fSerie(valoresMeta[ultimo]),
-                       puntosMeta[ultimo].x + 8, puntosMeta[ultimo].y + 4);
+          cajas.push({ x1: pt.x - ancho / 2, x2: pt.x + ancho / 2, y1: y - 8, y2: y + 8 });
+        }
+
+        if (chart.isDatasetVisible(0)) {
+          const puntos = chart.getDatasetMeta(0).data;
+          const valores = chart.data.datasets[0].data;
+          puntos.forEach((pt, i) => {
+            const v = valores[i];
+            if (v === null || v === undefined) return;
+            pintarPildora(pt, fSerie(v), '#2f2b28', pt.y - 16 > chart.chartArea.top);
+          });
+        }
+        if (chart.isDatasetVisible(1)) {
+          const puntosMeta = chart.getDatasetMeta(1).data;
+          const valoresMeta = chart.data.datasets[1].data;
+          if (chart.isDatasetVisible(0)) {
+            // etiqueta de la última meta al final de la línea, como en los
+            // informes (en el color de la serie meta)
+            let ultimo = -1;
+            valoresMeta.forEach((v, i) => { if (v !== null && v !== undefined) ultimo = i; });
+            if (ultimo >= 0 && puntosMeta[ultimo]) {
+              pintarPildora(puntosMeta[ultimo], fSerie(valoresMeta[ultimo]), COLOR_META, true);
+            }
+          } else {
+            // con el resultado oculto, la meta muestra todos sus valores
+            puntosMeta.forEach((pt, i) => {
+              const v = valoresMeta[i];
+              if (v === null || v === undefined) return;
+              pintarPildora(pt, fSerie(v), COLOR_META, pt.y - 16 > chart.chartArea.top);
+            });
+          }
         }
         ctx.restore();
       },

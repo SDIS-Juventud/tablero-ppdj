@@ -104,6 +104,7 @@ select {
   margin-bottom: 0.8rem;
 }
 .conteo-tabla { color: var(--gris); font-size: 0.8rem; margin-bottom: 0.6rem; }
+.nota-parcial { color: var(--gris); font-size: 0.75rem; margin-top: 0.6rem; }
 
 .tabla-scroll { max-height: 620px; overflow-y: auto; overflow-x: auto; }
 .celda-anio { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -209,6 +210,7 @@ footer {
           <tbody id="cuerpo-tabla"></tbody>
         </table>
       </div>
+      <div class="nota-parcial" id="nota-parcial-maestro"></div>
     </div>
 
     <div class="card" id="panel-detalle">
@@ -247,6 +249,10 @@ footer {
 
   const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
     : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
+
+  // El año parcial (corte en curso, ej. 2026 con solo el 1er trimestre)
+  // se rotula con "p": 2026p
+  const etiquetaAnio = a => a === DATOS.anio_parcial ? a + 'p' : String(a);
 
   // Formateador según el tipo de indicador: los "Porcentaje" guardados como
   // proporción (0 a 1) se muestran multiplicados por 100 con símbolo %; los
@@ -403,7 +409,8 @@ footer {
     const fSerie = crearFormateadorItem(it);
     // La gráfica pinta el ACUMULADO contra la meta acumulada, igual que el
     // Power BI original (la tabla maestro sí muestra los valores anuales).
-    const etiquetas = it.serie.map(p => p.anio);
+    // Para Constante y Decreciente el acumulado es el mismo valor anual.
+    const etiquetas = it.serie.map(p => etiquetaAnio(p.anio));
     const datosValor = it.serie.map(p => p.acumulado);
     const datosMeta = it.serie.map(p => p.meta_acum);
     // la gráfica arranca en el primer año con dato o meta, como el Power BI
@@ -417,40 +424,66 @@ footer {
 
     // Etiquetas de datos sobre cada punto de la serie principal, como en el
     // Power BI: permiten revisar y sacar pantallazos sin pasar el mouse.
+    // La última meta lleva una píldora propia que esquiva la etiqueta del
+    // producto para que no se monten; si se oculta el producto en la
+    // leyenda, la meta muestra el valor de todos sus puntos.
     const etiquetasDatos = {
       id: 'etiquetasDatos',
       afterDatasetsDraw(chart) {
         const ctx = chart.ctx;
-        const puntos = chart.getDatasetMeta(0).data;
-        const valores = chart.data.datasets[0].data;
         ctx.save();
         ctx.font = "600 11px Figtree, 'Segoe UI', sans-serif";
         ctx.textAlign = 'center';
-        puntos.forEach((pt, i) => {
-          const v = valores[i];
-          if (v === null || v === undefined) return;
-          const texto = fSerie(v);
+        const cajas = [];  // píldoras ya pintadas, para detectar choques
+
+        function pintarPildora(pt, texto, color, preferirArriba) {
           const ancho = ctx.measureText(texto).width + 10;
-          const arriba = pt.y - 16 > chart.chartArea.top;
-          const y = arriba ? pt.y - 16 : pt.y + 18;
+          const candidatos = preferirArriba ? [pt.y - 16, pt.y + 18] : [pt.y + 18, pt.y - 16];
+          let y = candidatos[candidatos.length - 1];
+          for (const cand of candidatos) {
+            const caja = { x1: pt.x - ancho / 2, x2: pt.x + ancho / 2, y1: cand - 8, y2: cand + 8 };
+            const dentro = caja.y1 > chart.chartArea.top - 10;
+            const choca = cajas.some(c =>
+              caja.x1 < c.x2 && caja.x2 > c.x1 && caja.y1 < c.y2 && caja.y2 > c.y1);
+            if (dentro && !choca) { y = cand; break; }
+          }
           ctx.fillStyle = 'rgba(244,242,238,0.92)';
           ctx.beginPath();
           ctx.roundRect(pt.x - ancho / 2, y - 8, ancho, 16, 4);
           ctx.fill();
-          ctx.fillStyle = '#2f2b28';
+          ctx.fillStyle = color;
           ctx.fillText(texto, pt.x, y + 4);
-        });
-        // etiqueta de la última meta al final de la línea, como en los
-        // informes (en el color de la serie meta)
-        const puntosMeta = chart.getDatasetMeta(1).data;
-        const valoresMeta = chart.data.datasets[1].data;
-        let ultimo = -1;
-        valoresMeta.forEach((v, i) => { if (v !== null && v !== undefined) ultimo = i; });
-        if (ultimo >= 0 && puntosMeta[ultimo]) {
-          ctx.textAlign = 'left';
-          ctx.fillStyle = COLOR_META;
-          ctx.fillText(fSerie(valoresMeta[ultimo]),
-                       puntosMeta[ultimo].x + 8, puntosMeta[ultimo].y + 4);
+          cajas.push({ x1: pt.x - ancho / 2, x2: pt.x + ancho / 2, y1: y - 8, y2: y + 8 });
+        }
+
+        if (chart.isDatasetVisible(0)) {
+          const puntos = chart.getDatasetMeta(0).data;
+          const valores = chart.data.datasets[0].data;
+          puntos.forEach((pt, i) => {
+            const v = valores[i];
+            if (v === null || v === undefined) return;
+            pintarPildora(pt, fSerie(v), '#2f2b28', pt.y - 16 > chart.chartArea.top);
+          });
+        }
+        if (chart.isDatasetVisible(1)) {
+          const puntosMeta = chart.getDatasetMeta(1).data;
+          const valoresMeta = chart.data.datasets[1].data;
+          if (chart.isDatasetVisible(0)) {
+            // etiqueta de la última meta al final de la línea, como en los
+            // informes (en el color de la serie meta)
+            let ultimo = -1;
+            valoresMeta.forEach((v, i) => { if (v !== null && v !== undefined) ultimo = i; });
+            if (ultimo >= 0 && puntosMeta[ultimo]) {
+              pintarPildora(puntosMeta[ultimo], fSerie(valoresMeta[ultimo]), COLOR_META, true);
+            }
+          } else {
+            // con el producto oculto, la meta muestra todos sus valores
+            puntosMeta.forEach((pt, i) => {
+              const v = valoresMeta[i];
+              if (v === null || v === undefined) return;
+              pintarPildora(pt, fSerie(v), COLOR_META, pt.y - 16 > chart.chartArea.top);
+            });
+          }
         }
         ctx.restore();
       },
@@ -520,23 +553,43 @@ footer {
 
   function pintarSerieTabla(it) {
     const f = crearFormateadorItem(it);
-    const filas = it.serie.filter(p => p.valor !== null || p.meta !== null || p.acumulado !== null);
+    // Columnas según el tipo de anualización:
+    // - Constante / Decreciente no acumulan: solo valor y meta.
+    // - Creciente: el sector reporta el ACUMULADO y la meta es un nivel —
+    //   la tabla abre con lo mismo que pinta el gráfico, y el avance del
+    //   año (nivel menos nivel del año anterior) queda al final como
+    //   columna complementaria. No hay "Meta acum.": duplicaría la meta.
+    // - Suma: valor y meta del año más el acumulado corrido de ambos.
+    let columnas;
+    if (['Constante', 'Decreciente'].includes(it.tipo_anualizacion)) {
+      columnas = [['Valor', 'valor'], ['Meta', 'meta']];
+    } else if (it.tipo_anualizacion === 'Creciente') {
+      columnas = [['Acumulado', 'acumulado'], ['Meta', 'meta'], ['Avance del año', 'valor']];
+    } else {
+      columnas = [['Valor', 'valor'], ['Meta', 'meta'],
+                  ['Acumulado', 'acumulado'], ['Meta acum.', 'meta_acum']];
+    }
+    const filas = it.serie.filter(p => columnas.some(([, campo]) => p[campo] !== null));
+    const nota = DATOS.nota_parcial && filas.some(p => p.anio === DATOS.anio_parcial)
+      ? `<div class="nota-parcial">${DATOS.nota_parcial}</div>` : '';
     document.getElementById('serie-tabla').innerHTML = `
       <table>
-        <thead><tr><th>Año</th><th>Valor</th><th>Meta</th><th>Acumulado</th><th>Meta acum.</th></tr></thead>
+        <thead><tr><th>Año</th>${columnas.map(([titulo]) => `<th>${titulo}</th>`).join('')}</tr></thead>
         <tbody>${filas.map(p => `
           <tr>
-            <td>${p.anio}</td><td>${f(p.valor)}</td><td>${f(p.meta)}</td>
-            <td>${f(p.acumulado)}</td><td>${f(p.meta_acum)}</td>
+            <td>${etiquetaAnio(p.anio)}</td>${columnas.map(([, campo]) => `<td>${f(p[campo])}</td>`).join('')}
           </tr>`).join('')}
         </tbody>
-      </table>`;
+      </table>${nota}`;
   }
 
   // encabezado de la tabla con las columnas de años (como en el Power BI)
   document.getElementById('cabeza-tabla').innerHTML =
     '<tr><th>Producto esperado</th><th>Indicador</th>' +
-    DATOS.anios.map(a => `<th class="th-anio">${a}</th>`).join('') + '</tr>';
+    DATOS.anios.map(a => `<th class="th-anio">${etiquetaAnio(a)}</th>`).join('') + '</tr>';
+  if (DATOS.nota_parcial) {
+    document.getElementById('nota-parcial-maestro').textContent = DATOS.nota_parcial;
+  }
 
   initFiltros();
   pintarTabla();

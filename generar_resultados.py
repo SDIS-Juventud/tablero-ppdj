@@ -22,7 +22,8 @@ from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
                             cargar_objetivos, clasificar_indicador_tipo,
                             extraer_anio_y_trimestre, normalizar_texto,
                             parsear_fecha_mixta)
-from generar_productos import a_fecha_iso, a_numero, redondear
+from generar_productos import (a_fecha_iso, a_numero, porcentaje_avance,
+                               redondear)
 
 # Insumo del ciclo 2025 (generado por convertir_formato_resultados.py a
 # partir del formato crudo de la SDP; trae los datos de 2025)
@@ -56,6 +57,8 @@ def construir():
         numero = int(fila['Resultado No.'])
         key_dim = f"{int(fila['Key'])}."
         tipo = fila['Tipo de anualización']
+        tipo_limpio = normalizar_texto(tipo)
+        linea_base = a_numero(fila['Valor Linea Base'])
         sector = normalizar_texto(fila['Sector Líder'])
         if sector:
             sectores.add(sector)
@@ -92,10 +95,14 @@ def construir():
             if valor is None and anio_ultimo is not None and anio_inicio <= anio <= int(anio_ultimo):
                 valor = 0.0
             meta = a_numero(fila.get(f'Meta_{anio}'))
-            diff = redondear(valor - meta) if valor is not None and meta is not None else None
-            porcentaje = (redondear(valor / meta * 100, 1)
-                          if valor is not None and meta not in (None, 0) else None)
-            serie.append({'anio': anio, 'valor': redondear(valor), 'meta': redondear(meta),
+            # 4 decimales: los resultados son proporciones y tasas — con 2
+            # decimales se pierde precisión real (0,3626 se mostraría 36%
+            # en vez de 36,3%)
+            diff = redondear(valor - meta, 4) if valor is not None and meta is not None else None
+            # % oficial: en Creciente descuenta la línea base; el valor de
+            # los resultados ya es el nivel reportado (no se diferencia)
+            porcentaje = porcentaje_avance(valor, meta, tipo_limpio, linea_base)
+            serie.append({'anio': anio, 'valor': redondear(valor, 4), 'meta': redondear(meta, 4),
                           'porcentaje': porcentaje, 'diff': diff})
 
         items.append({

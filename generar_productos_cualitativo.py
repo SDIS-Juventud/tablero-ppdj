@@ -24,7 +24,9 @@ import pandas as pd
 
 from comun_pipeline import DIR_INPUTS, normalizar_texto
 
-RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_Q1_2025_excel.xlsx')
+# Desde 2026-07-08: formato SDP nuevo convertido (solo vigentes, textos
+# hasta el corte 2026). Generado por convertir_formato_productos.py.
+RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_2026_excel.xlsx')
 RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'productos-cualitativo.json')
 
 LITERALES_SIN_CONTENIDO = {'N.A.', 'N/A', 'No aplica', 'N.A', 'NA'}
