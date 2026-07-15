@@ -4,6 +4,16 @@ Este tablero muestra el seguimiento a los Productos y Resultados del Plan de
 Acción Indicativo de la Política Pública Distrital de Juventud 2019-2030.
 Son páginas HTML estáticas que leen datos generados por scripts de Python.
 
+## Estructura de carpetas
+
+| Carpeta | Qué contiene |
+|---|---|
+| raíz | Las páginas HTML publicadas, `data\` e `imagenes\` (lo que usa el sitio) |
+| `programas\` | Todo el código Python: generadores, convertidores y `requirements.txt` |
+| `programas\paridad\` | Scripts de verificación contra el pipeline original de R |
+| `programas\salidas\` | Excel de verificación que generan los scripts |
+| `historico\` | Versiones viejas de código y HTML. Solo local, no se sube al repo |
+
 ## Qué archivos usa
 
 | Insumo | Dónde va |
@@ -20,21 +30,22 @@ formatos de trabajo del equipo y no se publica.
 1. Guardar el nuevo Excel de seguimiento en `..\Insumos\Datos tablero\Inputs\`
    **sin borrar el anterior**.
 2. Si cambió el nombre del archivo, actualizar la constante `RUTA_INPUT` en el
-   script correspondiente (`generar_productos.py`, `generar_resultados.py`,
-   `generar_productos_cualitativo.py`, `generar_resultados_cualitativo.py`).
-3. Correr los cuatro generadores desde esta carpeta:
+   script correspondiente dentro de `programas\` (`generar_productos.py`,
+   `generar_resultados.py`, `generar_productos_cualitativo.py`,
+   `generar_resultados_cualitativo.py`).
+3. Correr los cuatro generadores desde la raíz del repo:
 
 ```
-python generar_productos.py
-python generar_resultados.py
-python generar_productos_cualitativo.py
-python generar_resultados_cualitativo.py
+python programas\generar_productos.py
+python programas\generar_resultados.py
+python programas\generar_productos_cualitativo.py
+python programas\generar_resultados_cualitativo.py
 ```
 
 4. Abrir `index.html` con doble clic y revisar que los datos nuevos aparezcan.
 5. Subir los cambios (los `data/*.json` y `data/*.js` regenerados) al repositorio.
 
-Requisitos de Python: `pip install -r requirements.txt` (pandas y openpyxl).
+Requisitos de Python: `pip install -r programas\requirements.txt` (pandas y openpyxl).
 
 ## Reglas de cálculo (anualización)
 
@@ -49,12 +60,12 @@ según su tipo de anualización (ver `indicadores.html`):
 
 Un año sin ningún reporte trimestral queda sin dato (no en cero).
 
-## Carpeta paridad/
+## Carpeta programas\paridad\
 
 Contiene los scripts que replican el pipeline original de R **tal cual, con
 sus bugs**, y el comparador que verifica que Python reproduce las salidas ya
 publicadas. Solo se usan para auditoría; el tablero se alimenta de los
-`generar_*.py`. Ver `python paridad\comparar_excel.py`.
+`generar_*.py`. Ver `python programas\paridad\comparar_excel.py`.
 
 ## Estructura de páginas
 

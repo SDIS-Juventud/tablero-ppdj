@@ -6,7 +6,7 @@ Reutiliza la lógica de generar_productos_cualitativo.py cambiando el
 insumo y la columna de número. Mismo filtro corregido (excluye
 "N.A."/"N/A"/"No aplica") y misma estructura por_llave ("R<numero>").
 
-Ejecución: python generar_resultados_cualitativo.py  (desde tablero-ppdj/)
+Ejecución: python programas/generar_resultados_cualitativo.py  (desde la raíz del repo)
 """
 
 import json
@@ -17,7 +17,7 @@ from generar_productos_cualitativo import construir
 
 # Insumo del ciclo 2025 (generado por convertir_formato_resultados.py)
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2025_excel.xlsx')
-RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'resultados-cualitativo.json')
+RUTA_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'resultados-cualitativo.json')
 
 
 def main():

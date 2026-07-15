@@ -9,7 +9,7 @@ Igual que generar_productos.py pero para la vista de Resultados:
 - "Decreciente" (10 casos) se mantiene como Q4, igual que Constante,
   porque no hay regla documentada — pendiente de definición del equipo.
 
-Ejecución: python generar_resultados.py  (desde tablero-ppdj/)
+Ejecución: python programas/generar_resultados.py  (desde la raíz del repo)
 """
 
 import json
@@ -28,7 +28,7 @@ from generar_productos import (a_fecha_iso, a_numero, porcentaje_avance,
 # Insumo del ciclo 2025 (generado por convertir_formato_resultados.py a
 # partir del formato crudo de la SDP; trae los datos de 2025)
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Resultados_PPDJ_2025_excel.xlsx')
-RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'resultados.json')
+RUTA_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'resultados.json')
 
 # Los resultados como tal arrancan en 2020 (año de implementación de la
 # política — aclaración de Carolina, 2026-07-08, igual que el Power BI).

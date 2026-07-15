@@ -7,8 +7,13 @@ convertir_formato_productos.py), que reemplaza al corte Q1 2025:
 - Solo entran los productos VIGENTES (99 de 123). Decisión de Carolina.
 - 71 productos cambiaron de tipo de anualización frente al corte viejo
   (ej. 1.1.1 pasó de Constante a Suma); el tipo manda sobre el cálculo.
-- La serie llega hasta 2026, que es un año PARCIAL (corte a 1er trimestre):
-  se marca con anio_parcial en el JSON y el HTML lo rotula "2026p".
+- La serie del tablero llega hasta 2025 (decisión de Carolina 2026-07-14):
+  el insumo trae trimestres de 2026 pero no entran a la vista.
+- Los productos que entraron NUEVOS con la actualización del plan de acción
+  (aprobada en 2025) se marcan con nuevo_2025: se detectan comparando el
+  código del texto (1.1.1., 5.4.2., ...) contra el corte anterior Q1 2025,
+  porque los textos se reescribieron y la numeración no es estable entre
+  cortes. El HTML les muestra una etiqueta de "producto nuevo".
 - El acumulado ya NO viene del insumo (el bloque del formato trae textos
   de ERROR en varios Creciente): se calcula aquí según el tipo:
     Suma      -> suma corrida de los valores anuales
@@ -28,12 +33,13 @@ Reglas de anualización por tipo (valor del año):
 El JSON alimenta productos.html: filtros por dimensión y sector, tabla
 maestro, ficha del producto y gráfica Valor vs Meta por año.
 
-Ejecución: python generar_productos.py  (desde tablero-ppdj/)
+Ejecución: python programas/generar_productos.py  (desde la raíz del repo)
 """
 
 import json
 import math
 import os
+import re
 from datetime import date
 
 import pandas as pd
@@ -44,11 +50,12 @@ from comun_pipeline import (DIMENSIONES, DIR_INPUTS, cargar_objetivos,
                             parsear_fecha_mixta)
 
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_2026_excel.xlsx')
-RUTA_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'productos.json')
+# Corte anterior del plan: solo se usa para detectar los productos nuevos
+RUTA_CORTE_ANTERIOR = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_Q1_2025_excel.xlsx')
+RUTA_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'productos.json')
 
-ANIOS = list(range(2019, 2027))
-ANIO_PARCIAL = 2026  # en este corte solo trae el 1er trimestre
-NOTA_PARCIAL = '2026p: dato parcial de 2026, con corte al primer trimestre.'
+ANIOS = list(range(2019, 2026))  # el tablero muestra hasta 2025 cerrado
+NOTA_NUEVOS = 'Producto nuevo: entró al plan de acción con la actualización aprobada en 2025.'
 
 
 def a_numero(valor):
@@ -103,6 +110,20 @@ def porcentaje_avance(reportado, meta, tipo, linea_base):
     return redondear(reportado / meta * 100, 1)
 
 
+def extraer_codigo(texto):
+    """Código del producto al inicio del texto esperado ("1.1.1"), o None."""
+    m = re.match(r'\s*(\d+\.\d+\.\d+)', str(texto))
+    return m.group(1) if m else None
+
+
+def codigos_corte_anterior():
+    """Códigos de producto del corte Q1 2025. Un vigente del formato nuevo
+    que no aparezca aquí es un producto que entró con la actualización del
+    plan de acción (15 en el corte 2026)."""
+    bd = pd.read_excel(RUTA_CORTE_ANTERIOR, sheet_name='Cuanti', skiprows=2, engine='openpyxl')
+    return {c for c in bd['Producto esperado'].map(extraer_codigo) if c}
+
+
 def construir():
     bd = pd.read_excel(RUTA_INPUT, sheet_name='Cuanti', skiprows=0, engine='openpyxl')
     # Solo los productos vigentes entran al tablero (el formato trae
@@ -111,6 +132,7 @@ def construir():
         bd = bd[bd['Estado del Indicador'] == 'Vigente']
 
     columnas_trimestrales = [c for c in bd.columns if extraer_anio_y_trimestre(c)[0] is not None]
+    codigos_viejos = codigos_corte_anterior()
 
     objetivos = cargar_objetivos(pd)
     objetivos_por_key = {f'{int(k)}.': normalizar_texto(o)
@@ -138,7 +160,7 @@ def construir():
         # Ventana de reporte: los años sin ningún trimestre reportado se
         # muestran en 0 (decisión de Carolina 2026-07-07, igual que el Power
         # BI publicado) pero solo entre el año de inicio del producto y el
-        # último año CERRADO. El año parcial (2026) nunca se rellena.
+        # último año CERRADO dentro de la vista (hasta 2025).
         fecha_ini = parsear_fecha_mixta(fila['Fecha de Inicio'])
         anio_inicio = fecha_ini.year if fecha_ini else ANIOS[0]
         anio_ultimo = a_numero(fila.get('Año del último reporte'))
@@ -149,7 +171,7 @@ def construir():
         elif corte and corte != 'Q4':
             anio_ultimo = int(anio_ultimo) - 1
         if anio_ultimo is not None:
-            anio_ultimo = min(int(anio_ultimo), ANIO_PARCIAL - 1)
+            anio_ultimo = min(int(anio_ultimo), ANIOS[-1])
 
         # Meta acumulada COHERENTE con el tipo de anualización, calculada a
         # partir de las metas anuales (la columna acumulada del insumo trae
@@ -223,9 +245,11 @@ def construir():
                           'acumulado': redondear(acumulado, 4), 'meta_acum': redondear(meta_acum, 4),
                           'porcentaje_acum': porcentaje_acum})
 
+        codigo = extraer_codigo(fila['Producto esperado'])
         items.append({
             'llave': f'P{numero}',
             'numero': numero,
+            'nuevo_2025': bool(codigo) and codigo not in codigos_viejos,
             'key_dimension': key_dim,
             'dimension': DIMENSIONES[key_dim]['nombre'],
             'esperado': normalizar_texto(fila['Producto esperado']),
@@ -246,8 +270,7 @@ def construir():
         'generado': date.today().isoformat(),
         'vista': 'productos',
         'anios': ANIOS,
-        'anio_parcial': ANIO_PARCIAL,
-        'nota_parcial': NOTA_PARCIAL,
+        'nota_nuevos': NOTA_NUEVOS,
         'dimensiones': [{'key': k, 'nombre': v['nombre'], 'color': v['color'],
                          'objetivo': objetivos_por_key.get(k)}
                         for k, v in DIMENSIONES.items()],
@@ -268,6 +291,7 @@ def exportar_base_excel(datos, ruta_excel):
             'Key': it['key_dimension'],
             'Dimensión': it['dimension'],
             'No.': it['numero'],
+            'Nuevo (2025)': 'Sí' if it.get('nuevo_2025') else '',
             'Esperado': it['esperado'],
             'Nombre indicador': it['indicador'],
             'Indicador tipo': it['indicador_tipo'],
@@ -316,7 +340,8 @@ def main():
     kb = os.path.getsize(RUTA_JSON) / 1024
     print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
     print(f'Base Excel: {ruta_base}')
-    print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])}')
+    nuevos = sum(1 for it in datos['items'] if it.get('nuevo_2025'))
+    print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])} | Nuevos 2025: {nuevos}')
 
 
 if __name__ == '__main__':

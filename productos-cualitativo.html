@@ -59,6 +59,14 @@ main { max-width: 960px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
   font-family: 'Antonio', sans-serif; font-weight: 700;
   text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.08em; color: var(--gris);
 }
+/* Etiqueta de producto nuevo (entró con la actualización del plan, 2025) */
+.tag-nuevo, .dim-etiqueta .tag-nuevo {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; font-size: 0.62rem; letter-spacing: 0.08em;
+  color: var(--rosa); border: 1.5px solid var(--rosa);
+  border-radius: 6px; padding: 0.08rem 0.45rem;
+  white-space: nowrap; vertical-align: middle;
+}
 .detalle-titulo { font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 1.12rem; line-height: 1.3; margin-bottom: 0.3rem; }
 .detalle-indicador { color: var(--gris); font-size: 0.9rem; line-height: 1.45; margin-bottom: 0.9rem; }
 .ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.7rem; }
@@ -170,7 +178,7 @@ footer {
   const dim = CUANTI.dimensiones.find(d => d.key === item.key_dimension);
   document.getElementById('panel-item').innerHTML = `
     <div class="dim-etiqueta">
-      <span>${dim.key} ${dim.nombre}</span>
+      <span>${dim.key} ${dim.nombre}</span>${item.nuevo_2025 ? '<span class="tag-nuevo">Producto nuevo · 2025</span>' : ''}
     </div>
     <div class="detalle-titulo">${item.esperado || ''}</div>
     <div class="detalle-indicador">${item.indicador || ''}</div>

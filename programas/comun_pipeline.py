@@ -18,8 +18,9 @@ import re
 from datetime import datetime, timedelta
 
 # Ruta base de los insumos: la carpeta Insumos/ vive junto a tablero-ppdj/,
-# fuera del repo (no se versiona). Se resuelve relativa a este archivo.
-RAIZ_PROYECTO = os.path.dirname(os.path.abspath(__file__))
+# fuera del repo (no se versiona). Este archivo vive en programas/, así que
+# la raíz del repo queda un nivel arriba.
+RAIZ_PROYECTO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR_INSUMOS = os.path.normpath(os.path.join(RAIZ_PROYECTO, '..', 'Insumos', 'Datos tablero'))
 DIR_INPUTS = os.path.join(DIR_INSUMOS, 'Inputs')
 DIR_SALIDAS_R = os.path.join(DIR_INSUMOS, 'Salidas')

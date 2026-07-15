@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-08",
+ "generado": "2026-07-14",
  "vista": "productos",
  "anios": [
   2019,
@@ -8,11 +8,9 @@
   2022,
   2023,
   2024,
-  2025,
-  2026
+  2025
  ],
- "anio_parcial": 2026,
- "nota_parcial": "2026p: dato parcial de 2026, con corte al primer trimestre.",
+ "nota_nuevos": "Producto nuevo: entró al plan de acción con la actualización aprobada en 2025.",
  "dimensiones": [
   {
    "key": "1.",
@@ -75,6 +73,7 @@
   {
    "llave": "P1",
    "numero": 1,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.1. Implementación de las atenciones integrales para jóvenes",
@@ -156,22 +155,13 @@
      "acumulado": 444846.0,
      "meta_acum": 150000.0,
      "porcentaje_acum": 296.6
-    },
-    {
-     "anio": 2026,
-     "valor": 4370.0,
-     "meta": 50000.0,
-     "porcentaje": 8.7,
-     "diff": -45630.0,
-     "acumulado": 449216.0,
-     "meta_acum": 200000.0,
-     "porcentaje_acum": 224.6
     }
    ]
   },
   {
    "llave": "P2",
    "numero": 2,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.2. Jóvenes que hacen uso de los servicios de las casas de juventud en las localidades que brindan espacios para el reconocimiento de su diversidad y el desarrollo de capacidades.",
@@ -253,22 +243,13 @@
      "acumulado": 176870.0,
      "meta_acum": 178000.0,
      "porcentaje_acum": 99.3
-    },
-    {
-     "anio": 2026,
-     "valor": 4366.0,
-     "meta": 200000.0,
-     "porcentaje": 89.6,
-     "diff": -195634.0,
-     "acumulado": 181236.0,
-     "meta_acum": 200000.0,
-     "porcentaje_acum": 89.6
     }
    ]
   },
   {
    "llave": "P3",
    "numero": 3,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.3. Jóvenes en emergencia social atendidos",
@@ -350,22 +331,13 @@
      "acumulado": 2618.0,
      "meta_acum": 2500.0,
      "porcentaje_acum": 104.7
-    },
-    {
-     "anio": 2026,
-     "valor": 377.0,
-     "meta": 2500.0,
-     "porcentaje": 15.1,
-     "diff": -2123.0,
-     "acumulado": 377.0,
-     "meta_acum": 2500.0,
-     "porcentaje_acum": 15.1
     }
    ]
   },
   {
    "llave": "P4",
    "numero": 4,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.4. Jóvenes migrantes extranjeros en situación de vulnerabilidad o emergencia social atendidos",
@@ -447,22 +419,13 @@
      "acumulado": 28007.0,
      "meta_acum": 52256.0,
      "porcentaje_acum": 53.6
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 5255.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 57511.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P5",
    "numero": 5,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.5 Jóvenes beneficiados con Transferencias Monetarias Condicionadas.",
@@ -544,22 +507,13 @@
      "acumulado": 50770.0,
      "meta_acum": 22900.0,
      "porcentaje_acum": 221.7
-    },
-    {
-     "anio": 2026,
-     "valor": 4244.0,
-     "meta": 12000.0,
-     "porcentaje": 35.4,
-     "diff": -7756.0,
-     "acumulado": 55014.0,
-     "meta_acum": 34900.0,
-     "porcentaje_acum": 157.6
     }
    ]
   },
   {
    "llave": "P6",
    "numero": 6,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.6. Jóvenes atendidos en procesos de desarrollo de capacidades y generación de oportunidades orientadas a la inclusión económica",
@@ -641,22 +595,13 @@
      "acumulado": 2152.0,
      "meta_acum": 2000.0,
      "porcentaje_acum": 107.6
-    },
-    {
-     "anio": 2026,
-     "valor": 1130.0,
-     "meta": 2000.0,
-     "porcentaje": 56.5,
-     "diff": -870.0,
-     "acumulado": 1130.0,
-     "meta_acum": 2000.0,
-     "porcentaje_acum": 56.5
     }
    ]
   },
   {
    "llave": "P7",
    "numero": 7,
+   "nuevo_2025": true,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.7. Número de localidades de la ciudad con al menos una casa de la juventud en operación.",
@@ -738,22 +683,13 @@
      "acumulado": 19.0,
      "meta_acum": 18.0,
      "porcentaje_acum": 150.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 20.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 20.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P8",
    "numero": 8,
+   "nuevo_2025": true,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.1.8. Jóvenes con y sin discapacidad beneficiados a través de la oferta de servicios del Sistema Distrital de Cuidado.",
@@ -835,22 +771,13 @@
      "acumulado": 8597.0,
      "meta_acum": 8100.0,
      "porcentaje_acum": 106.1
-    },
-    {
-     "anio": 2026,
-     "valor": 544.0,
-     "meta": 16024.0,
-     "porcentaje": 57.0,
-     "diff": -15480.0,
-     "acumulado": 9141.0,
-     "meta_acum": 16024.0,
-     "porcentaje_acum": 57.0
     }
    ]
   },
   {
    "llave": "P10",
    "numero": 10,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.2. Programas y/o eventos de televisión juvenil emitidos en el Canal Público de Bogotá (Canal Capital).",
@@ -932,22 +859,13 @@
      "acumulado": 4128.0,
      "meta_acum": 70.0,
      "porcentaje_acum": 5897.1
-    },
-    {
-     "anio": 2026,
-     "valor": 41.0,
-     "meta": 10.0,
-     "porcentaje": 410.0,
-     "diff": 31.0,
-     "acumulado": 4169.0,
-     "meta_acum": 80.0,
-     "porcentaje_acum": 5211.2
     }
    ]
   },
   {
    "llave": "P11",
    "numero": 11,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.3. Programas de radio juvenil emitidos para propiciar el reconocimiento de la diversidad de los jóvenes.",
@@ -1029,22 +947,13 @@
      "acumulado": 168.0,
      "meta_acum": 64.0,
      "porcentaje_acum": 262.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 16.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 80.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P12",
    "numero": 12,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.4. Iniciativas juveniles realizadas por jóvenes, procesos, prácticas y organizaciones juveniles con impacto local.",
@@ -1126,22 +1035,13 @@
      "acumulado": 196.0,
      "meta_acum": 181.0,
      "porcentaje_acum": 108.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 30.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 211.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P13",
    "numero": 13,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.5. Jóvenes vinculados a la oferta de servicios de la semana distrital de la juventud.",
@@ -1223,22 +1123,13 @@
      "acumulado": 66318.0,
      "meta_acum": 65500.0,
      "porcentaje_acum": 101.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 66050.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 66050.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P15",
    "numero": 15,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.7 Estrategia implementada para la eliminación de estereotipos, incluyendo los estereotipos asociados a ciclo vital.",
@@ -1320,22 +1211,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P16",
    "numero": 16,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.2.8 Eventos conmemorativos en el marco del derecho a la cultura libre de sexismo en el que se reconozca el movimiento distrital de mujeres jóvenes.",
@@ -1417,22 +1299,13 @@
      "acumulado": 5.0,
      "meta_acum": 5.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 6.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P17",
    "numero": 17,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.3.1. Procesos de formación dirigido a jovenes, juventudes y comunidades realizados por el Distrito.",
@@ -1514,22 +1387,13 @@
      "acumulado": 43.0,
      "meta_acum": 30.0,
      "porcentaje_acum": 143.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 5.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 35.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P18",
    "numero": 18,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.3.2. Agendas de juventud formuladas con acompañamiento técnico y asesoría para su implementación en las instancias del Sistema Distrital de Juventud",
@@ -1611,22 +1475,13 @@
      "acumulado": 2.0,
      "meta_acum": 21.0,
      "porcentaje_acum": 9.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 21.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 21.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P19",
    "numero": 19,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.3.3. Estrategia de empoderamiento implementada dirigida a adolescentes y mujeres jóvenes entre los 14 y los 28 años.",
@@ -1708,22 +1563,13 @@
      "acumulado": 1687.0,
      "meta_acum": 1400.0,
      "porcentaje_acum": 120.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 400.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1800.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P20",
    "numero": 20,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.3.4. Fortalecimiento de procesos organizativos juveniles de: Barrismo social, arte y expresiones urbanas y rurales, confesiones religiosas, partidos y movimientos políticos y juntas de acción comunal.",
@@ -1805,22 +1651,13 @@
      "acumulado": 268.0,
      "meta_acum": 295.0,
      "porcentaje_acum": 90.8
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 70.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 365.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P21",
    "numero": 21,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.3.5. Estrategia sobre cuidado menstrual implementada que contenga acciones de sensibilización dirigidas adolescentes y mujeres jóvenes entre los 14 y los 28 años.",
@@ -1902,22 +1739,13 @@
      "acumulado": 10.0,
      "meta_acum": 10.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 10.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 10.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P22",
    "numero": 22,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.4.1. Sistema Distrital de Juventud implementado",
@@ -1999,22 +1827,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P23",
    "numero": 23,
+   "nuevo_2025": false,
    "key_dimension": "1.",
    "dimension": "Ser Joven",
    "esperado": "1.4.2. Estrategía de apoyo y acompañamiento técnico a espacios e instancias de participación juvenil de los demás sistemas de participación Distrital (Educación, Cultura, Deporte, Salud, Planeación, entre otros).",
@@ -2096,22 +1915,13 @@
      "acumulado": 40.0,
      "meta_acum": 25.0,
      "porcentaje_acum": 160.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 5.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 30.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P26",
    "numero": 26,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.1.2. Estudiantes adolescentes y jóvenes en conflicto con la ley penal que son atendidos con la estrategia educativa flexible y pertinente de Sistema de Responsabilidad penal para Adolescente -SRPA",
@@ -2193,22 +2003,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P27",
    "numero": 27,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.1.3. Jóvenes identificados como desescolarizados a través de la estrategia de búsqueda activa con asignación de cupo en la oferta educativa distrital.",
@@ -2290,22 +2091,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1679.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1679.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P28",
    "numero": 28,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.2.1 Jóvenes en extraedad atendidos a través de estrategias educativas flexibles",
@@ -2387,22 +2179,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P29",
    "numero": 29,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.2.5. Jóvenes matriculados en educación media en la Escuela Pedagógica del IDIPRON",
@@ -2484,22 +2267,13 @@
      "acumulado": 330.0,
      "meta_acum": 786.0,
      "porcentaje_acum": 42.0
-    },
-    {
-     "anio": 2026,
-     "valor": 201.0,
-     "meta": 786.0,
-     "porcentaje": 25.6,
-     "diff": -585.0,
-     "acumulado": 201.0,
-     "meta_acum": 786.0,
-     "porcentaje_acum": 25.6
     }
    ]
   },
   {
    "llave": "P30",
    "numero": 30,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.2.6. Jóvenes que se vinculan a la eduación formal por medio de estrategias de modelos de educación flexible en IED",
@@ -2581,22 +2355,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P32",
    "numero": 32,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.2.8. Instituciones educativas focalizadas en el marco de estrategias que buscan fortalecer las habilidades comunicativas en lengua extranjera",
@@ -2678,22 +2443,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 160.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 160.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P35",
    "numero": 35,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.3.3. Acciones de socialización y comunicación de información sobre la oferta de programas de la Agencia Atenea para fortalecer el acceso a la educación terciaria y posmedia",
@@ -2775,22 +2531,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 20.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 20.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P38",
    "numero": 38,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.4.3 Jóvenes que participan en las alianzas que potencien las competencias digitales.",
@@ -2872,22 +2619,13 @@
      "acumulado": 10812.0,
      "meta_acum": 7155.0,
      "porcentaje_acum": 151.1
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 5250.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 12405.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P39",
    "numero": 39,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.4.4. Instituciones educativas focalizadas en estrategias para el desarrollo y fortalecimiento de capacidades para la ciencia y tecnología",
@@ -2969,22 +2707,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 180.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 180.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P40",
    "numero": 40,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.5.1 Instituciones educativas distritales IED con jornadas de apropiación y reconocimiento del entorno ambiental y rural de la ciudad.",
@@ -3066,22 +2795,13 @@
      "acumulado": 136.0,
      "meta_acum": 128.0,
      "porcentaje_acum": 106.2
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 128.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 128.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P41",
    "numero": 41,
+   "nuevo_2025": false,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.6.1. Jornadas de trabajo con la comunidad educativa que fortalezcan la relación entre la familia y la escuela.",
@@ -3163,22 +2883,13 @@
      "acumulado": 702.0,
      "meta_acum": 420.0,
      "porcentaje_acum": 167.1
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 60.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 480.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P46",
    "numero": 46,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.8.1. Instituciones Educativas Distritales beneficiadas con estrategias ofrecidas por instituciones de educación superior y el SENA, entre otras.",
@@ -3260,22 +2971,13 @@
      "acumulado": null,
      "meta_acum": 1.0,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P49",
    "numero": 49,
+   "nuevo_2025": true,
    "key_dimension": "2.",
    "dimension": "Educación",
    "esperado": "2.8.4. Estrategia de bienestar integral dirigida a los beneficiarios de los programas de educación terciaria y posmedia de la Agencia Distrital para la Educación Superior, la Ciencia y la Tecnología - ATENEA",
@@ -3357,22 +3059,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 86.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 86.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P50",
    "numero": 50,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.1.1.Jóvenes remitidos por los programas de Empleo de la secretaria distrital de desarrollo económico",
@@ -3454,22 +3147,13 @@
      "acumulado": 104970.0,
      "meta_acum": 24332.0,
      "porcentaje_acum": 431.4
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 7028.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 31360.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P51",
    "numero": 51,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.1.2. Jóvenes formados en competencias blandas y transversales que complementen la oferta de los centros de empleo autorizados, con especial atención a la población diferencial, en riesgo y vulnerabilidad.",
@@ -3551,22 +3235,13 @@
      "acumulado": 16964.0,
      "meta_acum": 9540.0,
      "porcentaje_acum": 177.8
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1600.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 11140.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P52",
    "numero": 52,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.1.3. Jóvenes que participan en programas de cierres de brechas de la Secretaría Distrtal de Desarrollo Económico",
@@ -3648,22 +3323,13 @@
      "acumulado": 40731.0,
      "meta_acum": 4150.0,
      "porcentaje_acum": 981.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1500.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 5650.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P53",
    "numero": 53,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.1.4. Jóvenes vinculados a la Estrategia de empleo para jóvenes en condición de vulnerabilidad aplicando el enfoque diferencial, que contenga el desarrollo de formación técnica en competencias laborales y posibilite la inserción laboral formal de jóvenes.",
@@ -3745,22 +3411,13 @@
      "acumulado": 21201.0,
      "meta_acum": 13630.0,
      "porcentaje_acum": 155.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 4000.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 17630.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P54",
    "numero": 54,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.1.5. Jóvenes vinculados a la Estrategia de orientación Socio Ocupacional y acompañamiento socioemocional.",
@@ -3842,22 +3499,13 @@
      "acumulado": 17889.0,
      "meta_acum": 17750.0,
      "porcentaje_acum": 100.8
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 2400.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 20150.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P55",
    "numero": 55,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.1. Emprendimientos/unidadesproductivas/empresas de jóvenes fortalecidas a través de la atención y articulación de ofertas institucionales desde la etapa de ideación hasta la etapa de consolidación empresarial.",
@@ -3939,22 +3587,13 @@
      "acumulado": 4722.0,
      "meta_acum": 750.0,
      "porcentaje_acum": 629.6
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 130.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 880.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P56",
    "numero": 56,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.2. Jóvenes participantes en talleres de formación que permitan desarrollar y fortalecer habilidades emprendedoras a través de metodologías innovadoras.",
@@ -4036,22 +3675,13 @@
      "acumulado": 3636.0,
      "meta_acum": 172.0,
      "porcentaje_acum": 2114.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 30.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 202.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P57",
    "numero": 57,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.3. Jóvenes participantes en talleres de formación en planeación y educación financiera.",
@@ -4133,22 +3763,13 @@
      "acumulado": 6087.0,
      "meta_acum": 1340.0,
      "porcentaje_acum": 454.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 242.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1582.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P58",
    "numero": 58,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.4. Jóvenes participantes en ferias a nivel local y distrital, que permitan la articulación con modelos y procesos para fortalecer emprendimientos como las industrias creativas y clúster culturales de las y los jóvenes.",
@@ -4230,22 +3851,13 @@
      "acumulado": 54.0,
      "meta_acum": 7.0,
      "porcentaje_acum": 771.4
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 8.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P59",
    "numero": 59,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.5. Unidades productivas de jovenes que logran financiamiento a través de productos liderados o apoyados por la Secretaría Distrital de Desarrollo Económico",
@@ -4327,22 +3939,13 @@
      "acumulado": 5748.0,
      "meta_acum": 144.0,
      "porcentaje_acum": 3991.7
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 30.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 174.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P60",
    "numero": 60,
+   "nuevo_2025": false,
    "key_dimension": "3.",
    "dimension": "Inclusión Productiva",
    "esperado": "3.2.6. Emprendimientos/ unidades productivas/ empresas de jóvenes o colectivos que participan en actividades de comercialización e intermediación empresarial",
@@ -4424,22 +4027,13 @@
      "acumulado": 1373.0,
      "meta_acum": 620.0,
      "porcentaje_acum": 221.5
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 130.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 750.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P61",
    "numero": 61,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.1. Estrategias de salud para jóvenes, con énfasis en salud sexual y reproductiva y salud mental como apoyo a la implementación de la ruta de Promoción y Mantenimeinto de la Salud en las Entidades Administradoras de Planes de Beneficios (EAPB) y su red de Prestadores de Servicios de Salud (IPS priorizadas) que cuentan con afiliados de este grupo poblaciónal en la Ciudad de Bogotá",
@@ -4521,22 +4115,13 @@
      "acumulado": 0.1,
      "meta_acum": 0.1,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 0.14,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 0.14,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P62",
    "numero": 62,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.2. Diseño, construcción e implementación de la guía metodológica para el abordaje humanizado con enfoque diferencial en la atención en salud de los jóvenes y sus familias",
@@ -4618,22 +4203,13 @@
      "acumulado": 0.12,
      "meta_acum": 0.12,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 0.14,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 0.14,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P63",
    "numero": 63,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.3. Procesos de participación, organización y movilización juvenil en salud",
@@ -4715,22 +4291,13 @@
      "acumulado": 47110.0,
      "meta_acum": 12652.0,
      "porcentaje_acum": 372.4
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 2100.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 14752.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P64",
    "numero": 64,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.4 Instituciones del Sistema de Responsabilidad Penal Adolescente (SRPA) con acciones permanentes y continuas del Plan de Intervenciones Colectivas (PIC).",
@@ -4812,22 +4379,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P65",
    "numero": 65,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.5 Centros penitenciarios con acciones permanentes y continuas del Plan de Intervenciones Colectivas (PIC) para jóvenes de 18 a 28 años, con especial énfasis en el consumo de sustancias psicoactivas, salud sexual y reproductiva y salud mental .",
@@ -4909,22 +4467,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P66",
    "numero": 66,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.1.6 Unidades de protección integral (UPI) del IDIPRON con acciones permanentes y continuas del Plan de Intervenciones Colectivas (PIC) por parte de la Secretaría Distrital de Salud, con especial énfasis en el consumo de sustancias psicoactivas, salud sexual y reproductiva y salud mental .",
@@ -5006,22 +4555,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P67",
    "numero": 67,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.2.1 Plataforma de interacción digital para la promoción, prevención y gestión del riesgo en salud mental.",
@@ -5103,22 +4643,13 @@
      "acumulado": 112666.0,
      "meta_acum": 332500.0,
      "porcentaje_acum": 33.9
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 30000.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 362500.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P68",
    "numero": 68,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.2.2 . Estrategia de fortalecimiento de capacidades para el desarrollo de habilidades de liderazgo, en temas prioritarios en salud pública dirigida a jóvenes de 14 a 28 años en el espacio público en las 20 localidades del distrito.",
@@ -5200,22 +4731,13 @@
      "acumulado": 0.35,
      "meta_acum": 0.35,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 0.5,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 0.5,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P69",
    "numero": 69,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.2.3. Actividades con Líderes escolares para la comunicación en salud de colegios oficiales del Distrito Capital para la población joven de 14 a 18 años.",
@@ -5297,22 +4819,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P70",
    "numero": 70,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.2.4. Jornadas de promoción de la salud y gestión integral del riesgo dirigida a jóvenes de instituciones de formación para el trabajo y universidades.",
@@ -5394,22 +4907,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P71",
    "numero": 71,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.3.1. Acciones de prevención del consumo de sustancias psicoactivas en localidades del distrito capital.",
@@ -5491,22 +4995,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P72",
    "numero": 72,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.3.3. Plataforma de orientación y prevención para el consumo de sustancias psicoactivas operando",
@@ -5588,22 +5083,13 @@
      "acumulado": 63719.0,
      "meta_acum": 407500.0,
      "porcentaje_acum": 15.6
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 45000.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 452500.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P73",
    "numero": 73,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.3.4 Jóvenes atendidos por el componente de Reducción de riesgo y daño del consumo de SPA del IDIPRON.",
@@ -5685,22 +5171,13 @@
      "acumulado": 1438.0,
      "meta_acum": 2093.0,
      "porcentaje_acum": 68.7
-    },
-    {
-     "anio": 2026,
-     "valor": 425.0,
-     "meta": 2093.0,
-     "porcentaje": 20.3,
-     "diff": -1668.0,
-     "acumulado": 425.0,
-     "meta_acum": 2093.0,
-     "porcentaje_acum": 20.3
     }
    ]
   },
   {
    "llave": "P75",
    "numero": 75,
+   "nuevo_2025": true,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.4.2. Jóvenes que hacen uso de los servicios focalizados para la prevención de maternidades y paternidades tempranas",
@@ -5782,22 +5259,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 9200.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 9200.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P76",
    "numero": 76,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.5.1. Estrategia de promoción, apropiación y ejercicio de los derechos sexuales y reproductivos dirigidas a población adolescente y joven, en el marco del desarrollo de capacidades para la vivencia de una sexualidad, protegida, placentera, generadora de bienestar y salud.",
@@ -5879,22 +5347,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P77",
    "numero": 77,
+   "nuevo_2025": false,
    "key_dimension": "4.",
    "dimension": "Salud Integral y Autocuidado",
    "esperado": "4.5.2. Plataforma de interacción digital para la promoción, prevención y gestión del riesgo en salud sexual y reproductiva para la población joven.",
@@ -5976,22 +5435,13 @@
      "acumulado": 146745.0,
      "meta_acum": 1339110.0,
      "porcentaje_acum": 11.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 150000.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1489110.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P78",
    "numero": 78,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.1 Estrategias comunicativas para difusión, información y socialización del portafolio, la oferta y contenidos culturales, recreativos , deportivos y de las iniciativas juveniles realizadas",
@@ -6073,22 +5523,13 @@
      "acumulado": 6.5,
      "meta_acum": 6.0,
      "porcentaje_acum": 108.3
-    },
-    {
-     "anio": 2026,
-     "valor": 0.0,
-     "meta": 1.0,
-     "porcentaje": 0.0,
-     "diff": -1.0,
-     "acumulado": 6.5,
-     "meta_acum": 7.0,
-     "porcentaje_acum": 92.9
     }
    ]
   },
   {
    "llave": "P79",
    "numero": 79,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.2 Jóvenes atendidos con el programa de apoyo profesionalización de artistas jóvenes.",
@@ -6170,22 +5611,13 @@
      "acumulado": 34.0,
      "meta_acum": 45.0,
      "porcentaje_acum": 75.6
-    },
-    {
-     "anio": 2026,
-     "valor": 0.0,
-     "meta": 45.0,
-     "porcentaje": 0.0,
-     "diff": -45.0,
-     "acumulado": 0.0,
-     "meta_acum": 45.0,
-     "porcentaje_acum": 0.0
     }
    ]
   },
   {
    "llave": "P80",
    "numero": 80,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.3 Estimulos y apoyos otorgados a jóvenes artístas que fortalezcan y promueva sus procesos de creacion artística, las diferentes prácticas y sus expresiones creativas en las localidades.",
@@ -6267,22 +5699,13 @@
      "acumulado": 1119.92,
      "meta_acum": 1305.0,
      "porcentaje_acum": 85.8
-    },
-    {
-     "anio": 2026,
-     "valor": 0.0,
-     "meta": 186.0,
-     "porcentaje": 0.0,
-     "diff": -186.0,
-     "acumulado": 1119.92,
-     "meta_acum": 1491.0,
-     "porcentaje_acum": 75.1
     }
    ]
   },
   {
    "llave": "P81",
    "numero": 81,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.4 Jóvenes atendidos en programas y contenidos de formación en apreciación de las artes y la cultura, disciplinas artistícas, patrimoniales, deportivas, recreativas y actividad física, articulados al modelo pedagógico en los niveles de educación preescolar, básica y media.",
@@ -6364,22 +5787,13 @@
      "acumulado": 2551.0,
      "meta_acum": 3511.0,
      "porcentaje_acum": 72.7
-    },
-    {
-     "anio": 2026,
-     "valor": 143.0,
-     "meta": 150.0,
-     "porcentaje": 95.3,
-     "diff": -7.0,
-     "acumulado": 2694.0,
-     "meta_acum": 3661.0,
-     "porcentaje_acum": 73.6
     }
    ]
   },
   {
    "llave": "P82",
    "numero": 82,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.5. Jóvenes atendidos en programas de formación y apreciación artística, cultural, patrimonial por fuera de los programas del sistema escolar.",
@@ -6461,22 +5875,13 @@
      "acumulado": 202327.0,
      "meta_acum": 288829.0,
      "porcentaje_acum": 70.1
-    },
-    {
-     "anio": 2026,
-     "valor": 349.0,
-     "meta": 45303.0,
-     "porcentaje": 0.8,
-     "diff": -44954.0,
-     "acumulado": 202676.0,
-     "meta_acum": 334132.0,
-     "porcentaje_acum": 60.7
     }
    ]
   },
   {
    "llave": "P83",
    "numero": 83,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.1.6. Jóvenes vinculados a programas que fortalezcan y promuevan los procesos de creación artística por parte de colectivos y jóvenes entre las diferentes prácticas y expresiones de la Orquesta Filarmónica de Bogotá.",
@@ -6558,22 +5963,13 @@
      "acumulado": 156.0,
      "meta_acum": 147.0,
      "porcentaje_acum": 106.1
-    },
-    {
-     "anio": 2026,
-     "valor": 0.0,
-     "meta": 147.0,
-     "porcentaje": 0.0,
-     "diff": -147.0,
-     "acumulado": 0.0,
-     "meta_acum": 147.0,
-     "porcentaje_acum": 0.0
     }
    ]
   },
   {
    "llave": "P84",
    "numero": 84,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.2.1. Actividades artísticas, culturales, y patrimoniales recreativas y deportivas focalizadas para la población joven realizadas.",
@@ -6655,22 +6051,13 @@
      "acumulado": 1743.0,
      "meta_acum": 2800.0,
      "porcentaje_acum": 62.3
-    },
-    {
-     "anio": 2026,
-     "valor": 20.0,
-     "meta": 400.0,
-     "porcentaje": 5.0,
-     "diff": -380.0,
-     "acumulado": 1763.0,
-     "meta_acum": 3200.0,
-     "porcentaje_acum": 55.1
     }
    ]
   },
   {
    "llave": "P85",
    "numero": 85,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.2.2 Espacios interetnicos e intergeneraional de intercambio de saberes con jóvenes desde la cosmovisión propia de los grupos étnicos implementados",
@@ -6752,22 +6139,13 @@
      "acumulado": 11.0,
      "meta_acum": 7.0,
      "porcentaje_acum": 157.1
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 8.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P86",
    "numero": 86,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.3.1. Acciones para el fomento de la lectura crítica y escritura realizadas al aire libre, bibliotecas, equipamientos comunitarios públicos y privados y espacios no convencionales dirigido a jóvenes",
@@ -6849,22 +6227,13 @@
      "acumulado": 1667.0,
      "meta_acum": 168.0,
      "porcentaje_acum": 992.3
-    },
-    {
-     "anio": 2026,
-     "valor": 1.0,
-     "meta": 24.0,
-     "porcentaje": 4.2,
-     "diff": -23.0,
-     "acumulado": 1668.0,
-     "meta_acum": 192.0,
-     "porcentaje_acum": 868.8
     }
    ]
   },
   {
    "llave": "P87",
    "numero": 87,
+   "nuevo_2025": true,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.4.2. Actividades recreativas orientadas a jóvenes en parques y escenarios locales, que fomenten el uso adecuado del tiempo libre, la adopción de hábitos de vida saludables y el cuidado del entorno, con enfoque poblacional diferencial.",
@@ -6946,22 +6315,13 @@
      "acumulado": 0.0,
      "meta_acum": 2293.0,
      "porcentaje_acum": 0.0
-    },
-    {
-     "anio": 2026,
-     "valor": 482.0,
-     "meta": 1966.0,
-     "porcentaje": 24.5,
-     "diff": -1484.0,
-     "acumulado": 482.0,
-     "meta_acum": 4259.0,
-     "porcentaje_acum": 11.3
     }
    ]
   },
   {
    "llave": "P88",
    "numero": 88,
+   "nuevo_2025": false,
    "key_dimension": "5.",
    "dimension": "Cultura, Recreación y Deporte",
    "esperado": "5.5.1 Jóvenes vinculados a procesos de formación deportiva en los barrios, con el apoyo del gobierno distrital y la empresa privada, con especial atención de jóvenes de las poblaciones diferenciales, en condiciones de riesgo y vulnerabilidad.",
@@ -7043,22 +6403,13 @@
      "acumulado": 29165.0,
      "meta_acum": 30437.0,
      "porcentaje_acum": 95.8
-    },
-    {
-     "anio": 2026,
-     "valor": 97.0,
-     "meta": 4541.0,
-     "porcentaje": 2.1,
-     "diff": -4444.0,
-     "acumulado": 29262.0,
-     "meta_acum": 34978.0,
-     "porcentaje_acum": 83.7
     }
    ]
   },
   {
    "llave": "P89",
    "numero": 89,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.1.1. Jóvenes beneficiarios de la Estrategia de prevención de violencias y conflictos que involucren al arte, la cultura, el deporte y la recreación para prevenir vulneraciones de derechos.",
@@ -7140,22 +6491,13 @@
      "acumulado": 5338.0,
      "meta_acum": 2700.0,
      "porcentaje_acum": 197.7
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 550.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 3250.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P90",
    "numero": 90,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.1.2. Jóvenes atendidos en la estrategia de prevención del delito juvenil",
@@ -7237,22 +6579,13 @@
      "acumulado": 7883.0,
      "meta_acum": 6950.0,
      "porcentaje_acum": 117.4
-    },
-    {
-     "anio": 2026,
-     "valor": 253.0,
-     "meta": 7650.0,
-     "porcentaje": 108.0,
-     "diff": -7397.0,
-     "acumulado": 8136.0,
-     "meta_acum": 7650.0,
-     "porcentaje_acum": 108.0
     }
    ]
   },
   {
    "llave": "P92",
    "numero": 92,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.1.4. Jóvenes de los sectores LGTBI atendidos con la Ruta de atención y prevención",
@@ -7334,22 +6667,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P94",
    "numero": 94,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.2.2. Adolescentes y jóvenes atendidos integralmente en procesos pedagogicos a partir de su vinculación al Sistema de Responsabilidad Penal Adolescente, SRPA, y hasta la fase de posegreso, basado en el desarrollo de habilidades socioemocionales, enfoque diferencial y justicia juvenil restaurativa, con la participación y apoyo de sus familias.",
@@ -7431,22 +6755,13 @@
      "acumulado": 6202.0,
      "meta_acum": 4200.0,
      "porcentaje_acum": 147.7
-    },
-    {
-     "anio": 2026,
-     "valor": 314.0,
-     "meta": 700.0,
-     "porcentaje": 44.9,
-     "diff": -386.0,
-     "acumulado": 6516.0,
-     "meta_acum": 4900.0,
-     "porcentaje_acum": 133.0
     }
    ]
   },
   {
    "llave": "P95",
    "numero": 95,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.2.3. Unidades de atención territorial del programa de Justicia Juvenil Restaurativa implementadas",
@@ -7528,22 +6843,13 @@
      "acumulado": 2.0,
      "meta_acum": 2.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 2.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 2.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P96",
    "numero": 96,
+   "nuevo_2025": true,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.2.4. Semilleros Juveniles para la promoción de entornos seguris y disfrutables en la ciudad",
@@ -7625,22 +6931,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": 0.0,
-     "meta": 6.0,
-     "porcentaje": 0.0,
-     "diff": -6.0,
-     "acumulado": 0.0,
-     "meta_acum": 6.0,
-     "porcentaje_acum": 0.0
     }
    ]
   },
   {
    "llave": "P97",
    "numero": 97,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.3.1. Jóvenes que participan de la Estrategia de prevención de violencia intrafamiliar.",
@@ -7722,22 +7019,13 @@
      "acumulado": 9695.0,
      "meta_acum": 2500.0,
      "porcentaje_acum": 387.8
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 500.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 3000.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P98",
    "numero": 98,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.4.1. Jóvenes (18 a 28 años) víctimas del delito de trata de personas atendidos a través la Ruta Distrital Intersectorial.",
@@ -7819,22 +7107,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P99",
    "numero": 99,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.5.1. Jóvenes atendidos con la ruta de atención, prevención y protección ante amenazas y/o vulneración de derechos a líderes y lideresas juveniles, defensores de derechos humanos.",
@@ -7916,22 +7195,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P100",
    "numero": 100,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.5.2.Creación e implementación de una estrategia dirigida a ampliar los conocimientos, las alternativas de exigibilidad y ejercicio de las libertades de religión y culto, libertad y objeción de conciencia de la juventud en Bogotá..",
@@ -8013,22 +7283,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": null,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": null,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P101",
    "numero": 101,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.5.3. Jóvenes orientados para el ejercicio de su derecho de objeción de conciencia y definición de su situación frente al servicio militar obligatorio de acuerdo con la normatividad vigente.",
@@ -8110,22 +7371,13 @@
      "acumulado": 4639.0,
      "meta_acum": 4400.0,
      "porcentaje_acum": 105.4
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 950.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 5350.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P102",
    "numero": 102,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.6.1. Jóvenes y adolescentes formados en Justicia Comunitaria para la resolución pacífica de conflictos y rutas de acceso a la justicia",
@@ -8207,22 +7459,13 @@
      "acumulado": 293.0,
      "meta_acum": 290.0,
      "porcentaje_acum": 101.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 60.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 350.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P103",
    "numero": 103,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.6.2 Jóvenes y Adolescentes atendidos en acceso a la justicia",
@@ -8304,22 +7547,13 @@
      "acumulado": 77730.0,
      "meta_acum": 61786.0,
      "porcentaje_acum": 125.8
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 28724.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 90510.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P104",
    "numero": 104,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.6.3. Jornadas de mediación y prevención del escalamiento de conflictos, focalizadas en el territorio, entre grupos juveniles en discordia o con sus familias y comunidades, cuando se han generado dinámicas de violencia o daños.",
@@ -8401,22 +7635,13 @@
      "acumulado": 112.0,
      "meta_acum": 151.0,
      "porcentaje_acum": 74.2
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 36.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 187.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P106",
    "numero": 106,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.7.1 Acciones culturales y pedagógicas en torno a memoria, paz y reconciliación para los y las jóvenes del distrito capital implementadas",
@@ -8498,22 +7723,13 @@
      "acumulado": 117.0,
      "meta_acum": 60.0,
      "porcentaje_acum": 195.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 10.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 70.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P107",
    "numero": 107,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.7.2 Colectivos de jóvenes que participan en el plan de recorridos guiados y montajes expositivos realizados en el Centro Memoria, Paz y Reconciliación - CMPR.",
@@ -8595,22 +7811,13 @@
      "acumulado": 1346.0,
      "meta_acum": 569.0,
      "porcentaje_acum": 236.6
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 140.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 709.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P109",
    "numero": 109,
+   "nuevo_2025": false,
    "key_dimension": "6.",
    "dimension": "Paz, Convivencia y Justicia",
    "esperado": "6.8.1 Jóvenes que egresan del Sistema Penitenciario y Carcelario SPC vinculados al programa de atención que incluya oportunidades para el desarrollo integral.",
@@ -8692,22 +7899,13 @@
      "acumulado": 662.0,
      "meta_acum": 550.0,
      "porcentaje_acum": 120.4
-    },
-    {
-     "anio": 2026,
-     "valor": 22.0,
-     "meta": 109.0,
-     "porcentaje": 20.2,
-     "diff": -87.0,
-     "acumulado": 684.0,
-     "meta_acum": 659.0,
-     "porcentaje_acum": 103.8
     }
    ]
   },
   {
    "llave": "P110",
    "numero": 110,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.1.1. Jóvenes que participan en actividades de Educación ambiental de concientización, sensibilización y formación en cuidado y gestión ambiental.",
@@ -8789,22 +7987,13 @@
      "acumulado": 303688.0,
      "meta_acum": 209426.0,
      "porcentaje_acum": 145.0
-    },
-    {
-     "anio": 2026,
-     "valor": 16041.0,
-     "meta": 55646.0,
-     "porcentaje": 28.8,
-     "diff": -39605.0,
-     "acumulado": 319729.0,
-     "meta_acum": 265072.0,
-     "porcentaje_acum": 120.6
     }
    ]
   },
   {
    "llave": "P111",
    "numero": 111,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.1.2. Jóvenes que participan en el espacio digital dispuesto en la página web de la Secretaría Distrital de Ambiente.",
@@ -8886,22 +8075,13 @@
      "acumulado": 8366.0,
      "meta_acum": 615.0,
      "porcentaje_acum": 1360.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 120.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 735.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P112",
    "numero": 112,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.1.3.Jóvenes que participan en estrategias de educación ambiental certificadas, dirigidas a jóvenes, sobre biodiversidad, cambio climático, gestión del riesgo, manejo integral de residuos sólidos, agua y estructura ecológica principal.",
@@ -8983,22 +8163,13 @@
      "acumulado": 913.0,
      "meta_acum": 1034.0,
      "porcentaje_acum": 88.3
-    },
-    {
-     "anio": 2026,
-     "valor": 19.0,
-     "meta": 154.0,
-     "porcentaje": 12.3,
-     "diff": -135.0,
-     "acumulado": 932.0,
-     "meta_acum": 1188.0,
-     "porcentaje_acum": 78.5
     }
    ]
   },
   {
    "llave": "P113",
    "numero": 113,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.2.1. Iniciativas juveniles apoyadas para la protección y bienestar animal que fomente el conocimiento, la participación y la movilización social, en el marco del Servicio Social Estudiantil.",
@@ -9080,22 +8251,13 @@
      "acumulado": 1.0,
      "meta_acum": 1.0,
      "porcentaje_acum": 100.0
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P115",
    "numero": 115,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.3.2. Iniciativas de innovación social apoyadas para el mejoramiento del Hábitat presentadas por jóvenes.",
@@ -9177,22 +8339,13 @@
      "acumulado": 8.0,
      "meta_acum": 7.0,
      "porcentaje_acum": 114.3
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 8.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P116",
    "numero": 116,
+   "nuevo_2025": true,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.3.3. Subsidios asignados a jóvenes entre los 18 y 28 años de edad",
@@ -9274,22 +8427,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 1000.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 1000.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P120",
    "numero": 120,
+   "nuevo_2025": false,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.4.4. Jóvenes vinculados a actividades pedagógicas experienciales, con enfoques de género y diferencial, para mejorar la relación y el uso adecuado del Transmilenio y el TransMicable.",
@@ -9371,22 +8515,13 @@
      "acumulado": 9354.0,
      "meta_acum": 102801.0,
      "porcentaje_acum": -28.4
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 114109.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 114109.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P121",
    "numero": 121,
+   "nuevo_2025": true,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.4.5. Acciones de promoción del uso de la bicicleta, realizados en los Consejos Locales de Bicicleta con participación de jóvenes.",
@@ -9468,22 +8603,13 @@
      "acumulado": null,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 10.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 10.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P122",
    "numero": 122,
+   "nuevo_2025": true,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.4.6. Acciones pedagógicas e informativas, realizadas para la promoción del uso adecuado de cicloparqueaderos dirigidas a jóvenes.",
@@ -9565,22 +8691,13 @@
      "acumulado": 37010.0,
      "meta_acum": null,
      "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 50.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 50.0,
-     "porcentaje_acum": null
     }
    ]
   },
   {
    "llave": "P123",
    "numero": 123,
+   "nuevo_2025": true,
    "key_dimension": "7.",
    "dimension": "Hábitat",
    "esperado": "7.5.2. Jóvenes que participan en acciones pedagógicas de educación vial y cultura para la movilidad",
@@ -9661,16 +8778,6 @@
      "diff": null,
      "acumulado": null,
      "meta_acum": 30519.0,
-     "porcentaje_acum": null
-    },
-    {
-     "anio": 2026,
-     "valor": null,
-     "meta": 32045.0,
-     "porcentaje": null,
-     "diff": null,
-     "acumulado": null,
-     "meta_acum": 32045.0,
      "porcentaje_acum": null
     }
    ]

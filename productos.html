@@ -104,7 +104,18 @@ select {
   margin-bottom: 0.8rem;
 }
 .conteo-tabla { color: var(--gris); font-size: 0.8rem; margin-bottom: 0.6rem; }
-.nota-parcial { color: var(--gris); font-size: 0.75rem; margin-top: 0.6rem; }
+.nota-pie { color: var(--gris); font-size: 0.75rem; margin-top: 0.6rem; }
+
+/* Etiqueta de producto nuevo (entró con la actualización del plan, 2025).
+   La regla doble .dim-etiqueta .tag-nuevo evita que el estilo genérico de
+   los span de la etiqueta de dimensión le pise el color y el tamaño. */
+.tag-nuevo, .dim-etiqueta .tag-nuevo {
+  font-family: 'Antonio', sans-serif; font-weight: 700;
+  text-transform: uppercase; font-size: 0.62rem; letter-spacing: 0.08em;
+  color: var(--rosa); border: 1.5px solid var(--rosa);
+  border-radius: 6px; padding: 0.08rem 0.45rem;
+  white-space: nowrap; vertical-align: middle;
+}
 
 .tabla-scroll { max-height: 620px; overflow-y: auto; overflow-x: auto; }
 .celda-anio { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -210,7 +221,7 @@ footer {
           <tbody id="cuerpo-tabla"></tbody>
         </table>
       </div>
-      <div class="nota-parcial" id="nota-parcial-maestro"></div>
+      <div class="nota-pie" id="nota-tabla"></div>
     </div>
 
     <div class="card" id="panel-detalle">
@@ -249,10 +260,6 @@ footer {
 
   const fmt = (v, dec = 2) => (v === null || v === undefined) ? '—'
     : Number(v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: dec });
-
-  // El año parcial (corte en curso, ej. 2026 con solo el 1er trimestre)
-  // se rotula con "p": 2026p
-  const etiquetaAnio = a => a === DATOS.anio_parcial ? a + 'p' : String(a);
 
   // Formateador según el tipo de indicador: los "Porcentaje" guardados como
   // proporción (0 a 1) se muestran multiplicados por 100 con símbolo %; los
@@ -351,12 +358,16 @@ footer {
       const f = crearFormateadorItem(it);
       const celdasAnios = it.serie.map(p =>
         `<td class="celda-anio">${p.valor === null ? '—' : f(p.valor)}</td>`).join('');
+      const tagNuevo = it.nuevo_2025 ? ' <span class="tag-nuevo">Nuevo</span>' : '';
       tr.innerHTML = `
-        <td class="celda-texto">${it.esperado || ''}</td>
+        <td class="celda-texto">${it.esperado || ''}${tagNuevo}</td>
         <td class="celda-texto celda-indicador">${it.indicador || ''}</td>${celdasAnios}`;
       tr.addEventListener('click', () => seleccionar(it.llave));
       cuerpo.appendChild(tr);
     });
+    // la nota de productos nuevos solo aparece si hay alguno en la vista
+    document.getElementById('nota-tabla').textContent =
+      items.some(it => it.nuevo_2025) && DATOS.nota_nuevos ? DATOS.nota_nuevos : '';
     // si el ítem seleccionado quedó fuera del filtro, limpia el detalle
     if (estado.llave && !items.some(it => it.llave === estado.llave)) {
       estado.llave = '';
@@ -385,7 +396,7 @@ footer {
     const dim = dimPorKey[it.key_dimension];
     panel.innerHTML = `
       <div class="dim-etiqueta">
-        <span>${dim.key} ${dim.nombre}</span>
+        <span>${dim.key} ${dim.nombre}</span>${it.nuevo_2025 ? '<span class="tag-nuevo">Producto nuevo · 2025</span>' : ''}
       </div>
       <div class="detalle-titulo">${it.esperado || ''}</div>
       <div class="detalle-indicador">${it.indicador || ''}</div>
@@ -410,7 +421,7 @@ footer {
     // La gráfica pinta el ACUMULADO contra la meta acumulada, igual que el
     // Power BI original (la tabla maestro sí muestra los valores anuales).
     // Para Constante y Decreciente el acumulado es el mismo valor anual.
-    const etiquetas = it.serie.map(p => etiquetaAnio(p.anio));
+    const etiquetas = it.serie.map(p => String(p.anio));
     const datosValor = it.serie.map(p => p.acumulado);
     const datosMeta = it.serie.map(p => p.meta_acum);
     // la gráfica arranca en el primer año con dato o meta, como el Power BI
@@ -570,14 +581,15 @@ footer {
                   ['Acumulado', 'acumulado'], ['Meta acum.', 'meta_acum']];
     }
     const filas = it.serie.filter(p => columnas.some(([, campo]) => p[campo] !== null));
-    const nota = DATOS.nota_parcial && filas.some(p => p.anio === DATOS.anio_parcial)
-      ? `<div class="nota-parcial">${DATOS.nota_parcial}</div>` : '';
+    // para un producto nuevo la nota explica por qué hay poco o nada reportado
+    const nota = it.nuevo_2025 && DATOS.nota_nuevos
+      ? `<div class="nota-pie">${DATOS.nota_nuevos}</div>` : '';
     document.getElementById('serie-tabla').innerHTML = `
       <table>
         <thead><tr><th>Año</th>${columnas.map(([titulo]) => `<th>${titulo}</th>`).join('')}</tr></thead>
         <tbody>${filas.map(p => `
           <tr>
-            <td>${etiquetaAnio(p.anio)}</td>${columnas.map(([, campo]) => `<td>${f(p[campo])}</td>`).join('')}
+            <td>${p.anio}</td>${columnas.map(([, campo]) => `<td>${f(p[campo])}</td>`).join('')}
           </tr>`).join('')}
         </tbody>
       </table>${nota}`;
@@ -586,10 +598,7 @@ footer {
   // encabezado de la tabla con las columnas de años (como en el Power BI)
   document.getElementById('cabeza-tabla').innerHTML =
     '<tr><th>Producto esperado</th><th>Indicador</th>' +
-    DATOS.anios.map(a => `<th class="th-anio">${etiquetaAnio(a)}</th>`).join('') + '</tr>';
-  if (DATOS.nota_parcial) {
-    document.getElementById('nota-parcial-maestro').textContent = DATOS.nota_parcial;
-  }
+    DATOS.anios.map(a => `<th class="th-anio">${a}</th>`).join('') + '</tr>';
 
   initFiltros();
   pintarTabla();
