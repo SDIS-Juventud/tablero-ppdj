@@ -268,7 +268,10 @@ def construir():
             'tipo_anualizacion': tipo,
             'fecha_inicio': a_fecha_iso(fila['Fecha de Inicio']),
             'fecha_fin': a_fecha_iso(fila['Fecha de Finalización']),
-            'ajustes': ajustes_por_codigo.get(codigo, []),
+            # a la ficha solo van fecha y ajuste (el estado siempre es
+            # Aprobado: los demás se filtran en control_ajustes)
+            'ajustes': [{'fecha': a['fecha'], 'ajuste': a['ajuste']}
+                        for a in ajustes_por_codigo.get(codigo, [])],
             'serie': serie,
         })
 

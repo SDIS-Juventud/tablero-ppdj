@@ -99,8 +99,8 @@ def cargar_ajustes(solo_aprobados=True):
     - ajustes_resultados: {"6.4": [ajuste, ...]} con códigos de 2 partes
     - sin_asignar: lista de descripciones de filas sin código
     - ruta_usada: ruta del Excel leído (None si no se encontró)
-    Cada ajuste es un dict {fecha, estado, ajuste, tipo} listo para el JSON,
-    ordenado por fecha (los sin fecha al final).
+    Cada ajuste es un dict {fecha, estado, ajuste}, ordenado por fecha
+    (los sin fecha al final).
     Con solo_aprobados=True (el valor con el que corren los generadores)
     se omiten las solicitudes no aprobadas, denegadas o en trámite."""
     ruta = ruta_control_mas_reciente()
@@ -121,11 +121,13 @@ def cargar_ajustes(solo_aprobados=True):
             estado, fecha = _estado_y_fecha(fila[COL_FECHA], fila[COL_TRAMITE], hoja_aprobados)
             if solo_aprobados and estado != 'Aprobado':
                 continue
+            # A las fichas del tablero solo van fecha y ajuste (decisión de
+            # Carolina); el estado se conserva para la inspección de los no
+            # aprobados. El "tipo de ajuste según criterios SDP" no se usa.
             registro = {
                 'fecha': fecha,
                 'estado': estado,
                 'ajuste': texto_ajuste,
-                'tipo': normalizar_texto(fila[COL_TIPO]),
             }
             codigo, es_producto = _extraer_codigo(texto_producto)
             if codigo is None:

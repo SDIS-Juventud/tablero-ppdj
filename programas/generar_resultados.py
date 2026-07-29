@@ -132,8 +132,9 @@ def construir():
             'tipo_anualizacion': normalizar_texto(tipo),
             'fecha_inicio': a_fecha_iso(fila['Fecha de Inicio']),
             'fecha_fin': a_fecha_iso(fila['Fecha de Finalización']),
-            'ajustes': ajustes_por_codigo.get(
-                extraer_codigo_resultado(fila['Resultado esperado']), []),
+            'ajustes': [{'fecha': a['fecha'], 'ajuste': a['ajuste']}
+                        for a in ajustes_por_codigo.get(
+                            extraer_codigo_resultado(fila['Resultado esperado']), [])],
             'serie': serie,
         })
 

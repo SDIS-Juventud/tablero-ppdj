@@ -167,9 +167,7 @@ tbody tr.seleccionada { background: var(--gris-claro); }
   text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.08em;
   color: var(--gris); margin-bottom: 0.2rem;
 }
-.ajuste-cabecera .no-aprobado { color: var(--rosa); }
 .ajuste-texto { font-size: 0.82rem; line-height: 1.45; white-space: pre-line; }
-.ajuste-tipo { font-size: 0.72rem; color: var(--gris); margin-top: 0.25rem; }
 
 .grafica-caja { position: relative; height: 300px; }
 
@@ -421,10 +419,8 @@ footer {
       : 'Sin fecha';
     const filas = it.ajustes.map(a => `
       <li>
-        <div class="ajuste-cabecera">${fechaLarga(a.fecha)} ·
-          <span class="${a.estado === 'Aprobado' ? '' : 'no-aprobado'}">${a.estado || ''}</span></div>
+        <div class="ajuste-cabecera">${fechaLarga(a.fecha)}</div>
         <div class="ajuste-texto">${a.ajuste || ''}</div>
-        ${a.tipo ? `<div class="ajuste-tipo">${a.tipo}</div>` : ''}
       </li>`).join('');
     return `
       <details class="ajustes">

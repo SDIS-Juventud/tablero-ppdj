@@ -48,45 +48,46 @@ body {
 .btn-icono:hover { transform: translateY(-2px); }
 .btn-icono img { height: 48px; display: block; }
 
-main { max-width: 1240px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
+main { max-width: 1300px; margin: 0 auto; padding: 2.2rem 1.5rem 3rem; }
 
 h1 {
   color: var(--morado);
   font-weight: 800;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
   line-height: 1.2;
 }
 .subtitulo {
   color: var(--rosa);
   font-weight: 800;
-  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
-  margin-bottom: 2.2rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  margin-bottom: 2.6rem;
 }
 
+/* Las cuatro tarjetas comparten la misma altura (como en el Power BI):
+   el grid las estira a la fila y el texto queda arriba */
 .tipos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.4rem;
-  align-items: start;
+  gap: 1.8rem;
 }
 @media (max-width: 1000px) { .tipos { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .tipos { grid-template-columns: 1fr; } }
 
 .tipo {
   background: #f1f1f4;
-  border-radius: 22px;
-  padding: 1.5rem 1.4rem;
+  border-radius: 26px;
+  padding: 2rem 1.8rem;
 }
 .tipo h2 {
   color: var(--pervinca);
   font-weight: 800;
-  font-size: 1.45rem;
+  font-size: 1.85rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
-.tipo p { line-height: 1.6; font-size: 0.98rem; text-align: justify; }
+.tipo p { line-height: 1.65; font-size: 1.12rem; text-align: justify; }
 
-.fuente { color: var(--gris-oscuro); font-size: 0.95rem; margin-top: 2.5rem; }
+.fuente { color: var(--gris-oscuro); font-size: 1.02rem; margin-top: 3rem; }
 
 footer {
   max-width: 1240px;

@@ -89,9 +89,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en Tipo de anualización \nAjuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural - Solicitud DADE"
+     "ajuste": "Ajuste en Tipo de anualización \nAjuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -185,21 +183,15 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     },
     {
      "fecha": "2025-05-07",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     },
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto",
-     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto"
     }
    ],
    "serie": [
@@ -293,9 +285,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Responsable de la ejecución",
-     "tipo": "No estructural"
+     "ajuste": "Responsable de la ejecución"
     }
    ],
    "serie": [
@@ -478,15 +468,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Nuevo producto"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados",
-     "tipo": "No estructural - Solicitud DADE"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados"
     }
    ],
    "serie": [
@@ -580,9 +566,7 @@
    "ajustes": [
     {
      "fecha": "2022-12-22",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "No estructural"
+     "ajuste": "Nuevo producto"
     }
    ],
    "serie": [
@@ -676,9 +660,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "No estructural - Solicitud DADE"
+     "ajuste": "Nuevo producto"
     }
    ],
    "serie": [
@@ -772,9 +754,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "No estructural - Solicitud DADE"
+     "ajuste": "Nuevo producto"
     }
    ],
    "serie": [
@@ -1046,9 +1026,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -1142,15 +1120,11 @@
    "ajustes": [
     {
      "fecha": "2025-05-28",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     },
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto",
-     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto"
     }
    ],
    "serie": [
@@ -1244,9 +1218,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de metas anuales",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de metas anuales"
     }
    ],
    "serie": [
@@ -1340,9 +1312,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -1525,9 +1495,7 @@
    "ajustes": [
     {
      "fecha": "2026-02-26",
-     "estado": "Aprobado",
-     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto \nMetodología de medición\nDescripción de Productos\nFuentes de información (entidad generadora del dato)",
-     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto \nMetodología de medición\nDescripción de Productos\nFuentes de información (entidad generadora del dato)"
     }
    ],
    "serie": [
@@ -1621,15 +1589,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual"
     },
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nTipo de anualización",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nTipo de anualización"
     }
    ],
    "serie": [
@@ -1723,15 +1687,11 @@
    "ajustes": [
     {
      "fecha": "2022-12-22",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados\nAjuste en persona de contacto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados\nAjuste en persona de contacto"
     },
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Aspectos a considerar para el desarrollo del producto",
-     "tipo": "No estructural"
+     "ajuste": "Aspectos a considerar para el desarrollo del producto"
     }
    ],
    "serie": [
@@ -1825,9 +1785,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual"
     }
    ],
    "serie": [
@@ -1921,9 +1879,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Fórmula del indicador de producto\nMetodología de medición\nDescripción de Productos\nUnidad de medida",
-     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Fórmula del indicador de producto\nMetodología de medición\nDescripción de Productos\nUnidad de medida"
     }
    ],
    "serie": [
@@ -2195,9 +2151,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.1.3. -reemplazo del producto 2.1.1",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 2.1.3. -reemplazo del producto 2.1.1"
     }
    ],
    "serie": [
@@ -2380,9 +2334,7 @@
    "ajustes": [
     {
      "fecha": "2022-12-22",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.2.5. -reemplazo del producto 2.2.3",
-     "tipo": "Estructural"
+     "ajuste": "Nuevo producto 2.2.5. -reemplazo del producto 2.2.3"
     }
    ],
    "serie": [
@@ -2476,9 +2428,7 @@
    "ajustes": [
     {
      "fecha": "2023-09-07",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.2.6 reemplazo del producto 2.2.2.\nAjuste en el tipo de indicador\nAjuste en línea de Base\nAjuste de la programación (magnitud) de metas anuales\nAjuste Persona de contacto y correo electrónico",
-     "tipo": "Estructural"
+     "ajuste": "Nuevo producto 2.2.6 reemplazo del producto 2.2.2.\nAjuste en el tipo de indicador\nAjuste en línea de Base\nAjuste de la programación (magnitud) de metas anuales\nAjuste Persona de contacto y correo electrónico"
     }
    ],
    "serie": [
@@ -2572,9 +2522,7 @@
    "ajustes": [
     {
      "fecha": "2026-02-26",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.2.8. -reemplazo del producto 2.2.7",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 2.2.8. -reemplazo del producto 2.2.7"
     }
    ],
    "serie": [
@@ -2668,9 +2616,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.3.3. -reemplazo del producto 2.3.2",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 2.3.3. -reemplazo del producto 2.3.2"
     }
    ],
    "serie": [
@@ -2764,15 +2710,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Nuevo producto"
     },
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nDatos del responsable del indicador",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nDatos del responsable del indicador"
     }
    ],
    "serie": [
@@ -2866,9 +2808,7 @@
    "ajustes": [
     {
      "fecha": "2026-02-26",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.4.4. -reemplazo del producto 2.4.1",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 2.4.4. -reemplazo del producto 2.4.1"
     }
    ],
    "serie": [
@@ -3140,15 +3080,11 @@
    "ajustes": [
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Abre - Cambia nomenclatura por cambio de nomenclatura en IR",
-     "tipo": "No estructural"
+     "ajuste": "Abre - Cambia nomenclatura por cambio de nomenclatura en IR"
     },
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Fórmula del indicador\nResponsable de la ejecución",
-     "tipo": "No estructural"
+     "ajuste": "Fórmula del indicador\nResponsable de la ejecución"
     }
    ],
    "serie": [
@@ -3242,9 +3178,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 2.8.4. -reemplazo del producto 2.8.2",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 2.8.4. -reemplazo del producto 2.8.2"
     }
    ],
    "serie": [
@@ -3338,9 +3272,7 @@
    "ajustes": [
     {
      "fecha": "2023-09-07",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales",
-     "tipo": "Estructural"
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -3434,9 +3366,7 @@
    "ajustes": [
     {
      "fecha": "2022-12-22",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Estructural"
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -3530,9 +3460,7 @@
    "ajustes": [
     {
      "fecha": "2023-09-07",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales",
-     "tipo": "Estructural"
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -3626,9 +3554,7 @@
    "ajustes": [
     {
      "fecha": "2025-05-28",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -3722,15 +3648,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado"
     },
     {
      "fecha": "2025-05-28",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -3913,9 +3835,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -4276,9 +4196,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual"
     }
    ],
    "serie": [
@@ -4372,9 +4290,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado"
     }
    ],
    "serie": [
@@ -4468,15 +4384,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado"
     },
     {
      "fecha": "2026-02-26",
-     "estado": "Aprobado",
-     "ajuste": "Nombre indicador de producto",
-     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nombre indicador de producto"
     }
    ],
    "serie": [
@@ -4570,15 +4482,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el tiempo de ejecución de la meta\nAjuste en la programación de la meta",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el tiempo de ejecución de la meta\nAjuste en la programación de la meta"
     },
     {
      "fecha": "2023-09-07",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -4939,15 +4847,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en las magnitudes del producto",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en las magnitudes del producto"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Fórmula de cálculo\nUnidad de medida",
-     "tipo": "No estructural"
+     "ajuste": "Fórmula de cálculo\nUnidad de medida"
     }
    ],
    "serie": [
@@ -5130,9 +5034,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre del producto\nNombre del indicador\nFormula del indicador",
-     "tipo": "No estructural"
+     "ajuste": "Nombre del producto\nNombre del indicador\nFormula del indicador"
     }
    ],
    "serie": [
@@ -5226,15 +5128,11 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre del producto",
-     "tipo": "No estructural"
+     "ajuste": "Nombre del producto"
     }
    ],
    "serie": [
@@ -5328,15 +5226,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tipo del indicador\nAjuste en Metas",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tipo del indicador\nAjuste en Metas"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre del producto\nNombre del indicador\nFórmula del indicador\nMeta",
-     "tipo": "No estructural"
+     "ajuste": "Nombre del producto\nNombre del indicador\nFórmula del indicador\nMeta"
     }
    ],
    "serie": [
@@ -5430,15 +5324,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en Metas",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en Metas"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nombre del indicador\nDescripción del indicador\nFórmula de cálculo\nUnidad de medida",
-     "tipo": "No estructural"
+     "ajuste": "Nombre del indicador\nDescripción del indicador\nFórmula de cálculo\nUnidad de medida"
     }
    ],
    "serie": [
@@ -5532,9 +5422,7 @@
    "ajustes": [
     {
      "fecha": "2022-12-22",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 4.3.4 -reemplazo del producto 4.3.2.",
-     "tipo": "Estructural"
+     "ajuste": "Nuevo producto 4.3.4 -reemplazo del producto 4.3.2."
     }
    ],
    "serie": [
@@ -5628,9 +5516,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 4.4.2. -reemplazo del producto 4.4.1",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 4.4.2. -reemplazo del producto 4.4.1"
     }
    ],
    "serie": [
@@ -5724,15 +5610,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste al producto esperado",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste al producto esperado"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Fórmula de cálculo\nMetas",
-     "tipo": "No estructural"
+     "ajuste": "Fórmula de cálculo\nMetas"
     }
    ],
    "serie": [
@@ -5826,15 +5708,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste al producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en la programación de la metas",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste al producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en la programación de la metas"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Fórmula de cálculo\nMetodología de medición\nDescripción del indicador\nDescripción del producto",
-     "tipo": "No estructural"
+     "ajuste": "Fórmula de cálculo\nMetodología de medición\nDescripción del indicador\nDescripción del producto"
     }
    ],
    "serie": [
@@ -6106,9 +5984,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto"
     }
    ],
    "serie": [
@@ -6202,9 +6078,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto"
     }
    ],
    "serie": [
@@ -6387,9 +6261,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en instancia responsable de reporte de seguimiento a implementación de producto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en instancia responsable de reporte de seguimiento a implementación de producto"
     }
    ],
    "serie": [
@@ -6483,9 +6355,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto"
     }
    ],
    "serie": [
@@ -6757,9 +6627,7 @@
    "ajustes": [
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 5.4.2 -reemplazo del producto 5.4.1.",
-     "tipo": "No estructural"
+     "ajuste": "Nuevo producto 5.4.2 -reemplazo del producto 5.4.1."
     }
    ],
    "serie": [
@@ -7031,9 +6899,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Metas\nRelación entre el indicador de producto y el resultado esperado\nDescripción del indicador\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nPeriodicidad de medición\nResponsable de la ejecución",
-     "tipo": "No estructural"
+     "ajuste": "Metas\nRelación entre el indicador de producto y el resultado esperado\nDescripción del indicador\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nPeriodicidad de medición\nResponsable de la ejecución"
     }
    ],
    "serie": [
@@ -7394,9 +7260,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 6.2.4. -reemplazo del producto 6.2.1.",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 6.2.4. -reemplazo del producto 6.2.1."
     }
    ],
    "serie": [
@@ -7579,9 +7443,7 @@
    "ajustes": [
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Nombre del producto",
-     "tipo": "No estructural"
+     "ajuste": "Nombre del producto"
     }
    ],
    "serie": [
@@ -7764,9 +7626,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -7860,9 +7720,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Nuevo producto"
     }
    ],
    "serie": [
@@ -7956,9 +7814,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -8052,15 +7908,11 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la programación de la meta",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la programación de la meta"
     },
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Metas\nDescripción del indicador\nRelación entre el indicador de producto y el resultado esperado\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nTerritorialización del indicador\nMetodología de medición\nFuentes de información\nResponsable de la ejecución",
-     "tipo": "No estructural"
+     "ajuste": "Metas\nDescripción del indicador\nRelación entre el indicador de producto y el resultado esperado\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nTerritorialización del indicador\nMetodología de medición\nFuentes de información\nResponsable de la ejecución"
     }
    ],
    "serie": [
@@ -8154,9 +8006,7 @@
    "ajustes": [
     {
      "fecha": "2021-08-13",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en la programación de la meta",
-     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+     "ajuste": "Ajuste en la programación de la meta"
     }
    ],
    "serie": [
@@ -8339,9 +8189,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados y recursos disponibles",
-     "tipo": "Estructural"
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados y recursos disponibles"
     }
    ],
    "serie": [
@@ -8524,9 +8372,7 @@
    "ajustes": [
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -8620,9 +8466,7 @@
    "ajustes": [
     {
      "fecha": "2025-05-07",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en Descripción del indicador\nAjuste en Aspectos a considerar para el desarrollo del producto",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste en Descripción del indicador\nAjuste en Aspectos a considerar para el desarrollo del producto"
     }
    ],
    "serie": [
@@ -8805,9 +8649,7 @@
    "ajustes": [
     {
      "fecha": "2022-10-03",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador"
     }
    ],
    "serie": [
@@ -8990,9 +8832,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 7.3.3. -reemplazo del producto 7.3.1",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 7.3.3. -reemplazo del producto 7.3.1"
     }
    ],
    "serie": [
@@ -9086,9 +8926,7 @@
    "ajustes": [
     {
      "fecha": "2025-12-12",
-     "estado": "Aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
-     "tipo": "No estructural"
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales"
     }
    ],
    "serie": [
@@ -9182,9 +9020,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 7.4.5. -reemplazo del producto 7.4.1",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 7.4.5. -reemplazo del producto 7.4.1"
     }
    ],
    "serie": [
@@ -9278,9 +9114,7 @@
    "ajustes": [
     {
      "fecha": "2025-11-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 7.4.6. -reemplazo del producto 7.4.3",
-     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+     "ajuste": "Nuevo producto 7.4.6. -reemplazo del producto 7.4.3"
     }
    ],
    "serie": [
@@ -9374,9 +9208,7 @@
    "ajustes": [
     {
      "fecha": "2025-02-27",
-     "estado": "Aprobado",
-     "ajuste": "Nuevo producto 7.5.2. -reemplazo del producto 7.5.1",
-     "tipo": "Estructural"
+     "ajuste": "Nuevo producto 7.5.2. -reemplazo del producto 7.5.1"
     }
    ],
    "serie": [
