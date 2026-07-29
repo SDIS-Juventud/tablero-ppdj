@@ -218,6 +218,10 @@ footer {
       <select id="filtro-dim"></select>
     </div>
     <div class="filtro-grupo">
+      <span class="filtro-label">Anualización</span>
+      <select id="filtro-tipo"></select>
+    </div>
+    <div class="filtro-grupo">
       <span class="filtro-label">Sector líder</span>
       <div id="filtro-sectores" style="display:flex; gap:0.4rem; flex-wrap:wrap;"></div>
     </div>
@@ -264,6 +268,7 @@ footer {
 
   const estado = {
     dim: params.get('dim') || '',            // "1".."7" o "" = todas
+    tipo: params.get('tipo') || '',          // tipo de anualización o "" = todos
     sectores: new Set(),                      // vacío = todos
     llave: params.get('llave') || '',
   };
@@ -301,6 +306,19 @@ footer {
       estado.llave = '';
       sincronizarUrl();
       pintarSectores();
+      pintarTabla();
+    });
+
+    // filtro por tipo de anualización (Suma, Constante, Creciente, ...)
+    const selTipo = document.getElementById('filtro-tipo');
+    const tipos = [...new Set(DATOS.items.map(it => it.tipo_anualizacion).filter(Boolean))].sort();
+    selTipo.innerHTML = '<option value="">Todos los tipos</option>' +
+      tipos.map(t => `<option value="${t}">${t}</option>`).join('');
+    selTipo.value = estado.tipo;
+    selTipo.addEventListener('change', () => {
+      estado.tipo = selTipo.value;
+      estado.llave = '';
+      sincronizarUrl();
       pintarTabla();
     });
 
@@ -345,12 +363,14 @@ footer {
   function itemsFiltrados() {
     return DATOS.items.filter(it =>
       (!estado.dim || it.key_dimension === estado.dim + '.') &&
+      (!estado.tipo || it.tipo_anualizacion === estado.tipo) &&
       (estado.sectores.size === 0 || estado.sectores.has(it.sector_lider)));
   }
 
   function sincronizarUrl() {
     const p = new URLSearchParams();
     if (estado.dim) p.set('dim', estado.dim);
+    if (estado.tipo) p.set('tipo', estado.tipo);
     if (estado.llave) p.set('llave', estado.llave);
     history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
   }
