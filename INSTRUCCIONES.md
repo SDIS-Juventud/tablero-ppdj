@@ -21,9 +21,22 @@ Son páginas HTML estáticas que leen datos generados por scripts de Python.
 | Seguimiento a Productos (Excel, hojas Cuanti y Cuali) | `..\Insumos\Datos tablero\Inputs\` |
 | Seguimiento a Resultados (Excel, hojas Cuanti y Cuali) | `..\Insumos\Datos tablero\Inputs\` |
 | Objetivos por dimensión | `..\Insumos\Datos tablero\Objetivos.xlsx` |
+| Control de ajustes PPDJ (Excel de la Subdirección) | `..\Insumos\Control de ajustes PPDJ*.xlsx` |
 
 La carpeta `Insumos\` está fuera del repositorio a propósito: contiene los
 formatos de trabajo del equipo y no se publica.
+
+**Control de ajustes:** cada producto y resultado muestra en su ficha la
+historia de ajustes del plan de acción (qué se ajustó, cuándo y en qué
+estado quedó la solicitud: aprobado, no aprobado, denegado o en trámite).
+El módulo `programas\control_ajustes.py` busca en `..\Insumos\` el archivo
+que empiece por "Control de ajustes PPDJ" y usa **el más reciente** (por
+fecha de modificación). Cuando la Subdirección publique una versión nueva,
+basta con guardarla en `Insumos\` con ese mismo prefijo y volver a correr
+los generadores — no hay que tocar código. El cruce se hace por el código
+del indicador al inicio de la columna "Producto / Resultado" (ej. "1.1.2"
+para productos, "6.4" o "R 6.4." para resultados); las filas sin código
+reconocible se listan al correr `python programas\control_ajustes.py`.
 
 ## Cómo actualizar los datos
 

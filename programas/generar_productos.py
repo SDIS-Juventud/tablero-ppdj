@@ -48,6 +48,7 @@ from comun_pipeline import (DIMENSIONES, DIR_INPUTS, cargar_objetivos,
                             clasificar_indicador_tipo,
                             extraer_anio_y_trimestre, normalizar_texto,
                             parsear_fecha_mixta)
+from control_ajustes import cargar_ajustes
 
 RUTA_INPUT = os.path.join(DIR_INPUTS, 'Seguimiento_Productos_PPDJ_2026_excel.xlsx')
 # Corte anterior del plan: solo se usa para detectar los productos nuevos
@@ -133,6 +134,10 @@ def construir():
 
     columnas_trimestrales = [c for c in bd.columns if extraer_anio_y_trimestre(c)[0] is not None]
     codigos_viejos = codigos_corte_anterior()
+    # Historia de ajustes por código (Control de ajustes de la Subdirección):
+    # cada producto lleva su lista para que la ficha muestre qué se ajustó,
+    # cuándo y en qué estado quedó la solicitud
+    ajustes_por_codigo, _, _, ruta_control = cargar_ajustes()
 
     objetivos = cargar_objetivos(pd)
     objetivos_por_key = {f'{int(k)}.': normalizar_texto(o)
@@ -263,6 +268,7 @@ def construir():
             'tipo_anualizacion': tipo,
             'fecha_inicio': a_fecha_iso(fila['Fecha de Inicio']),
             'fecha_fin': a_fecha_iso(fila['Fecha de Finalización']),
+            'ajustes': ajustes_por_codigo.get(codigo, []),
             'serie': serie,
         })
 
@@ -270,6 +276,7 @@ def construir():
         'generado': date.today().isoformat(),
         'vista': 'productos',
         'anios': ANIOS,
+        'control_ajustes_archivo': os.path.basename(ruta_control) if ruta_control else None,
         'nota_nuevos': NOTA_NUEVOS,
         'dimensiones': [{'key': k, 'nombre': v['nombre'], 'color': v['color'],
                          'objetivo': objetivos_por_key.get(k)}
@@ -341,7 +348,9 @@ def main():
     print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
     print(f'Base Excel: {ruta_base}')
     nuevos = sum(1 for it in datos['items'] if it.get('nuevo_2025'))
+    con_ajustes = sum(1 for it in datos['items'] if it.get('ajustes'))
     print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])} | Nuevos 2025: {nuevos}')
+    print(f'Con ajustes del control: {con_ajustes} (fuente: {datos.get("control_ajustes_archivo")})')
 
 
 if __name__ == '__main__':

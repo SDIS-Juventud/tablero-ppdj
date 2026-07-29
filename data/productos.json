@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-14",
+ "generado": "2026-07-28",
  "vista": "productos",
  "anios": [
   2019,
@@ -10,6 +10,7 @@
   2024,
   2025
  ],
+ "control_ajustes_archivo": "Control de ajustes PPDJ  V11_05_2026.xlsx",
  "nota_nuevos": "Producto nuevo: entró al plan de acción con la actualización aprobada en 2025.",
  "dimensiones": [
   {
@@ -85,6 +86,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en Tipo de anualización \nAjuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural - Solicitud DADE"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -173,6 +182,26 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2019-12-19",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-05-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto",
+     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -261,6 +290,20 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Responsable de la ejecución",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Periodicidad de medición\nDescripción del indicador\nDescripción del Producto\nFórmula de cálculo\nMetodología de medición\nFuentes de información",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -349,6 +392,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Descripción del indicador\nDescripción del Producto\nFórmula de cálculo\nMetodología de medición\nFuentes de información",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -437,6 +488,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados",
+     "tipo": "No estructural - Solicitud DADE"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -525,6 +590,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2022-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-12-22",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -613,6 +686,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2025-01-01",
    "fecha_fin": "2027-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "No estructural - Solicitud DADE"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -701,6 +782,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2024-01-01",
    "fecha_fin": "2027-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "No estructural - Solicitud DADE"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -789,6 +878,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -877,6 +967,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-19",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -965,6 +1056,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1053,6 +1152,20 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2019-12-19",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-05-28",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto",
+     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1141,6 +1254,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de metas anuales",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1229,6 +1350,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1317,6 +1446,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -1405,6 +1535,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2026-02-26",
+     "estado": "Aprobado",
+     "ajuste": "Nombre Producto esperado\nFórmula del indicador de producto\nNombre indicador de producto \nMetodología de medición\nDescripción de Productos\nFuentes de información (entidad generadora del dato)",
+     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1493,6 +1631,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nTipo de anualización",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1581,6 +1733,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-12-22",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados\nAjuste en persona de contacto",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Aspectos a considerar para el desarrollo del producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1669,6 +1835,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1757,6 +1931,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Fórmula del indicador de producto\nMetodología de medición\nDescripción de Productos\nUnidad de medida",
+     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -1845,6 +2027,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -1933,6 +2116,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -2021,6 +2205,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-02",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.1.3. -reemplazo del producto 2.1.1",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2109,6 +2301,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -2197,6 +2390,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2022-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2022-12-22",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.2.5. -reemplazo del producto 2.2.3",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2285,6 +2486,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2023-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2023-09-07",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.2.6 reemplazo del producto 2.2.2.\nAjuste en el tipo de indicador\nAjuste en línea de Base\nAjuste de la programación (magnitud) de metas anuales\nAjuste Persona de contacto y correo electrónico",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2373,6 +2582,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2026-01-02",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2026-02-26",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.2.8. -reemplazo del producto 2.2.7",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2461,6 +2678,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-02",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.3.3. -reemplazo del producto 2.3.2",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2549,6 +2774,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-03-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nDatos del responsable del indicador",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2637,6 +2876,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2026-01-02",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2026-02-26",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.4.4. -reemplazo del producto 2.4.1",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2725,6 +2972,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -2813,6 +3061,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-30",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -2901,6 +3150,20 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Abre - Cambia nomenclatura por cambio de nomenclatura en IR",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Fórmula del indicador\nResponsable de la ejecución",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -2989,6 +3252,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-02",
    "fecha_fin": "2030-12-30",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 2.8.4. -reemplazo del producto 2.8.2",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3077,6 +3348,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2023-09-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3165,6 +3444,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-12-22",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3253,6 +3540,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2023-09-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3341,6 +3636,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-05-28",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3429,6 +3732,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-05-28",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3517,6 +3834,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -3605,6 +3923,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -3693,6 +4019,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -3781,6 +4108,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -3869,6 +4197,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -3957,6 +4286,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación de la meta anual",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4045,6 +4382,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4133,6 +4478,20 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2026-02-26",
+     "estado": "Aprobado",
+     "ajuste": "Nombre indicador de producto",
+     "tipo": "Ajuste Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4221,6 +4580,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el tiempo de ejecución de la meta\nAjuste en la programación de la meta",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2023-09-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4309,6 +4682,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -4397,6 +4771,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -4485,6 +4860,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2022-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -4573,6 +4949,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en las magnitudes del producto",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Fórmula de cálculo\nUnidad de medida",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4661,6 +5051,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -4749,6 +5140,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del producto\nNombre del indicador\nFormula del indicador",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4837,6 +5236,20 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -4925,6 +5338,20 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2022-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tipo del indicador\nAjuste en Metas",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del producto\nNombre del indicador\nFórmula del indicador\nMeta",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5013,6 +5440,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en Metas",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del indicador\nDescripción del indicador\nFórmula de cálculo\nUnidad de medida",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5101,6 +5542,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2022-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-12-22",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 4.3.4 -reemplazo del producto 4.3.2.",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5189,6 +5638,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2026-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 4.4.2. -reemplazo del producto 4.4.1",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5277,6 +5734,20 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste al producto esperado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Fórmula de cálculo\nMetas",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5365,6 +5836,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-12-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste al producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en el tiempo de ejecución de la meta\nAjuste en la programación de la metas",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Fórmula de cálculo\nMetodología de medición\nDescripción del indicador\nDescripción del producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5453,6 +5938,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Responsables de la ejecución (Dirección/Subdirección/Grupo/Unidad)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5541,6 +6034,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -5629,6 +6123,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5717,6 +6219,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5805,6 +6315,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2024-09-12",
+     "estado": "Denegado",
+     "ajuste": "Reducción de metas",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5893,6 +6411,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nAjuste en instancia responsable de reporte de seguimiento a implementación de producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -5981,6 +6507,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en instancia responsable de reporte de seguimiento a implementación de producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -6069,6 +6603,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6157,6 +6692,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6245,6 +6781,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2025-12-03",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 5.4.2 -reemplazo del producto 5.4.1.",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -6333,6 +6877,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6421,6 +6966,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6509,6 +7055,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Metas\nRelación entre el indicador de producto y el resultado esperado\nDescripción del indicador\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nPeriodicidad de medición\nResponsable de la ejecución",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -6597,6 +7151,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6685,6 +7240,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6773,6 +7329,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6861,6 +7418,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 6.2.4. -reemplazo del producto 6.2.1.",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -6949,6 +7514,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2029-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -7037,6 +7603,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del producto",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7125,6 +7699,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -7213,6 +7788,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2023-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7301,6 +7884,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2021-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7389,6 +7980,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7477,6 +8076,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el producto esperado\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la programación de la meta",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Metas\nDescripción del indicador\nRelación entre el indicador de producto y el resultado esperado\nAspectos a considerar para el desarrollo del producto\nFórmula de cálculo\nTerritorialización del indicador\nMetodología de medición\nFuentes de información\nResponsable de la ejecución",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7565,6 +8178,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en la programación de la meta",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7653,6 +8274,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -7741,6 +8363,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste de la programación (magnitud) de metas anuales\nAjuste en costos estimados y recursos disponibles",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7829,6 +8459,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Asociar el producto al indicador de resultado 6.6. “Jóvenes con oportunidades y herramientas para conciliar ante situaciones de conflicto en los territorios”.",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -7917,6 +8555,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8005,6 +8651,20 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-05-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en Descripción del indicador\nAjuste en Aspectos a considerar para el desarrollo del producto",
+     "tipo": "No estructural"
+    },
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nTipo de anualización",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8093,6 +8753,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -8181,6 +8842,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2022-10-03",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del producto\nAjuste en el nombre del indicador\nAjuste en la fórmula del indicador",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8269,6 +8938,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Metodología de medición\nDescripción de Productos\nDirección/Subdirección/Grupo/Unidad\nFuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8357,6 +9034,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 7.3.3. -reemplazo del producto 7.3.1",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8445,6 +9130,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste de la programación (magnitud) de metas anuales",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8533,6 +9226,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 7.4.5. -reemplazo del producto 7.4.1",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8621,6 +9322,14 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2026-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-11-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 7.4.6. -reemplazo del producto 7.4.3",
+     "tipo": "Reemplazo Protocolo Depuración SDP - CONPES DC"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,
@@ -8709,6 +9418,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2024-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-02-27",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo producto 7.5.2. -reemplazo del producto 7.5.1",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2019,

@@ -14,6 +14,7 @@ Ejecución: python programas/generar_resultados.py  (desde la raíz del repo)
 
 import json
 import os
+import re
 from datetime import date
 
 import pandas as pd
@@ -22,6 +23,7 @@ from comun_pipeline import (DIMENSIONES, DIR_INPUTS, anualizar_tablero,
                             cargar_objetivos, clasificar_indicador_tipo,
                             extraer_anio_y_trimestre, normalizar_texto,
                             parsear_fecha_mixta)
+from control_ajustes import cargar_ajustes
 from generar_productos import (a_fecha_iso, a_numero, porcentaje_avance,
                                redondear)
 
@@ -37,6 +39,12 @@ RUTA_JSON = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file_
 ANIOS = list(range(2020, 2026))
 
 
+def extraer_codigo_resultado(texto):
+    """Código del resultado al inicio del texto esperado ("6.4"), o None."""
+    m = re.match(r'\s*(\d+\.\d+)', str(texto or ''))
+    return m.group(1) if m else None
+
+
 def construir():
     bd = pd.read_excel(RUTA_INPUT, sheet_name='Cuanti', engine='openpyxl')
     # Solo los resultados vigentes entran al tablero. En el ciclo 2025 salió
@@ -50,6 +58,9 @@ def construir():
     objetivos = cargar_objetivos(pd)
     objetivos_por_key = {f'{int(k)}.': normalizar_texto(o)
                          for k, o in zip(objetivos['Key'], objetivos['Objetivo'])}
+
+    # Historia de ajustes por código (Control de ajustes de la Subdirección)
+    _, ajustes_por_codigo, _, ruta_control = cargar_ajustes()
 
     items = []
     sectores = set()
@@ -121,6 +132,8 @@ def construir():
             'tipo_anualizacion': normalizar_texto(tipo),
             'fecha_inicio': a_fecha_iso(fila['Fecha de Inicio']),
             'fecha_fin': a_fecha_iso(fila['Fecha de Finalización']),
+            'ajustes': ajustes_por_codigo.get(
+                extraer_codigo_resultado(fila['Resultado esperado']), []),
             'serie': serie,
         })
 
@@ -128,6 +141,7 @@ def construir():
         'generado': date.today().isoformat(),
         'vista': 'resultados',
         'anios': ANIOS,
+        'control_ajustes_archivo': os.path.basename(ruta_control) if ruta_control else None,
         'dimensiones': [{'key': k, 'nombre': v['nombre'], 'color': v['color'],
                          'objetivo': objetivos_por_key.get(k)}
                         for k, v in DIMENSIONES.items()],
@@ -147,7 +161,9 @@ def main():
     kb = os.path.getsize(RUTA_JSON) / 1024
     print(f'Generado: {RUTA_JSON} (+ .js) ({kb:.0f} KB)')
     print(f'Base Excel: {ruta_base}')
+    con_ajustes = sum(1 for it in datos['items'] if it.get('ajustes'))
     print(f'Items: {len(datos["items"])} | Dimensiones: {len(datos["dimensiones"])} | Sectores: {len(datos["sectores"])}')
+    print(f'Con ajustes del control: {con_ajustes} (fuente: {datos.get("control_ajustes_archivo")})')
 
 
 if __name__ == '__main__':

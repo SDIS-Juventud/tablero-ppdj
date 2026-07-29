@@ -1,5 +1,5 @@
 {
- "generado": "2026-07-14",
+ "generado": "2026-07-28",
  "vista": "resultados",
  "anios": [
   2020,
@@ -9,6 +9,7 @@
   2024,
   2025
  ],
+ "control_ajustes_archivo": "Control de ajustes PPDJ  V11_05_2026.xlsx",
  "dimensiones": [
   {
    "key": "1.",
@@ -81,6 +82,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -140,6 +142,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Fuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -199,6 +209,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -258,6 +269,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -317,6 +329,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -376,6 +389,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -435,6 +449,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Descripción del indicador\nEnfoques\nFórmula del indicador en plan de acción",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -494,6 +516,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -553,6 +576,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -612,6 +636,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -671,6 +696,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2025-10-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2025-12-12",
+     "estado": "Aprobado",
+     "ajuste": "Nuevo resultado 2.8. -reemplazo del resultado 2.7",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -730,6 +763,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -789,6 +823,7 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -848,6 +883,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -907,6 +943,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Línea base\nMetas de resultado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -966,6 +1010,20 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Indicador de resultado\nFormula del indicador de resultado\nLínea base\nMeta ajustada",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    },
+    {
+     "fecha": "2025-05-07",
+     "estado": "Aprobado",
+     "ajuste": "Nombre del indicador de resultado (paridad de criterios entre ficha y PAI)\nFormula del indicador de resultado (paridad de criterios entre ficha y PAI)\nAjuste de metas anuales (paridad de criterios entre ficha y PAI)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1025,6 +1083,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en la proyección de metas de resultado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1084,6 +1150,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2021-08-13",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el tipo de indicador\nAjuste en la proyección de metas de resultado",
+     "tipo": "Tipo de ajuste no específicado por metodología CONPES para este proceso."
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1143,6 +1217,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1202,6 +1277,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Fuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1261,6 +1344,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Fuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1320,6 +1411,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Fuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1379,6 +1478,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Fuentes de información (entidad generadora del dato)",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1438,6 +1545,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1497,6 +1605,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1556,6 +1665,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1615,6 +1725,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2024-10-16",
+     "estado": "Denegado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la línea de base\nAjuste de la programación (magnitud) de metas anuales",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1674,6 +1792,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2024-10-16",
+     "estado": "Denegado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la línea de base\nAjuste de la programación (magnitud) de metas anuales",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1733,6 +1859,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1792,6 +1919,14 @@
    "tipo_anualizacion": "Constante",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": "2023-09-07",
+     "estado": "Aprobado",
+     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la descripción del indicador\nAjuste en la metodología de medición del indicador\nAjuste en la fuente de información del indicador",
+     "tipo": "Estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1851,6 +1986,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Eliminar el indicador de resultado 6.8.",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -1910,6 +2053,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1969,6 +2113,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -2028,6 +2173,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -2087,6 +2233,14 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Descripción del indicador",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
@@ -2146,6 +2300,14 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
+   "ajustes": [
+    {
+     "fecha": null,
+     "estado": "No aprobado",
+     "ajuste": "Descripción del indicador",
+     "tipo": "No estructural"
+    }
+   ],
    "serie": [
     {
      "anio": 2020,
