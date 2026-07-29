@@ -24,31 +24,31 @@ body {
 }
 
 main {
-  max-width: 1240px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2.2rem 1.5rem 3rem;
+  padding: 2.6rem 2rem 3rem;
   display: grid;
-  grid-template-columns: minmax(300px, 420px) 1fr;
-  gap: 3rem;
+  grid-template-columns: minmax(320px, 480px) 1fr;
+  gap: 3.5rem;
   align-items: start;
 }
 @media (max-width: 980px) { main { grid-template-columns: 1fr; gap: 2rem; } }
 
 /* ---- columna izquierda ---- */
-.logos { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; flex-wrap: wrap; }
-.logos img { height: 52px; width: auto; }
+.logos { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
+.logos img { height: 60px; width: auto; }
 
 .tarjeta-titulo {
   position: relative;
   background: var(--navy);
-  border-radius: 26px;
-  box-shadow: 8px 8px 0 var(--rosa);
-  padding: 1.6rem 1.8rem 1.5rem;
+  border-radius: 28px;
+  box-shadow: 9px 9px 0 var(--rosa);
+  padding: 1.9rem 2rem 1.8rem;
   color: #ffffff;
   font-weight: 800;
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-size: clamp(1.7rem, 2.9vw, 2.35rem);
   line-height: 1.35;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.7rem;
 }
 .tarjeta-titulo .resaltado {
   display: inline-block;
@@ -61,59 +61,63 @@ main {
 .tarjeta-titulo .anios { color: var(--rosa); font-size: 0.8em; margin-top: 0.2rem; }
 .estrella {
   position: absolute;
-  top: -26px; right: -18px;
-  width: 58px; height: 58px;
+  top: -30px; right: -20px;
+  width: 66px; height: 66px;
 }
 
+/* Banda de la Secretaría: mismo ancho de la tarjeta del título (como en el
+   Power BI original), con el texto centrado */
 .pill-sdis {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  text-align: center;
   background: var(--navy);
   color: #ffffff;
   font-weight: 700;
-  border-radius: 14px;
-  padding: 0.55rem 1.1rem;
-  font-size: 1.02rem;
-  margin-bottom: 2rem;
+  border-radius: 16px;
+  padding: 0.7rem 1.1rem;
+  font-size: 1.18rem;
+  margin-bottom: 2.2rem;
 }
-.explora { color: var(--rosa); font-weight: 800; font-size: 1.25rem; margin-bottom: 0.6rem; }
-.col-izq p { line-height: 1.55; max-width: 40ch; }
+.explora { color: var(--rosa); font-weight: 800; font-size: 1.4rem; margin-bottom: 0.6rem; }
+.col-izq p { line-height: 1.55; max-width: 44ch; font-size: 1.08rem; }
 
 /* ---- columna derecha ---- */
-.instruccion { text-align: right; font-weight: 700; margin-bottom: 1rem; }
+.instruccion { text-align: right; font-weight: 700; font-size: 1.08rem; margin-bottom: 1.1rem; }
 
 .fila, .fila-encabezado {
   display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 0.8rem;
+  grid-template-columns: 60px 1fr;
+  gap: 0.9rem;
   align-items: center;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
 }
-.dim-icono { width: 44px; height: 44px; object-fit: contain; justify-self: center; }
+.dim-icono { width: 52px; height: 52px; object-fit: contain; justify-self: center; }
 
 .barra-dim, .encabezado-interno {
   display: grid;
-  grid-template-columns: 1fr 92px 92px;
-  gap: 0.7rem;
+  grid-template-columns: 1fr 106px 106px;
+  gap: 0.8rem;
   align-items: center;
-  padding: 0.45rem 0.9rem;
+  padding: 0.6rem 1.1rem;
 }
 .barra-dim {
   background: var(--navy);
-  border-radius: 22px;
-  box-shadow: 5px 5px 0 var(--rosa);
+  border-radius: 24px;
+  box-shadow: 6px 6px 0 var(--rosa);
 }
-.dim-etiqueta { color: #ffffff; font-weight: 800; font-size: 1.02rem; }
+.dim-etiqueta { color: #ffffff; font-weight: 800; font-size: 1.18rem; }
 .dim-etiqueta .num { color: var(--rosa); font-size: 1.15em; margin-right: 0.35rem; }
 
 .conteo {
   display: block;
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 16px;
   text-align: center;
   text-decoration: none;
   font-weight: 800;
-  font-size: 1.15rem;
-  padding: 0.32rem 0;
+  font-size: 1.35rem;
+  padding: 0.38rem 0;
   transition: transform 0.15s ease;
 }
 .conteo:hover { transform: translateY(-2px); }
@@ -121,7 +125,7 @@ main {
 .conteo.resultados { color: var(--azul); }
 
 .fila-encabezado { margin-bottom: 0.5rem; }
-.encabezado-interno span { font-weight: 800; font-size: 1.05rem; text-align: center; }
+.encabezado-interno span { font-weight: 800; font-size: 1.15rem; text-align: center; }
 .encabezado-interno .h-dim { text-align: left; color: var(--rosa); }
 .encabezado-interno .h-prod { color: var(--rosa); }
 .encabezado-interno .h-res { color: var(--azul); }

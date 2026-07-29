@@ -296,12 +296,6 @@
      "estado": "Aprobado",
      "ajuste": "Responsable de la ejecución",
      "tipo": "No estructural"
-    },
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Periodicidad de medición\nDescripción del indicador\nDescripción del Producto\nFórmula de cálculo\nMetodología de medición\nFuentes de información",
-     "tipo": "No estructural"
     }
    ],
    "serie": [
@@ -392,14 +386,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Descripción del indicador\nDescripción del Producto\nFórmula de cálculo\nMetodología de medición\nFuentes de información",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -5938,14 +5925,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Responsables de la ejecución (Dirección/Subdirección/Grupo/Unidad)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -6315,14 +6295,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": "2024-09-12",
-     "estado": "Denegado",
-     "ajuste": "Reducción de metas",
-     "tipo": "Estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -8459,14 +8432,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Asociar el producto al indicador de resultado 6.6. “Jóvenes con oportunidades y herramientas para conciliar ante situaciones de conflicto en los territorios”.",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,
@@ -8656,12 +8622,6 @@
      "fecha": "2025-05-07",
      "estado": "Aprobado",
      "ajuste": "Ajuste en Descripción del indicador\nAjuste en Aspectos a considerar para el desarrollo del producto",
-     "tipo": "No estructural"
-    },
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Ajuste de la programación (magnitud) de metas anuales\nTipo de anualización",
      "tipo": "No estructural"
     }
    ],
@@ -8938,14 +8898,7 @@
    "tipo_anualizacion": "Suma",
    "fecha_inicio": "2019-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Metodología de medición\nDescripción de Productos\nDirección/Subdirección/Grupo/Unidad\nFuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2019,

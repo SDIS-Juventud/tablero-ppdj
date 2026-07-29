@@ -25,6 +25,11 @@ El código del producto ("1.1.2", tres partes) o del resultado ("6.4", dos
 partes, a veces escrito "R 6.4.") se extrae del inicio de la columna
 "Producto / Resultado". Las filas sin código reconocible (ej. ajustes
 generales de encuestas) se devuelven aparte como "sin asignar".
+
+Al tablero solo pasan los ajustes APROBADOS (decisión de Carolina,
+2026-07-28): el sitio es público y las solicitudes denegadas o en trámite
+son información interna del proceso. Para inspeccionarlas todas, correr
+este módulo directo o llamar cargar_ajustes(solo_aprobados=False).
 """
 
 import glob
@@ -87,7 +92,7 @@ def _estado_y_fecha(celda_fecha, tramite, hoja_aprobados):
     return 'En trámite', fecha
 
 
-def cargar_ajustes():
+def cargar_ajustes(solo_aprobados=True):
     """Lee el Control de ajustes y devuelve:
     (ajustes_productos, ajustes_resultados, sin_asignar, ruta_usada)
     - ajustes_productos: {"1.1.2": [ajuste, ...]} con códigos de 3 partes
@@ -95,7 +100,9 @@ def cargar_ajustes():
     - sin_asignar: lista de descripciones de filas sin código
     - ruta_usada: ruta del Excel leído (None si no se encontró)
     Cada ajuste es un dict {fecha, estado, ajuste, tipo} listo para el JSON,
-    ordenado por fecha (los sin fecha al final)."""
+    ordenado por fecha (los sin fecha al final).
+    Con solo_aprobados=True (el valor con el que corren los generadores)
+    se omiten las solicitudes no aprobadas, denegadas o en trámite."""
     ruta = ruta_control_mas_reciente()
     if ruta is None:
         return {}, {}, [], None
@@ -112,6 +119,8 @@ def cargar_ajustes():
             if not texto_producto and not texto_ajuste:
                 continue
             estado, fecha = _estado_y_fecha(fila[COL_FECHA], fila[COL_TRAMITE], hoja_aprobados)
+            if solo_aprobados and estado != 'Aprobado':
+                continue
             registro = {
                 'fecha': fecha,
                 'estado': estado,
@@ -134,13 +143,19 @@ def cargar_ajustes():
 
 
 if __name__ == '__main__':
-    # Corrida de inspección: muestra el resumen de lo que se cargó
-    prods, res, sueltos, ruta = cargar_ajustes()
+    # Corrida de inspección: muestra el resumen completo, incluyendo las
+    # solicitudes no aprobadas que NO pasan al tablero
+    prods, res, sueltos, ruta = cargar_ajustes(solo_aprobados=False)
     print(f'Archivo: {ruta}')
     total_p = sum(len(v) for v in prods.values())
     total_r = sum(len(v) for v in res.values())
     print(f'Productos con ajustes: {len(prods)} ({total_p} ajustes)')
     print(f'Resultados con ajustes: {len(res)} ({total_r} ajustes)')
+    no_aprobados = [(c, a) for d in (prods, res) for c, lista in d.items()
+                    for a in lista if a['estado'] != 'Aprobado']
+    print(f'No aprobados / denegados / en trámite (no pasan al tablero): {len(no_aprobados)}')
+    for c, a in no_aprobados:
+        print(f'  - [{c}] {a["estado"]}: {(a["ajuste"] or "")[:90]}')
     print(f'Filas sin código asignable: {len(sueltos)}')
     for s in sueltos:
         print(f'  - {s[:120]}')

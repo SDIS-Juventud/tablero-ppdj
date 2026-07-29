@@ -142,14 +142,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Fuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1277,14 +1270,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Fuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1344,14 +1330,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Fuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1411,14 +1390,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Fuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1478,14 +1450,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Fuentes de información (entidad generadora del dato)",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1725,14 +1690,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": "2024-10-16",
-     "estado": "Denegado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la línea de base\nAjuste de la programación (magnitud) de metas anuales",
-     "tipo": "Estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1792,14 +1750,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": "2024-10-16",
-     "estado": "Denegado",
-     "ajuste": "Ajuste en el nombre del indicador\nAjuste en la fórmula del indicador\nAjuste en la línea de base\nAjuste de la programación (magnitud) de metas anuales",
-     "tipo": "Estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -1986,14 +1937,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Eliminar el indicador de resultado 6.8.",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -2233,14 +2177,7 @@
    "tipo_anualizacion": "Creciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Descripción del indicador",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,
@@ -2300,14 +2237,7 @@
    "tipo_anualizacion": "Decreciente",
    "fecha_inicio": "2020-01-01",
    "fecha_fin": "2030-12-31",
-   "ajustes": [
-    {
-     "fecha": null,
-     "estado": "No aprobado",
-     "ajuste": "Descripción del indicador",
-     "tipo": "No estructural"
-    }
-   ],
+   "ajustes": [],
    "serie": [
     {
      "anio": 2020,

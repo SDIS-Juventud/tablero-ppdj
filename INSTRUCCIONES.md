@@ -27,8 +27,10 @@ La carpeta `Insumos\` está fuera del repositorio a propósito: contiene los
 formatos de trabajo del equipo y no se publica.
 
 **Control de ajustes:** cada producto y resultado muestra en su ficha la
-historia de ajustes del plan de acción (qué se ajustó, cuándo y en qué
-estado quedó la solicitud: aprobado, no aprobado, denegado o en trámite).
+historia de ajustes **aprobados** del plan de acción (qué se ajustó y
+cuándo). Las solicitudes no aprobadas, denegadas o en trámite no se
+publican — el sitio es público; para inspeccionarlas se corre
+`python programas\control_ajustes.py`, que las lista completas.
 El módulo `programas\control_ajustes.py` busca en `..\Insumos\` el archivo
 que empiece por "Control de ajustes PPDJ" y usa **el más reciente** (por
 fecha de modificación). Cuando la Subdirección publique una versión nueva,
